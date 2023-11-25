@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-4="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4"/>
     
 
@@ -23,7 +24,10 @@
 
     <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#esFan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#esFan"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#esFan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Autor"/>
+    </owl:ObjectProperty>
     
 
 
@@ -70,6 +74,27 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Edad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Edad">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -98,12 +123,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Perfil_de_Lectura -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Perfil_de_Lectura"/>
-    
-
-
     <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Persona -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Persona"/>
@@ -127,6 +146,94 @@
     <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Valoración -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Valoración"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Arturo_Perez_Reverte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Arturo_Perez_Reverte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Autor"/>
+        <untitled-ontology-4:Edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</untitled-ontology-4:Edad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Belico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Belico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Género"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Cyberpunk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Cyberpunk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Género"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#David_Benedicto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#David_Benedicto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Usuario"/>
+        <untitled-ontology-4:Edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</untitled-ontology-4:Edad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Merce_Rodoera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Merce_Rodoera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Autor"/>
+        <untitled-ontology-4:Edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">74</untitled-ontology-4:Edad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Mirall_Trencat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Mirall_Trencat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Libro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Pau_Martinez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Pau_Martinez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Usuario"/>
+        <untitled-ontology-4:Edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</untitled-ontology-4:Edad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Uriol_Roca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Uriol_Roca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Usuario"/>
+        <untitled-ontology-4:Edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</untitled-ontology-4:Edad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Geronimo_Estilton:_En_Narnia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Geronimo_Estilton:_En_Narnia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-4#Libro"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
