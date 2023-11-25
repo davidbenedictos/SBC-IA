@@ -98,3 +98,15 @@
     )
 
 )
+
+(defrule Recomendar-Autor-Mayor
+    ?user <- (Usuario (Edad ?edad&:(>= ?edad 20)))
+    =>
+    (printout t "Recomendar a Arturo_Perez_Reverte" crlf)
+)
+
+(defrule Recomendar-Autor-Menor
+    ?user <- (Usuario (Edad ?edad&:(< ?edad 20)))
+    =>
+    (printout t "Recomendar a Merce_Rodoera" crlf)
+)
