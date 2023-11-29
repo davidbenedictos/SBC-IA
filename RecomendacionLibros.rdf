@@ -1,0 +1,614 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11/"
+     xml:base="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-11="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#autorDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#autorDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#escritoPor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Autor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#escribeGenero -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#escribeGenero">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Autor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#escritoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#escritoPor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Autor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#incluyeSubgeneros -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#incluyeSubgeneros">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#perteneceAGenero -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#perteneceAGenero">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#recomiendaLibro -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#recomiendaLibro">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Recomendacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tieneAutoresDestacados -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tieneAutoresDestacados">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Autor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tieneAutoresFavoritos -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tieneAutoresFavoritos">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Autor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tieneHistorialDeLectura -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tieneHistorialDeLectura">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tieneLibrosPopulares -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tieneLibrosPopulares">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tieneListaDeDeseos -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tieneListaDeDeseos">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tienePreferenciasDeGenero -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tienePreferenciasDeGenero">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#autor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#autor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#autoresDestacadosGenero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#autoresDestacadosGenero">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#autoresFavoritos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#autoresFavoritos">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#complejidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#complejidad">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#confianzaValoraciones -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#confianzaValoraciones">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#edad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#edad">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Autor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#estiloEscritura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#estiloEscritura">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Autor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#fecha -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#fecha">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#fechaRecomendacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#fechaRecomendacion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Recomendacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#frecuenciaLectura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#frecuenciaLectura">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#genero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#genero">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#generos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#generos">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Autor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#historialLectura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#historialLectura">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#idioma -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#idioma">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#influenciaModasLiterarias -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#influenciaModasLiterarias">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#librosPopularesGenero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#librosPopularesGenero">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#listaDeseos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#listaDeseos">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#listaLibrosRecomendados -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#listaLibrosRecomendados">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Recomendacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#lugaresLectura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#lugaresLectura">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#momentoFavoritoLectura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#momentoFavoritoLectura">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#nacionalidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#nacionalidad">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#nombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#nombre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#nombreGenero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#nombreGenero">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#paginas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#paginas">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#popularidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#popularidad">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#preferenciaAutores -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#preferenciaAutores">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#preferenciaBestSellers -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#preferenciaBestSellers">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#preferenciaGeneros -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#preferenciaGeneros">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#razonesRecomendacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#razonesRecomendacion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Recomendacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#subgenerosAsociados -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#subgenerosAsociados">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tiempoDisponibleLectura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tiempoDisponibleLectura">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#titulo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#titulo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#valoracion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#valoracion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Autor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Autor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Persona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Persona"/>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Recomendacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Recomendacion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#CienciaFiccion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#CienciaFiccion">
+        <untitled-ontology-11:nombreGenero>Ciencia Ficcion</untitled-ontology-11:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Fantasia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Fantasia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+        <untitled-ontology-11:nombreGenero>Fantasia</untitled-ontology-11:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Misterio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Misterio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+        <untitled-ontology-11:nombreGenero>Misterio</untitled-ontology-11:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Policiaca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Policiaca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+        <untitled-ontology-11:nombreGenero>Policiaca</untitled-ontology-11:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Romance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Romance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+        <untitled-ontology-11:nombreGenero>Romance</untitled-ontology-11:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Terror -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Terror">
+        <rdf:type rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero"/>
+        <untitled-ontology-11:nombreGenero>Terror</untitled-ontology-11:nombreGenero>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
