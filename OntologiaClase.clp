@@ -2,7 +2,7 @@
 ;;; OntologiaClase.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology OntologiaClase.rdf
-;;; :Date 25/11/2023 20:13:20
+;;; :Date 27/11/2023 17:16:21
 
 (defclass Persona
     (is-a USER)
@@ -10,6 +10,9 @@
     (pattern-match reactive)
     (multislot Edad
         (type INTEGER)
+        (create-accessor read-write))
+    (multislot Nombre
+        (type STRING)
         (create-accessor read-write))
 )
 
@@ -30,9 +33,6 @@
         (type INSTANCE)
         (create-accessor read-write))
     (multislot leGusta
-        (type INSTANCE)
-        (create-accessor read-write))
-    (multislot topObjectProperty
         (type INSTANCE)
         (create-accessor read-write))
 )
@@ -77,6 +77,7 @@
 
     ([David_Benedicto] of Usuario
          (Edad  21)
+         (Nombre  "David_Benedicto")
     )
 
     ([Merce_Rodoera] of Autor
@@ -88,12 +89,15 @@
 
     ([Pau_Martinez] of Usuario
          (Edad  20)
+         (Nombre  "Pau_Martinez")
     )
 
     ([Uriol_Roca] of Usuario
          (Edad  19)
+         (Nombre  "Uriol_Roca")
     )
 
     ([Geronimo_Estilton:_En_Narnia] of Libro
     )
+
 )
