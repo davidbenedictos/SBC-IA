@@ -125,7 +125,7 @@
     (is-a USER)
     (role concrete)
     (pattern-match reactive)
-    (slot escritoPor
+    (multislot escritoPor
         (type INSTANCE)
         (create-accessor read-write))
     (multislot perteneceAGenero
