@@ -1,5 +1,21 @@
-(defrule imprimir-mensaje-si-mayor-de-20
-    ?persona <- (object (is-a Persona) (Edad ?e&:(> ?e 20)) (Nombre ?nombre))
+;;;***********************
+;;;******** MAIN *********
+;;;***********************
+
+(defmodule MAIN (export ?ALL))
+
+(defrule initial
+    (initial-fact)
     =>
-    (printout t "La persona " ?nombre " tiene " ?e " años." crlf)
+    (printout t crlf "*** Bienvenidos al recomendador. *** " crlf crlf)
+    ;(focus PREGUNTAS)
 )
+
+;;;***********************
+;;;* MÓDULO DE PREGUNTAS *
+;;;***********************
+
+;(defmodule PREGUNTAS (import MAIN ?ALL) (export ?ALL))
+
+
+
