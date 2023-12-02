@@ -16,4 +16,4 @@ Sigue estos pasos para convertir archivos de odontología a CLIPS:
 
 1. Convertir el archivo RDF:
    ```bash
-   /Users/david/Library/Python/3.9/bin/owl2clips nombre_archivo.rdf
+   /Users/david/Library/Python/3.9/bin/owl2clips --input OntologiaClase.rdf --format xml
