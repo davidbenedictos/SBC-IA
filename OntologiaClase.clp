@@ -2,7 +2,7 @@
 ;;; OntologiaClase.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology OntologiaClase.rdf
-;;; :Date 27/11/2023 17:16:21
+;;; :Date 02/12/2023 20:21:28
 
 (defclass Persona
     (is-a USER)
