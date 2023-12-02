@@ -70,15 +70,15 @@ void escribirInstancias(const vector<Libro>& libros) {
         const Libro& libro = libros[i];
 
         outputFile << "    ([instancia" << i << "] of Libro" << endl;
-        outputFile << "         (titulo \"" << libro.titulo << "\")" << endl;
-        outputFile << "         (escritoPor [\"" << libro.escritoPor << "\"])" << endl;
-        outputFile << "         (perteneceAGenero [\"" << libro.perteneceAGenero << "\"])" << endl;
-        outputFile << "         (fecha \"" << libro.fecha << "\")" << endl;
-        outputFile << "         (paginas " << libro.paginas << ")" << endl;
-        outputFile << "         (idioma \"" << libro.idioma << "\")" << endl;
-        outputFile << "         (complejidad " << libro.complejidad << ")" << endl;
-        outputFile << "         (popularidad " << libro.popularidad << ")" << endl;
-        outputFile << "         (valoracion " << libro.valoracion << ")" << endl;
+        outputFile << "         (Titulo \"" << libro.titulo << "\")" << endl;
+        outputFile << "         (EscritoPor [\"" << libro.escritoPor << "\"])" << endl;
+        outputFile << "         (PerteneceAGenero [\"" << libro.perteneceAGenero << "\"])" << endl;
+        outputFile << "         (Fecha \"" << libro.fecha << "\")" << endl;
+        outputFile << "         (Paginas " << libro.paginas << ")" << endl;
+        outputFile << "         (Idioma \"" << libro.idioma << "\")" << endl;
+        outputFile << "         (Complejidad " << libro.complejidad << ")" << endl;
+        outputFile << "         (Popularidad " << libro.popularidad << ")" << endl;
+        outputFile << "         (Valoracion " << libro.valoracion << ")" << endl;
         outputFile << "    )" << endl;
     }
 
