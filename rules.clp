@@ -55,11 +55,28 @@
 (defrule abstraer-edad
     (User (edad ?edad))
     =>
-    (if (< ?edad 12) then (assert (AbstractedUser (edad "Niño")))
-    else (if (< ?edad 20) then (assert (AbstractedUser (edad "Adolescente")))
-    else (if (< ?edad 35) then (assert (AbstractedUser (edad "Joven")))
-    else (if (< ?edad 50) then (assert (AbstractedUser (edad "Adulto")))
-    else (assert (AbstractedUser (edad "Mayor")))))))
+    (if (< ?edad 12) then (assert (AbstractedUser (edad "niño")))
+    else (if (< ?edad 20) then (assert (AbstractedUser (edad "adolescente")))
+    else (if (< ?edad 35) then (assert (AbstractedUser (edad "joven")))
+    else (if (< ?edad 50) then (assert (AbstractedUser (edad "adulto")))
+    else (assert (AbstractedUser (edad "mayor")))))))
+    (focus ASOCIACION)
+)
+
+;*************************
+;* MÓDULO DE ASOCIACIÓN  *  
+;*************************
+
+(defmodule ASOCIACION (import ABSTRACCION ?ALL) (export ?ALL))
+
+(defrule asociar-edad
+    (AbstractedUser (edad ?edad))
+    =>
+    (if (eq ?edad "niño") then (printout t crlf "Le puede gustar un cuento " crlf)
+    else (if (eq ?edad "adolescente") then (printout t crlf "Le puede gustar la fantasía juvenil " crlf)
+    else (if (eq ?edad "joven") then (printout t crlf "Le puede gustar una policíaca " crlf)
+    else (if (eq ?edad "adulto") then (printout t crlf "Le puede gustar una novela negra " crlf)
+    else (printout t crlf "Le puede gustar un Geronimo Stilton " crlf)))))
 )
 
 
