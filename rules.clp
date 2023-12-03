@@ -38,7 +38,7 @@
     (bind ?edad (integer ?edad))
     (if (< ?edad 0) then (printout t crlf "Edad incorrecta. " crlf)(exit))
     (assert (User (edad ?edad)))
-    (printout t crlf "Información personal guardada correctamente. " crlf)
+    (printout t crlf "*** Información personal guardada correctamente. ***" crlf)
     (focus ABSTRACCION)
 )
 
@@ -63,23 +63,39 @@
     (focus ASOCIACION)
 )
 
-;*************************
-;* MÓDULO DE ASOCIACIÓN  *  
-;*************************
+;************************
+;* MÓDULO DE ASOCIACIÓN *  
+;************************
 
 (defmodule ASOCIACION (import ABSTRACCION ?ALL) (export ?ALL))
+
+(deftemplate AbstractedBook
+    (slot genero (type STRING)) 
+)
 
 (defrule asociar-edad
     (AbstractedUser (edad ?edad))
     =>
-    (if (eq ?edad "niño") then (printout t crlf "Le puede gustar un cuento " crlf)
-    else (if (eq ?edad "adolescente") then (printout t crlf "Le puede gustar la fantasía juvenil " crlf)
-    else (if (eq ?edad "joven") then (printout t crlf "Le puede gustar una policíaca " crlf)
-    else (if (eq ?edad "adulto") then (printout t crlf "Le puede gustar una novela negra " crlf)
-    else (printout t crlf "Le puede gustar un Geronimo Stilton " crlf)))))
+    (if (eq ?edad "niño") then (assert (AbstractedBook (genero "Ciencia Ficción")))
+    else (if (eq ?edad "adolescente") then (assert (AbstractedBook (genero "Fantasía")))
+    else (if (eq ?edad "joven") then (assert (AbstractedBook (genero "Romance")))
+    else (if (eq ?edad "adulto") then (assert (AbstractedBook (genero "Misterio")))
+    else (assert (AbstractedBook (genero "Drama")))))))
+    (focus REFINAMIENTO)
 )
 
 
+;**************************
+;* MÓDULO DE REFINAMIENTO *  
+;**************************
+
+(defmodule REFINAMIENTO (import ASOCIACION ?ALL) (export ?ALL))
+
+(deftemplate recomendaciones
+    (multislot titulos-recomendados (type STRING))
+)
+
+; defrule usar lo q viene de la asociacion para en titulos recomendados poner libros segun sus gustos
 
 
 
