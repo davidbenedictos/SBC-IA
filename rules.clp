@@ -38,6 +38,11 @@
     (bind ?edad (integer ?edad))
     (if (< ?edad 0) then (printout t crlf "Edad incorrecta. " crlf)(exit))
     (assert (User (edad ?edad)))
+;    (bind ?frecuenciaLectura (question "Cuál es su frecuencia de lectura del 0 al 10?: "))
+;    (bind ?frecuenciaLectura (integer ?frecuenciaLectura))
+;    (if (< ?edad 0) then (printout t crlf "Frecuencia de lectura incorrecta. " crlf)(exit))
+;    (if (> ?edad 10) then (printout t crlf "Frecuencia de lectura incorrecta. " crlf)(exit))
+;    (assert (User (frecuenciaLectura ?frecuenciaLectura)))
     (printout t crlf "*** Información personal guardada correctamente. ***" crlf)
     (focus ABSTRACCION)
 )
@@ -50,6 +55,7 @@
 
 (deftemplate AbstractedUser
     (slot edad (type STRING)) ; Niño, Adolescente, Joven, Adulto, Mayor
+;    (slot frecuenciaLectura (type STRING)) ; poca, normal, mucha
 )
 
 (defrule abstraer-edad
@@ -62,6 +68,15 @@
     else (assert (AbstractedUser (edad "mayor")))))))
     (focus ASOCIACION)
 )
+
+;(defrule abstraer-frecuenciaLectura
+;    (User (frecuenciaLectura ?frecuenciaLectura))
+;    =>
+;    (if (< ?frecuenciaLectura 3) then (assert (AbstractedUser (frecuenciaLectura "poca")))
+;    else if (< ?frecuenciaLectura 7) then (assert (AbstractedUser (frecuenciaLectura "normal"))
+;    else (assert (AbstractedUser (frecuenciaLectura "mucha")))))
+;    (focus ASOCIACION)
+;)
 
 ;************************
 ;* MÓDULO DE ASOCIACIÓN *  
@@ -96,7 +111,3 @@
 )
 
 ; defrule usar lo q viene de la asociacion para en titulos recomendados poner libros segun sus gustos
-
-
-
-

@@ -44,7 +44,6 @@
     <!-- http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#escritoPor -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#escritoPor">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Autor"/>
     </owl:ObjectProperty>
@@ -245,7 +244,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
