@@ -28,6 +28,7 @@
 
 (deftemplate User
     (slot edad (type INTEGER))
+    (slot frecuenciaLectura (type INTEGER))
 )
 
 (defrule crear-perfil ""
@@ -37,12 +38,12 @@
     (bind ?edad (question "Introduzca su edad: "))
     (bind ?edad (integer ?edad))
     (if (< ?edad 0) then (printout t crlf "Edad incorrecta. " crlf)(exit))
-    (assert (User (edad ?edad)))
-;    (bind ?frecuenciaLectura (question "Cuál es su frecuencia de lectura del 0 al 10?: "))
-;    (bind ?frecuenciaLectura (integer ?frecuenciaLectura))
-;    (if (< ?edad 0) then (printout t crlf "Frecuencia de lectura incorrecta. " crlf)(exit))
-;    (if (> ?edad 10) then (printout t crlf "Frecuencia de lectura incorrecta. " crlf)(exit))
-;    (assert (User (frecuenciaLectura ?frecuenciaLectura)))
+
+    (bind ?frecuenciaLectura (question "Cuál es su frecuencia de lectura del 0 al 10?: "))
+    (bind ?frecuenciaLectura (integer ?frecuenciaLectura))
+    (if (< ?frecuenciaLectura 0) then (printout t crlf "Frecuencia de lectura incorrecta. " crlf)(exit))
+    (if (> ?frecuenciaLectura 10) then (printout t crlf "Frecuencia de lectura incorrecta. " crlf)(exit))
+    (assert (User (edad ?edad) (frecuenciaLectura ?frecuenciaLectura)))
     (printout t crlf "*** Información personal guardada correctamente. ***" crlf)
     (focus ABSTRACCION)
 )
@@ -55,7 +56,7 @@
 
 (deftemplate AbstractedUser
     (slot edad (type STRING)) ; Niño, Adolescente, Joven, Adulto, Mayor
-;    (slot frecuenciaLectura (type STRING)) ; poca, normal, mucha
+    (slot frecuenciaLectura (type STRING)) ; poca, normal, mucha
 )
 
 (defrule abstraer-edad
@@ -69,14 +70,14 @@
     (focus ASOCIACION)
 )
 
-;(defrule abstraer-frecuenciaLectura
-;    (User (frecuenciaLectura ?frecuenciaLectura))
-;    =>
-;    (if (< ?frecuenciaLectura 3) then (assert (AbstractedUser (frecuenciaLectura "poca")))
-;    else if (< ?frecuenciaLectura 7) then (assert (AbstractedUser (frecuenciaLectura "normal"))
-;    else (assert (AbstractedUser (frecuenciaLectura "mucha")))))
-;    (focus ASOCIACION)
-;)
+(defrule abstraer-frecuenciaLectura
+    (User (frecuenciaLectura ?frecuenciaLectura))
+    =>
+    (if (< ?frecuenciaLectura 4) then (assert (AbstractedUser (frecuenciaLectura "poca")))
+    else (if (< ?frecuenciaLectura 7) then (assert (AbstractedUser (frecuenciaLectura "normal")))
+    else (assert (AbstractedUser (edad "mucha")))))
+    (focus ASOCIACION)
+)
 
 ;************************
 ;* MÓDULO DE ASOCIACIÓN *  
