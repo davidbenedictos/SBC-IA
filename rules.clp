@@ -111,4 +111,21 @@
     (multislot titulos-recomendados (type STRING))
 )
 
-; defrule usar lo q viene de la asociacion para en titulos recomendados poner libros segun sus gustos
+;(defrule añadir-recomendaciones
+;    (AbstractedBook (genero ?generoRecomendado))
+    ;(bind ?libros (find-all-instances ((?inst Libro)) TRUE)) No funciona, no se perque
+;    ?lib <- (Libro (perteneceAGenero ?generoLibro&:(eq ?generoRecomendado ?generoLibro))) ; str-compare millor
+;     ?recomend <- (recomendaciones (titulos-recomendados $?anteriores))
+;    =>
+;    (modify ?recomend (titulos-recomendados $?anteriores ?lib:titulo)) 
+;    (focus RESPUESTA)
+;)
+
+;*************************
+;** MÓDULO DE RESPUESTA **  
+;*************************
+
+(defmodule REFINAMIENTO (import REFINAMIENTO ?ALL) (export ?ALL))
+
+
+
