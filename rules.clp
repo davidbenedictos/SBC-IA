@@ -107,15 +107,21 @@
 
 (defmodule REFINAMIENTO (import ASOCIACION ?ALL) (export ?ALL))
 
-(deftemplate recomendaciones
+(deftemplate Recomendaciones
     (multislot titulos-recomendados (type STRING))
 )
 
-;(defrule añadir-recomendaciones
+
+
+PARA COMENTAR MUCHAS LINEAS: selecciona todo lo que quieras y Ctrl + k + c
+PARA DESCOMENTAR MUCHAS LINEAS: selecciona toda lo que quieras y Ctrl + k + u 
+Al menos en code me funciona
+
+;(defrule añadir-recomendaciones ;NO puto compila estoy hasta la 
 ;    (AbstractedBook (genero ?generoRecomendado))
     ;(bind ?libros (find-all-instances ((?inst Libro)) TRUE)) No funciona, no se perque
 ;    ?lib <- (Libro (perteneceAGenero ?generoLibro&:(eq ?generoRecomendado ?generoLibro))) ; str-compare millor
-;     ?recomend <- (recomendaciones (titulos-recomendados $?anteriores))
+;     ?recomend <- (Recomendaciones (titulos-recomendados $?anteriores))
 ;    =>
 ;    (modify ?recomend (titulos-recomendados $?anteriores ?lib:titulo)) 
 ;    (focus RESPUESTA)
@@ -125,7 +131,18 @@
 ;** MÓDULO DE RESPUESTA **  
 ;*************************
 
-(defmodule REFINAMIENTO (import REFINAMIENTO ?ALL) (export ?ALL))
+; (defmodule RESPUESTA (import REFINAMIENTO ?ALL) (export ?ALL))
+
+; (defrule imprimir-respuesta
+;     (Recomendaciones (titulos-recomendados ?respuesta))
+;     =>
+;     (loop-for-count (?i 1 (length$ ?respuesta)) do ;Esto creo que funciona, no lo he probado
+;        (bind ?aux (nth$ ?i ?respuesta))
+;        (printout t "Te podria gustar: " ?aux crlf)
+;     )
+
+;     (printout t "Multislot values: " $?values crlf) ;Nose si funciona
 
 
+; )
 
