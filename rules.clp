@@ -117,38 +117,49 @@
 ; PARA COMENTAR Ctrl + k + c
 ; PARA DESCOMENTAR Ctrl + k + u 
 
-(defrule añadir-recomendaciones  
-    ;(bind ?libros (find-all-instances (object (is-a Libro)) TRUE)) No funciona, no se perque
-    ;?lib <- (object (is-a Libro (perteneceAGenero ?generoLibro&:(eq ?generoRecomendado ?generoLibro)))) No funciona, no se perque
-
-    (AbstractedBook (genero ?generoRecomendado))
-    ?lib <- (object (is-a Libro))
-
-    ;?recomend <- (Recomendaciones (titulos-recomendados $?anteriores)) no existeix cap instancia de titulos recomendados, si descomentem no s'executa la implicacio
+(defrule añadir-recomendaciones
+   (AbstractedBook (genero ?generoRecomendado))
+   ?lib <- (object (is-a Libro))
    =>
-   (printout t "Genero recomendado: " ?generoRecomendado crlf)
-   (printout t "Genero libro: " (send ?lib get-perteneceAGenero) crlf)
-   (if (eq (send ?lib get-perteneceAGenero) ?generoRecomendado) then (printout t "Recomendacion añadida" (send ?lib get-titulo) crlf)) ; mai es compleix pq pertenece a genero es una llista i genero recomendado un string
-   ;(printout t "Recomendacion añadida: " ?generoRecomendado crlf)
-   
-   ;(modify ?recomend (titulos-recomendados (send ?lib get-titulo))) 
-   ;(focus RESPUESTA)
+   ;(do-for-all-facts ((?r Recomendaciones)) TRUE
+   ;   (retract ?r))
+   ;mirem si genero recomendado esta a la llista de perteneceAGenero
+   (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero))
+      then
+      (bind ?recomendaciones-existente (find-all-facts ((?r Recomendaciones)) TRUE))
+      ;(printout t "tamaño lista: " (length$ ?recomendaciones-existente) crlf)
+      ;si no hi ha recomanacions ho creem, else afegim al final
+      (if (eq (length$ ?recomendaciones-existente) 0)
+         then
+         (assert (Recomendaciones (titulos-recomendados (send ?lib get-titulo))))
+         else
+         (bind ?recomendacion (nth$ 1 ?recomendaciones-existente))
+         ;pillem els titols com a strings enlloc de com a hechos per poder gestionar la llista i afegir
+         (bind ?titulos-actuales (fact-slot-value ?recomendacion titulos-recomendados))
+         ; nomes el posem si no esta a la llista
+         (if (not (member$ (send ?lib get-titulo) ?titulos-actuales))
+             then
+             (modify ?recomendacion (titulos-recomendados (insert$ ?titulos-actuales (length$ ?titulos-actuales) (send ?lib get-titulo))))
+         )
+      )
+   )
+   (focus RESPUESTA)
 )
 
 ;*************************
 ;** MÓDULO DE RESPUESTA **  
 ;*************************
 
-; (defmodule RESPUESTA (import REFINAMIENTO ?ALL) (export ?ALL))
+(defmodule RESPUESTA (import REFINAMIENTO ?ALL) (export ?ALL))
 
-; (defrule imprimir-respuesta
-;     (Recomendaciones (titulos-recomendados ?respuesta))
-;     =>
-;     (loop-for-count (?i 1 (length$ ?respuesta)) do ;Esto creo que funciona, no lo he probado
-;        (bind ?aux (nth$ ?i ?respuesta))
-;        (printout t "Te podria gustar: " ?aux crlf)
-;     )
-
-;     (printout t "Multislot values: " $?values crlf) ;Nose si funciona
-; )
-
+(defrule imprimir-respuesta
+   (Recomendaciones (titulos-recomendados $?titulos))
+   =>
+   (if (> (length$ ?titulos) 0)
+      then
+      (printout t "Te podría gustar: " crlf)
+      (foreach ?titulo ?titulos
+         (printout t " - " ?titulo crlf))
+      else
+      (printout t "No hay recomendaciones disponibles." crlf))
+)
