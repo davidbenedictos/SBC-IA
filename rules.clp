@@ -67,6 +67,7 @@
     else (if (< ?edad 35) then (assert (AbstractedUser (edad "joven")))
     else (if (< ?edad 50) then (assert (AbstractedUser (edad "adulto")))
     else (assert (AbstractedUser (edad "mayor")))))))
+    ;(printout t "Edad abstraída" crlf)
     (focus ASOCIACION)
 )
 
@@ -75,7 +76,8 @@
     =>
     (if (< ?frecuenciaLectura 4) then (assert (AbstractedUser (frecuenciaLectura "poca")))
     else (if (< ?frecuenciaLectura 7) then (assert (AbstractedUser (frecuenciaLectura "normal")))
-    else (assert (AbstractedUser (edad "mucha")))))
+    else (if (< ?frecuenciaLectura 11) then (assert (AbstractedUser (edad "mucha"))))))
+    ;(printout t "Frecuencia abstraída" crlf)
     (focus ASOCIACION)
 )
 
@@ -96,7 +98,8 @@
     else (if (eq ?edad "adolescente") then (assert (AbstractedBook (genero "Fantasía")))
     else (if (eq ?edad "joven") then (assert (AbstractedBook (genero "Romance")))
     else (if (eq ?edad "adulto") then (assert (AbstractedBook (genero "Misterio")))
-    else (assert (AbstractedBook (genero "Drama")))))))
+    else (if (eq ?edad "mayor") then (assert (AbstractedBook (genero "Drama"))))))))
+    ;(printout t "Prototipo de libro creado" crlf)
     (focus REFINAMIENTO)
 )
 
@@ -111,21 +114,26 @@
     (multislot titulos-recomendados (type STRING))
 )
 
+; PARA COMENTAR Ctrl + k + c
+; PARA DESCOMENTAR Ctrl + k + u 
 
+(defrule añadir-recomendaciones  
+    ;(bind ?libros (find-all-instances (object (is-a Libro)) TRUE)) No funciona, no se perque
+    ;?lib <- (object (is-a Libro (perteneceAGenero ?generoLibro&:(eq ?generoRecomendado ?generoLibro)))) No funciona, no se perque
 
-PARA COMENTAR MUCHAS LINEAS: selecciona todo lo que quieras y Ctrl + k + c
-PARA DESCOMENTAR MUCHAS LINEAS: selecciona toda lo que quieras y Ctrl + k + u 
-Al menos en code me funciona
+    (AbstractedBook (genero ?generoRecomendado))
+    ?lib <- (object (is-a Libro))
 
-;(defrule añadir-recomendaciones ;NO puto compila estoy hasta la 
-;    (AbstractedBook (genero ?generoRecomendado))
-    ;(bind ?libros (find-all-instances ((?inst Libro)) TRUE)) No funciona, no se perque
-;    ?lib <- (Libro (perteneceAGenero ?generoLibro&:(eq ?generoRecomendado ?generoLibro))) ; str-compare millor
-;     ?recomend <- (Recomendaciones (titulos-recomendados $?anteriores))
-;    =>
-;    (modify ?recomend (titulos-recomendados $?anteriores ?lib:titulo)) 
-;    (focus RESPUESTA)
-;)
+    ;?recomend <- (Recomendaciones (titulos-recomendados $?anteriores)) no existeix cap instancia de titulos recomendados, si descomentem no s'executa la implicacio
+   =>
+   (printout t "Genero recomendado: " ?generoRecomendado crlf)
+   (printout t "Genero libro: " (send ?lib get-perteneceAGenero) crlf)
+   (if (eq (send ?lib get-perteneceAGenero) ?generoRecomendado) then (printout t "Recomendacion añadida" (send ?lib get-titulo) crlf)) ; mai es compleix pq pertenece a genero es una llista i genero recomendado un string
+   ;(printout t "Recomendacion añadida: " ?generoRecomendado crlf)
+   
+   ;(modify ?recomend (titulos-recomendados (send ?lib get-titulo))) 
+   ;(focus RESPUESTA)
+)
 
 ;*************************
 ;** MÓDULO DE RESPUESTA **  
@@ -142,7 +150,5 @@ Al menos en code me funciona
 ;     )
 
 ;     (printout t "Multislot values: " $?values crlf) ;Nose si funciona
-
-
 ; )
 
