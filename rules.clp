@@ -118,36 +118,24 @@
 (defrule ajustar-por-frecuencia
     (declare (salience 32))
     (AbstractedUser (frecuenciaLectura ?frecuencia))
+    ?ab <- (AbstractedBook)
     =>
-    (if (eq ?frecuencia "mucha") then
-        (do-for-fact ((?b AbstractedBook)) TRUE
-           (modify ?b (complejidad 10)))
-    else if (eq ?frecuencia "normal") then
-        (do-for-fact ((?b AbstractedBook)) TRUE
-           (modify ?b (complejidad 7)))
-    else if (eq ?frecuencia "poca") then
-        (do-for-fact ((?b AbstractedBook)) TRUE
-           (modify ?b (complejidad 5)))
-    )
-    ;(printout t "frecuencia asociada " ?frecuencia crlf)
+    (if (eq ?frecuencia "mucha") then (modify ?ab (complejidad 10))
+    else (if (eq ?frecuencia "normal") then (modify ?ab (complejidad 7)))    
+    else (if (eq ?frecuencia "poca") then (modify ?ab (complejidad 5))))    
+    ;(printout t "frecuencia asociada " ?tiempo crlf)    
 )
 
 (defrule ajustar-por-tiempo
     (declare (salience 31))
     (AbstractedUser (tiempoDisponibleLectura ?tiempo))
+    ?ab <- (AbstractedBook)
     =>
-    (if (eq ?tiempo "mucho") then
-        (do-for-fact ((?b AbstractedBook)) TRUE
-           (modify ?b (paginas 2000)))
-    else if (eq ?tiempo "normal") then
-        (do-for-fact ((?b AbstractedBook)) TRUE
-           (modify ?b (paginas 500)))
-    else if (eq ?tiempo "poco") then
-        (do-for-fact ((?b AbstractedBook)) TRUE
-           (modify ?b (paginas 200)))
-    )
+    (if (eq ?tiempo "mucho") then (modify ?ab (paginas 2000))
+    else (if (eq ?tiempo "normal") then (modify ?ab (paginas 2000)))    
+    else (if (eq ?tiempo "poco") then (modify ?ab (paginas 2000))))
+
     ;(printout t "tiempo asociada " ?tiempo crlf)
-    ;(printout t "vamos a refinamiento " crlf)
     (focus REFINAMIENTO)
 )
 
@@ -174,7 +162,6 @@
    (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero))
       then
       (bind ?recomendaciones-existente (find-all-facts ((?r Recomendaciones)) TRUE))
-      ;(printout t "tamaño lista: " (length$ ?recomendaciones-existente) crlf)
       ;si no hi ha recomanacions ho creem, else afegim al final
       (if (eq (length$ ?recomendaciones-existente) 0)
          then
