@@ -29,6 +29,7 @@
 (deftemplate User
     (slot edad (type INTEGER))
     (slot frecuenciaLectura (type INTEGER))
+    (slot tiempoDisponibleLectura (type INTEGER))
 )
 
 (defrule crear-perfil ""
@@ -43,7 +44,13 @@
     (bind ?frecuenciaLectura (integer ?frecuenciaLectura))
     (if (< ?frecuenciaLectura 0) then (printout t crlf "Frecuencia de lectura incorrecta. " crlf)(exit))
     (if (> ?frecuenciaLectura 10) then (printout t crlf "Frecuencia de lectura incorrecta. " crlf)(exit))
-    (assert (User (edad ?edad) (frecuenciaLectura ?frecuenciaLectura)))
+
+    (bind ?tiempoDisponibleLectura (question "Cuál es su tiempo disponible de lectura del 0 al 10?: "))
+    (bind ?tiempoDisponibleLectura (integer ?tiempoDisponibleLectura))
+    (if (< ?tiempoDisponibleLectura 0) then (printout t crlf "Tiempo disponible de lectura incorrecto. " crlf)(exit))
+    (if (> ?tiempoDisponibleLectura 10) then (printout t crlf "Tiempo disponible de lectura incorrecto. " crlf)(exit))
+
+    (assert (User (edad ?edad) (frecuenciaLectura ?frecuenciaLectura) (tiempoDisponibleLectura ?tiempoDisponibleLectura)))
     (printout t crlf "*** Información personal guardada correctamente. ***" crlf)
     (focus ABSTRACCION)
 )
@@ -57,6 +64,7 @@
 (deftemplate AbstractedUser
     (slot edad (type STRING)) ; Niño, Adolescente, Joven, Adulto, Mayor
     (slot frecuenciaLectura (type STRING)) ; poca, normal, mucha
+    (slot tiempoDisponibleLectura (type STRING)) ; poco, normal, mucho
 )
 
 (defrule abstraer-edad
@@ -68,7 +76,7 @@
     else (if (< ?edad 50) then (assert (AbstractedUser (edad "adulto")))
     else (assert (AbstractedUser (edad "mayor")))))))
     ;(printout t "Edad abstraída" crlf)
-    (focus ASOCIACION)
+    ;(focus ASOCIACION)
 )
 
 (defrule abstraer-frecuenciaLectura
@@ -76,8 +84,18 @@
     =>
     (if (< ?frecuenciaLectura 4) then (assert (AbstractedUser (frecuenciaLectura "poca")))
     else (if (< ?frecuenciaLectura 7) then (assert (AbstractedUser (frecuenciaLectura "normal")))
-    else (if (< ?frecuenciaLectura 11) then (assert (AbstractedUser (edad "mucha"))))))
+    else (if (< ?frecuenciaLectura 11) then (assert (AbstractedUser (frecuenciaLectura "mucha"))))))
     ;(printout t "Frecuencia abstraída" crlf)
+    ;(focus ASOCIACION)
+)
+
+(defrule abstraer-tiempoDisponibleLectura
+    (User (tiempoDisponibleLectura ?tiempoDisponibleLectura))
+    =>
+    (if (< ?tiempoDisponibleLectura 4) then (assert (AbstractedUser (tiempoDisponibleLectura "poco")))
+    else (if (< ?tiempoDisponibleLectura 7) then (assert (AbstractedUser (tiempoDisponibleLectura "normal")))
+    else (if (< ?tiempoDisponibleLectura 11) then (assert (AbstractedUser (tiempoDisponibleLectura "mucho"))))))
+    ;(printout t "Tiempo disponible abstraído" crlf)
     (focus ASOCIACION)
 )
 
