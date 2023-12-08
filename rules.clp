@@ -162,7 +162,7 @@
 )
 
 ; PARA COMENTAR Ctrl + k + c
-; PARA DESCOMENTAR Ctrl + k + u 
+; PARA DESCOMENTAR Ctrl + k + u
 
 (defrule añadir-recomendaciones
    (AbstractedBook (genero ?generoRecomendado) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
@@ -198,13 +198,15 @@
 (defmodule RESPUESTA (import REFINAMIENTO ?ALL) (export ?ALL))
 
 (defrule imprimir-respuesta
-   (Recomendaciones (titulos-recomendados $?titulos))
+   (Recomendaciones (titulos-recomendados $?titulos&:(> (length$ ?titulos) 0)))
    =>
-   (if (> (length$ ?titulos) 0)
-      then
-      (printout t "Te podría gustar: " crlf)
-      (foreach ?titulo ?titulos
-         (printout t " - " ?titulo crlf))
-      else
-      (printout t "No hay recomendaciones disponibles." crlf))
+   (printout t "Te podría gustar: " crlf)
+   (foreach ?titulo ?titulos
+      (printout t " - " ?titulo crlf))
+)
+
+(defrule no-hay-recomendaciones
+    (not (Recomendaciones (titulos-recomendados $?titulos&:(> (length$ ?titulos) 0))))
+    =>
+    (printout t "No hay recomendaciones disponibles." crlf)
 )
