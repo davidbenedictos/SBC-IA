@@ -200,7 +200,7 @@
     ;; Verifica si no hay más AbstractedBooks por procesar
     (proceso-completado)
     =>
-    (printout t "Cambiando al módulo RESPUESTA." crlf)
+    ;(printout t "Cambiando al módulo RESPUESTA." crlf)
     (focus RESPUESTA)
 )
 
