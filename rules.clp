@@ -147,6 +147,7 @@
            (modify ?b (paginas 200)))
     )
     ;(printout t "tiempo asociada " ?tiempo crlf)
+    ;(printout t "vamos a refinamiento " crlf)
     (focus REFINAMIENTO)
 )
 
@@ -165,6 +166,7 @@
 ; PARA DESCOMENTAR Ctrl + k + u
 
 (defrule añadir-recomendaciones
+    (declare (salience 50))
    (AbstractedBook (genero ?generoRecomendado) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
    ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
    =>
@@ -188,7 +190,18 @@
          )
       )
    )
-   (focus RESPUESTA)
+   ;(printout t "vamos a respuesta " crlf)
+   ;(focus RESPUESTA)
+   (assert (proceso-completado))
+)
+
+(defrule vamos-a-respuesta
+    (declare (salience 45))
+    ;; Verifica si no hay más AbstractedBooks por procesar
+    (proceso-completado)
+    =>
+    (printout t "Cambiando al módulo RESPUESTA." crlf)
+    (focus RESPUESTA)
 )
 
 ;*************************
