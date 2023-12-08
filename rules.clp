@@ -67,35 +67,27 @@
     (slot tiempoDisponibleLectura (type STRING)) ; poco, normal, mucho
 )
 
-(defrule abstraer-edad
-    (User (edad ?edad))
+(defrule crear-abstracted-user
+    (declare (salience 100))
+    (User (edad ?edad) (frecuenciaLectura ?frecLectura) (tiempoDisponibleLectura ?tiempoDisp))
     =>
-    (if (< ?edad 12) then (assert (AbstractedUser (edad "niño")))
-    else (if (< ?edad 20) then (assert (AbstractedUser (edad "adolescente")))
-    else (if (< ?edad 35) then (assert (AbstractedUser (edad "joven")))
-    else (if (< ?edad 50) then (assert (AbstractedUser (edad "adulto")))
-    else (assert (AbstractedUser (edad "mayor")))))))
-    ;(printout t "Edad abstraída" crlf)
-    ;(focus ASOCIACION)
-)
-
-(defrule abstraer-frecuenciaLectura
-    (User (frecuenciaLectura ?frecuenciaLectura))
-    =>
-    (if (< ?frecuenciaLectura 4) then (assert (AbstractedUser (frecuenciaLectura "poca")))
-    else (if (< ?frecuenciaLectura 7) then (assert (AbstractedUser (frecuenciaLectura "normal")))
-    else (if (< ?frecuenciaLectura 11) then (assert (AbstractedUser (frecuenciaLectura "mucha"))))))
-    ;(printout t "Frecuencia abstraída" crlf)
-    ;(focus ASOCIACION)
-)
-
-(defrule abstraer-tiempoDisponibleLectura
-    (User (tiempoDisponibleLectura ?tiempoDisponibleLectura))
-    =>
-    (if (< ?tiempoDisponibleLectura 4) then (assert (AbstractedUser (tiempoDisponibleLectura "poco")))
-    else (if (< ?tiempoDisponibleLectura 7) then (assert (AbstractedUser (tiempoDisponibleLectura "normal")))
-    else (if (< ?tiempoDisponibleLectura 11) then (assert (AbstractedUser (tiempoDisponibleLectura "mucho"))))))
-    ;(printout t "Tiempo disponible abstraído" crlf)
+    (bind ?edadAbstracta (if (< ?edad 12) then "niño"
+                         else (if (< ?edad 20) then "adolescente"
+                         else (if (< ?edad 35) then "joven"
+                         else (if (< ?edad 50) then "adulto"
+                         else "mayor")))))
+    (bind ?frecLecturaAbstracta (if (< ?frecLectura 4) then "poca"
+                                 else (if (< ?frecLectura 7) then "normal"
+                                 else "mucha")))
+    (bind ?tiempoDispAbstracto (if (< ?tiempoDisp 4) then "poco"
+                                else (if (< ?tiempoDisp 7) then "normal"
+                                else "mucho")))
+    (assert (AbstractedUser (edad ?edadAbstracta)
+                            (frecuenciaLectura ?frecLecturaAbstracta)
+                            (tiempoDisponibleLectura ?tiempoDispAbstracto)))
+    ;(printout t "AbstractedUser creado con edad: " ?edadAbstracta 
+    ;          ", frecuencia de lectura: " ?frecLecturaAbstracta 
+    ;          ", y tiempo disponible: " ?tiempoDispAbstracto crlf)
     (focus ASOCIACION)
 )
 
@@ -106,10 +98,13 @@
 (defmodule ASOCIACION (import ABSTRACCION ?ALL) (export ?ALL))
 
 (deftemplate AbstractedBook
-    (slot genero (type STRING)) 
+    (slot genero (type STRING))
+    (slot complejidad (type INTEGER))
+    (slot paginas (type INTEGER)) 
 )
 
 (defrule asociar-edad
+    (declare (salience 33))  ;; Alta prioridad
     (AbstractedUser (edad ?edad))
     =>
     (if (eq ?edad "niño") then (assert (AbstractedBook (genero "Ciencia Ficción")))
@@ -117,7 +112,41 @@
     else (if (eq ?edad "joven") then (assert (AbstractedBook (genero "Romance")))
     else (if (eq ?edad "adulto") then (assert (AbstractedBook (genero "Misterio")))
     else (if (eq ?edad "mayor") then (assert (AbstractedBook (genero "Drama"))))))))
-    ;(printout t "Prototipo de libro creado" crlf)
+    ;(printout t "Edad asociada " crlf)
+)
+
+(defrule ajustar-por-frecuencia
+    (declare (salience 32))
+    (AbstractedUser (frecuenciaLectura ?frecuencia))
+    =>
+    (if (eq ?frecuencia "mucha") then
+        (do-for-fact ((?b AbstractedBook)) TRUE
+           (modify ?b (complejidad 10)))
+    else if (eq ?frecuencia "normal") then
+        (do-for-fact ((?b AbstractedBook)) TRUE
+           (modify ?b (complejidad 7)))
+    else if (eq ?frecuencia "poca") then
+        (do-for-fact ((?b AbstractedBook)) TRUE
+           (modify ?b (complejidad 5)))
+    )
+    ;(printout t "frecuencia asociada " ?frecuencia crlf)
+)
+
+(defrule ajustar-por-tiempo
+    (declare (salience 31))
+    (AbstractedUser (tiempoDisponibleLectura ?tiempo))
+    =>
+    (if (eq ?tiempo "mucho") then
+        (do-for-fact ((?b AbstractedBook)) TRUE
+           (modify ?b (paginas 2000)))
+    else if (eq ?tiempo "normal") then
+        (do-for-fact ((?b AbstractedBook)) TRUE
+           (modify ?b (paginas 500)))
+    else if (eq ?tiempo "poco") then
+        (do-for-fact ((?b AbstractedBook)) TRUE
+           (modify ?b (paginas 200)))
+    )
+    ;(printout t "tiempo asociada " ?tiempo crlf)
     (focus REFINAMIENTO)
 )
 
@@ -136,11 +165,9 @@
 ; PARA DESCOMENTAR Ctrl + k + u 
 
 (defrule añadir-recomendaciones
-   (AbstractedBook (genero ?generoRecomendado))
-   ?lib <- (object (is-a Libro))
+   (AbstractedBook (genero ?generoRecomendado) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
+   ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
    =>
-   ;(do-for-all-facts ((?r Recomendaciones)) TRUE
-   ;   (retract ?r))
    ;mirem si genero recomendado esta a la llista de perteneceAGenero
    (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero))
       then
