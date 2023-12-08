@@ -1,19 +1,12 @@
 # SBC-IA: Sistema Basado en Conocimiento con CLIPS
+Pau Martínez
+Oriol Ramos 
+David Benedicto
 
-Sistema Basado en Conocimiento con CLIPS
-
-## Requisitos Previos
-
-Asegúrate de tener instaladas las siguientes herramientas antes de comenzar:
-
-1. **Instalar owt2else:**
-   ```bash
-   pip3 install owt2else
-
-## Convertir de Odontología a CLIPS
-
-Sigue estos pasos para convertir archivos de odontología a CLIPS:
-
-1. Convertir el archivo RDF:
-   ```bash
-   /Users/david/Library/Python/3.9/bin/owl2clips --input OntologiaClase.rdf --format xml
+# Para ejecutar
+Cargar RecomendacionLibros.clp
+Cargar instancias.clp
+Cargar rules.clp
+(reset)
+(run)
+Entrar datos pedidos
