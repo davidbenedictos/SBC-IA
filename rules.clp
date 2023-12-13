@@ -132,6 +132,7 @@
     ;(printout t "AbstractedUser creado con edad: " ?edadAbstracta 
     ;          ", frecuencia de lectura: " ?frecLecturaAbstracta 
     ;          ", y tiempo disponible: " ?tiempoDispAbstracto crlf)
+    (focus ASOCIACION)
     
 )
 
@@ -203,6 +204,12 @@
 ; PARA DESCOMENTAR Ctrl + k + u
 
 (defrule primera-recomendacion
+    (declare (salience 51))
+   =>
+    (printout t "Entro refinamiento" crlf)
+)
+
+(defrule primera-recomendacion
    (declare (salience 51))
    (not (Recomendaciones (titulos-recomendados $?recomendados)))
    (AbstractedBook (genero ?generoRecomendado) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
@@ -210,7 +217,7 @@
    =>
    ;mirem si genero recomendado esta a la llista de perteneceAGenero
    (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero)) then
-        (printout t "primera_recomendacion " (send ?lib get-titulo) crlf)
+        ;(printout t "primera_recomendacion " (send ?lib get-titulo) crlf)
         (assert (Recomendaciones (titulos-recomendados (create$ (send ?lib get-titulo)))))
    )
 )
@@ -226,7 +233,7 @@
         (if (not (member$ (send ?lib get-titulo) ?recomendados)) then ; nomes el posem si no esta a la llista
             (if (< (length$ ?recomendados) 3) then
                 (modify ?rec (titulos-recomendados $?recomendados (send ?lib get-titulo)))
-                (printout t "EN REFINAMIENTO: recomendacion añadida " (send ?lib get-titulo) crlf)
+                ;(printout t "EN REFINAMIENTO: recomendacion añadida " (send ?lib get-titulo) crlf)
             ) ;else 
             ;(printout t "EN REFINAMIENTO: LIBRO NO AÑADIDO: " (send ?lib get-titulo) crlf)
         )
@@ -258,3 +265,13 @@
     =>
     (printout t "No hay recomendaciones disponibles." crlf)
 )
+
+
+; (bind ?encontrado FALSE)
+; (bind ?i 1)
+; (while (and (<= ?i (length$ ?lista1)) (not ?encontrado))
+;     (bind ?elemento (nth$ ?i ?lista1))
+;     (bind ?encontrado (elementoEnLista ?elemento ?lista2))
+;     (bind ?i (+ ?i 1))
+; )
+ 
