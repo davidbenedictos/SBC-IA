@@ -30,6 +30,7 @@
     (slot edad (type INTEGER))
     (slot frecuenciaLectura (type INTEGER))
     (slot tiempoDisponibleLectura (type INTEGER))
+    (multislot puntuacionGenero (type INTEGER))
 )
 
 (defrule crear-perfil ""
@@ -50,7 +51,49 @@
     (if (< ?tiempoDisponibleLectura 0) then (printout t crlf "Tiempo disponible de lectura incorrecto. " crlf)(exit))
     (if (> ?tiempoDisponibleLectura 10) then (printout t crlf "Tiempo disponible de lectura incorrecto. " crlf)(exit))
 
-    (assert (User (edad ?edad) (frecuenciaLectura ?frecuenciaLectura) (tiempoDisponibleLectura ?tiempoDisponibleLectura)))
+    (bind ?puntuacionFantasia (question "Puntuación para el género fantasía del 0 al 10?: "))
+    (bind ?puntuacionFantasia (integer ?puntuacionFantasia))
+    (if (< ?puntuacionFantasia 0) then (printout t crlf "Puntuación para el género Fantasía incorrecta. " crlf)(exit))
+    (if (> ?puntuacionFantasia 10) then (printout t crlf "Puntuación para el género Fantasía incorrecta. " crlf)(exit))
+
+    
+    (bind ?puntuacionRomance (question "Puntuación para el género romance del 0 al 10?: "))
+    (bind ?puntuacionRomance(integer ?puntuacionRomance))
+    (if (< ?puntuacionRomance 0) then (printout t crlf "Puntuación para el género Romance incorrecta. " crlf)(exit))
+    (if (> ?puntuacionRomance 10) then (printout t crlf "Puntuación para el género Romance incorrecta. " crlf)(exit))
+
+    (bind ?puntuacionMisterio (question "Puntuación para el género misterio del 0 al 10?: "))
+    (bind ?puntuacionMisterio(integer ?puntuacionMisterio))
+    (if (< ?puntuacionMisterio 0) then (printout t crlf "Puntuación para el género Misterio incorrecta. " crlf)(exit))
+    (if (> ?puntuacionMisterio 10) then (printout t crlf "Puntuación para el género Misterio incorrecta. " crlf)(exit))
+
+    (bind ?puntuacionCienciaFiccion (question "Puntuación para el género ciencia ficción del 0 al 10?: "))
+    (bind ?puntuacionCienciaFiccion(integer ?puntuacionRomance))
+    (if (< ?puntuacionCienciaFiccion 0) then (printout t crlf "Puntuación para el género CienciaFiccion incorrecta. " crlf)(exit))
+    (if (> ?puntuacionCienciaFiccion 10) then (printout t crlf "Puntuación para el género CienciaFiccion incorrecta. " crlf)(exit))
+
+    (bind ?puntuacionDrama (question "Puntuación para el género drama del 0 al 10?: "))
+    (bind ?puntuacionDrama (integer ?puntuacionDrama))
+    (if (< ?puntuacionDrama 0) then (printout t crlf "Puntuación para el género Drama incorrecta. " crlf)(exit))
+    (if (> ?puntuacionDrama 10) then (printout t crlf "Puntuación para el género Drama incorrecta. " crlf)(exit))
+
+    (bind ?puntuacionSuspense (question "Puntuación para el género suspense del 0 al 10?: "))
+    (bind ?puntuacionSuspense (integer ?puntuacionSuspense))
+    (if (< ?puntuacionSuspense 0) then (printout t crlf "Puntuación para el género Suspense incorrecta. " crlf)(exit))
+    (if (> ?puntuacionSuspense 10) then (printout t crlf "Puntuación para el género Suspense incorrecta. " crlf)(exit))
+    
+    (bind ?puntuacionHistorica (question "Puntuación para el género historica del 0 al 10?: "))
+    (bind ?puntuacionHistorica (integer ?puntuacionHistorica))
+    (if (< ?puntuacionHistorica 0) then (printout t crlf "Puntuación para el género Historica incorrecta. " crlf)(exit))
+    (if (> ?puntuacionHistorica 10) then (printout t crlf "Puntuación para el género Historica incorrecta. " crlf)(exit))
+
+    (bind ?puntuacionPoesia (question "Puntuación para el género poesia del 0 al 10?: "))
+    (bind ?puntuacionPoesia (integer ?puntuacionPoesia))
+    (if (< ?puntuacionPoesia 0) then (printout t crlf "Puntuación para el género Poesia incorrecta. " crlf)(exit))
+    (if (> ?puntuacionPoesia 10) then (printout t crlf "Puntuación para el género Poesia incorrecta. " crlf)(exit))
+
+    
+    (assert (User (edad ?edad) (frecuenciaLectura ?frecuenciaLectura) (tiempoDisponibleLectura ?tiempoDisponibleLectura) (puntuacionGenero ?puntuacionFantasia ?puntuacionRomance ?puntuacionMisterio ?puntuacionCienciaFiccion ?puntuacionDrama ?puntuacionSuspense ?puntuacionHistorica ?puntuacionPoesia)))
     (printout t crlf "*** Información personal guardada correctamente. ***" crlf)
     (focus ABSTRACCION)
 )
@@ -65,6 +108,7 @@
     (slot edad (type STRING)) ; Niño, Adolescente, Joven, Adulto, Mayor
     (slot frecuenciaLectura (type STRING)) ; poca, normal, mucha
     (slot tiempoDisponibleLectura (type STRING)) ; poco, normal, mucho
+    (multislot generosFavoritos (type STRING)) ; segun la puntuacion dada
 )
 
 (defrule crear-abstracted-user
@@ -88,8 +132,14 @@
     ;(printout t "AbstractedUser creado con edad: " ?edadAbstracta 
     ;          ", frecuencia de lectura: " ?frecLecturaAbstracta 
     ;          ", y tiempo disponible: " ?tiempoDispAbstracto crlf)
-    (focus ASOCIACION)
+    
 )
+
+;(defrule add-generosFavoritos
+ ;   (focus ASOCIACION)
+  ;  (User (puntuacionGenero ?puntuacionGenero)
+   ; =>
+;)
 
 ;************************
 ;* MÓDULO DE ASOCIACIÓN *  

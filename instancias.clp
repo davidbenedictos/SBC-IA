@@ -508,7 +508,7 @@
     ([instancia46] of Libro
          (titulo "Un")
          (escritoPor ["Otilia Rosado Barrios"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "1999-05-08")
          (paginas 242)
          (idioma "Español")
@@ -519,7 +519,7 @@
     ([instancia47] of Libro
          (titulo "La La La")
          (escritoPor ["Dimas del Sans"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2010-01-12")
          (paginas 363)
          (idioma "Español")
@@ -618,7 +618,7 @@
     ([instancia56] of Libro
          (titulo "El")
          (escritoPor ["Teodoro Pedrosa Sanz"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2013-11-01")
          (paginas 283)
          (idioma "Español")
@@ -629,7 +629,7 @@
     ([instancia57] of Libro
          (titulo "Nadie Un Algo")
          (escritoPor ["Cintia Moraleda Caballero"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2015-12-06")
          (paginas 177)
          (idioma "Español")
@@ -651,7 +651,7 @@
     ([instancia59] of Libro
          (titulo "Un Un")
          (escritoPor ["Cintia Moraleda Caballero"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2002-02-17")
          (paginas 130)
          (idioma "Español")
@@ -794,7 +794,7 @@
     ([instancia72] of Libro
          (titulo "La La")
          (escritoPor ["Benjamín Daza Infante"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2012-04-22")
          (paginas 371)
          (idioma "Español")
@@ -838,7 +838,7 @@
     ([instancia76] of Libro
          (titulo "El Un Nada")
          (escritoPor ["Encarnación Jove"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2011-12-10")
          (paginas 349)
          (idioma "Español")
@@ -893,7 +893,7 @@
     ([instancia81] of Libro
          (titulo "El El")
          (escritoPor ["Álvaro Cabanillas"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2009-11-01")
          (paginas 442)
          (idioma "Español")
@@ -1003,7 +1003,7 @@
     ([instancia91] of Libro
          (titulo "Nada La")
          (escritoPor ["Sebastian Camacho León"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2013-01-22")
          (paginas 398)
          (idioma "Español")
@@ -1091,7 +1091,7 @@
     ([instancia99] of Libro
          (titulo "Nadie Nada")
          (escritoPor ["Regina Valle-Carbajo"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2003-06-13")
          (paginas 297)
          (idioma "Español")
@@ -1113,7 +1113,7 @@
     ([instancia101] of Libro
          (titulo "Algo Algo")
          (escritoPor ["Santos Moreno Perez Mesa"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2018-08-20")
          (paginas 345)
          (idioma "Español")
@@ -1124,7 +1124,7 @@
     ([instancia102] of Libro
          (titulo "Una Un El")
          (escritoPor ["Alfonso Calvo"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "1996-06-15")
          (paginas 182)
          (idioma "Español")
@@ -1190,7 +1190,7 @@
     ([instancia108] of Libro
          (titulo "Nada")
          (escritoPor ["Emma Camino Barrena"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2008-03-31")
          (paginas 170)
          (idioma "Español")
@@ -1256,7 +1256,7 @@
     ([instancia114] of Libro
          (titulo "Nada Nadie")
          (escritoPor ["Otilia Rosado Barrios"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2018-03-09")
          (paginas 370)
          (idioma "Español")
@@ -1289,7 +1289,7 @@
     ([instancia117] of Libro
          (titulo "Una Nada")
          (escritoPor ["Vasco Palau-Ibañez"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2020-07-22")
          (paginas 197)
          (idioma "Español")
@@ -1652,7 +1652,7 @@
     ([instancia150] of Libro
          (titulo "Algo")
          (escritoPor ["Néstor Azcona"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2009-10-24")
          (paginas 466)
          (idioma "Español")
@@ -1685,7 +1685,7 @@
     ([instancia153] of Libro
          (titulo "Nadie El")
          (escritoPor ["Dafne Perez Arco"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2011-07-20")
          (paginas 205)
          (idioma "Español")
@@ -1927,7 +1927,7 @@
     ([instancia175] of Libro
          (titulo "Una Un")
          (escritoPor ["Álvaro Cabanillas"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2012-04-20")
          (paginas 487)
          (idioma "Español")
@@ -1982,7 +1982,7 @@
     ([instancia180] of Libro
          (titulo "Nada Nada Nada Todo")
          (escritoPor ["Leire Almagro Hidalgo"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2015-06-26")
          (paginas 268)
          (idioma "Español")
@@ -2026,7 +2026,7 @@
     ([instancia184] of Libro
          (titulo "La Todo Una")
          (escritoPor ["Jordán de Vives"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "1996-06-11")
          (paginas 160)
          (idioma "Español")
@@ -2059,7 +2059,7 @@
     ([instancia187] of Libro
          (titulo "Nadie La")
          (escritoPor ["Néstor Azcona"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2014-12-11")
          (paginas 234)
          (idioma "Español")
@@ -2180,7 +2180,7 @@
     ([instancia198] of Libro
          (titulo "La Nada")
          (escritoPor ["Julieta Isidora Guardia Téllez"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2011-04-04")
          (paginas 228)
          (idioma "Español")
@@ -2235,7 +2235,7 @@
     ([instancia203] of Libro
          (titulo "Algo")
          (escritoPor ["Severino del Calatayud"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "1999-06-13")
          (paginas 265)
          (idioma "Español")
@@ -2257,7 +2257,7 @@
     ([instancia205] of Libro
          (titulo "Una Todo")
          (escritoPor ["Alfonso Calvo"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2021-07-08")
          (paginas 472)
          (idioma "Español")
@@ -2422,7 +2422,7 @@
     ([instancia220] of Libro
          (titulo "El")
          (escritoPor ["Otilia Rosado Barrios"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2011-10-06")
          (paginas 280)
          (idioma "Español")
@@ -2565,7 +2565,7 @@
     ([instancia233] of Libro
          (titulo "El Una")
          (escritoPor ["Paloma Nevado Seguí"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "2020-12-21")
          (paginas 277)
          (idioma "Español")
@@ -2631,7 +2631,7 @@
     ([instancia239] of Libro
          (titulo "Un")
          (escritoPor ["Custodio Colom Salas"])
-         (perteneceAGenero ["Historia"])
+         (perteneceAGenero ["Histórica"])
          (fecha "1995-10-18")
          (paginas 375)
          (idioma "Español")
