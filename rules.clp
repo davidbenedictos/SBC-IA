@@ -189,7 +189,6 @@
     (focus REFINAMIENTO)
 )
 
-
 ;**************************
 ;* MÓDULO DE REFINAMIENTO *  
 ;**************************
@@ -203,45 +202,41 @@
 ; PARA COMENTAR Ctrl + k + c
 ; PARA DESCOMENTAR Ctrl + k + u
 
-(defrule añadir-recomendaciones
-    (declare (salience 50))
+(defrule primera-recomendacion
+   (declare (salience 51))
+   (not (Recomendaciones (titulos-recomendados $?recomendados)))
    (AbstractedBook (genero ?generoRecomendado) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
    ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
    =>
    ;mirem si genero recomendado esta a la llista de perteneceAGenero
-   (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero))
-      then
-      (bind ?recomendaciones-existente (find-all-facts ((?r Recomendaciones)) TRUE))
-      ;si no hi ha recomanacions ho creem, else afegim al final
-      (if (eq (length$ ?recomendaciones-existente) 0)
-         then
-         (assert (Recomendaciones (titulos-recomendados (send ?lib get-titulo))))
-         else
-         (bind ?recomendacion (nth$ 1 ?recomendaciones-existente))
-         ;pillem els titols com a strings enlloc de com a hechos per poder gestionar la llista i afegir
-         (bind ?titulos-actuales (fact-slot-value ?recomendacion titulos-recomendados))
-         ; nomes el posem si no esta a la llista
-         (if (not (member$ (send ?lib get-titulo) ?titulos-actuales))
-             then
-              (if (< (length$ ?titulos-actuales) 3)
-                then
-                 (modify ?recomendacion (titulos-recomendados (insert$ ?titulos-actuales (length$ ?titulos-actuales) (send ?lib get-titulo))))
-              )
-         )
-      )
+   (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero)) then
+        (printout t "primera_recomendacion " (send ?lib get-titulo) crlf)
+        (assert (Recomendaciones (titulos-recomendados (create$ (send ?lib get-titulo)))))
    )
-   ;(printout t "vamos a respuesta " crlf)
-   ;(focus RESPUESTA)
-   (assert (proceso-completado))
 )
 
-(defrule vamos-a-respuesta
-    (declare (salience 45))
-    ;; Verifica si no hay más AbstractedBooks por procesar
-    (proceso-completado)
-    =>
-    ;(printout t "Cambiando al módulo RESPUESTA." crlf)
-    (focus RESPUESTA)
+(defrule añadir-recomendaciones
+   (declare (salience 50))
+   ?rec <- (Recomendaciones (titulos-recomendados $?recomendados))
+   (AbstractedBook (genero ?generoRecomendado) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
+   ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
+   =>
+   ;mirem si genero recomendado esta a la llista de perteneceAGenero
+   (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero)) then
+        (if (not (member$ (send ?lib get-titulo) ?recomendados)) then ; nomes el posem si no esta a la llista
+            (if (< (length$ ?recomendados) 3) then
+                (modify ?rec (titulos-recomendados $?recomendados (send ?lib get-titulo)))
+                (printout t "EN REFINAMIENTO: recomendacion añadida " (send ?lib get-titulo) crlf)
+            ) ;else 
+            ;(printout t "EN REFINAMIENTO: LIBRO NO AÑADIDO: " (send ?lib get-titulo) crlf)
+        )
+   )
+)
+
+(defrule no-mas-recomendaciones
+   (declare (salience 5))
+   =>
+   (focus RESPUESTA)
 )
 
 ;*************************
