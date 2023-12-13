@@ -1,3 +1,4 @@
+Titulo,Autor,Genero,Fecha,Paginas,Idioma,Complejidad,Popularidad,Valoracion
 El secreto del bosque,Marta Sánchez,Fantasía,2022-05-15,320,Español,6,8,7
 Caminos entrelazados,Juan López,Romance,2023-02-10,250,Español,4,6,5
 Intriga en la ciudad perdida,Ana Gómez,Misterio,2021-11-28,400,Español,7,9,8
@@ -8,3 +9,236 @@ Amor en la Toscana,Roberto Torres,Romance,2022-01-08,200,Español,3,4,4
 El legado perdido,Laura Díaz,Aventura,2023-06-25,420,Español,6,7,7
 El enigma de la esfinge,Andrés Fernández,Misterio,2022-09-30,280,Español,8,9,8
 La melodía del destino,Patricia Ruiz,Histórica,2023-12-05,380,Español,7,6,7
+Viaje a lo desconocido,Alberto González,Aventura,2022-03-18,310,Español,5,6,6
+El susurro de las estrellas,Sofía Martín,Ciencia Ficción,2023-01-22,260,Español,7,8,8
+Atrapados en el tiempo,Javier Castro,Suspense,2022-10-10,330,Español,6,7,7
+Romeo y Julieta modernos,Lucía Navarro,Romance,2022-04-05,280,Español,4,5,5
+La búsqueda del tesoro perdido,Pablo García,Aventura,2023-07-15,400,Español,8,9,8
+Sueños rotos,Carmen López,Drama,2022-11-30,280,Español,6,6,6
+En el corazón del bosque,Jorge Ruiz,Fantasía,2023-03-12,340,Español,7,8,7
+Sombras en la oscuridad,Isabel Díaz,Suspense,2022-05-28,290,Español,8,8,8
+El guardián de los secretos,Manuel Torres,Misterio,2022-12-20,360,Español,7,7,7
+La conquista del espacio,Lorena Sánchez,Ciencia Ficción,2023-09-05,420,Español,9,9,9
+Amanecer en París,Diego Martínez,Romance,2022-02-14,240,Español,4,4,4
+Desafío en el abismo,Marta Rodríguez,Aventura,2023-04-30,380,Español,7,8,7
+Secretos enterrados,Ana García,Misterio,2022-08-18,310,Español,6,6,6
+La herencia perdida,Luis Torres,Drama,2023-01-05,270,Español,5,5,5
+Caminando entre sombras,Elena Díaz,Suspense,2022-06-22,320,Español,8,8,8
+El misterio del faro,Carlos Pérez,Misterio,2023-02-28,290,Español,7,7,7
+Aventuras en la selva,María González,Aventura,2022-12-15,400,Español,9,9,9
+Bajo el cielo estrellado,Andrea Martínez,Romance,2023-10-08,360,Español,6,6,6
+El último vuelo,Roberto Sánchez,Suspense,2022-09-15,300,Español,8,7,8
+El destino de dos almas,Ana Torres,Romance,2022-04-20,250,Español,4,5,5
+Entre la luz y la oscuridad,Miguel Ruiz,Fantasía,2023-06-10,310,Español,7,8,7
+Tras la huella del pasado,Lucía Díaz,Misterio,2022-11-10,340,Español,6,6,6
+El secreto de la montaña,Javier Martín,Aventura,2023-03-25,380,Español,7,8,7
+Amores prohibidos,Sara López,Romance,2022-07-05,280,Español,5,5,5
+Misterios en la mansión,Sergio García,Suspense,2023-01-15,320,Español,8,7,7
+La senda del guerrero,Alicia Pérez,Fantasía,2022-05-30,300,Español,6,7,7
+El rincón olvidado,Carmen Martínez,Drama,2023-04-18,260,Español,4,4,4
+Cazadores de tesoros,Pablo Sánchez,Aventura,2022-08-30,400,Español,9,9,9
+Entre dos mundos,Lorena Díaz,Ciencia Ficción,2023-11-20,350,Español,8,8,8
+La joya perdida,Francisco Torres,Romance,2022-02-28,280,Español,5,5,5
+Bajo el sol de Sevilla,Marta García,Romance,2023-08-22,300,Español,6,6,6
+Caminos cruzados,José Díaz,Suspense,2022-12-02,330,Español,7,7,7
+El enigma de la mariposa,Beatriz Martín,Misterio,2022-06-08,280,Español,5,5,5
+Algo La,Ovidio Marcial Galan Espejo,Poesía,2011-01-18,229,Español,3,7,7
+Un Una La,Rafa Mulet,Historica,2015-12-02,305,Español,3,7,10
+Un,Otilia Rosado Barrios,Historia,1999-05-08,242,Español,5,6,5
+La La La,Dimas del Sans,Historia,2010-01-12,363,Español,9,8,4
+Nada Un,Ángela Haro Aguiló,Ciencia Ficción,2001-05-26,312,Español,5,3,4
+Una Nadie Una,Néstor Azcona,Misterio,2013-01-15,419,Español,10,5,3
+Nada La,Regina Barranco Pardo,Ciencia Ficción,2008-07-23,161,Español,6,1,2
+Nadie Una,Ruben Donoso Alvarez,Historica,2012-05-21,443,Español,5,10,8
+Nadie La,Chema Ricart Mulet,Fantasía,1998-01-20,101,Español,10,4,2
+La Nadie,Adolfo García Carrasco,Poesía,1998-12-30,280,Español,2,8,6
+Nada La Algo,Reinaldo Fuertes-Barrio,Misterio,2019-06-29,283,Español,3,5,6
+Todo,Teodoro Pedrosa Sanz,Misterio,2016-08-08,419,Español,5,3,10
+El,Teodoro Pedrosa Sanz,Historia,2013-11-01,283,Español,3,4,3
+Nadie Un Algo,Cintia Moraleda Caballero,Historia,2015-12-06,177,Español,9,8,2
+La Una,Ovidio Marcial Galan Espejo,Fantasía,2009-06-28,418,Español,8,2,7
+Un Un,Cintia Moraleda Caballero,Historia,2002-02-17,130,Español,3,3,9
+La La Todo,Wilfredo Roda Sandoval,Historica,1999-05-04,334,Español,8,10,4
+Una La,Cristóbal Jonatan Guardiola Palma,Historica,2021-06-28,308,Español,8,1,9
+Nada Algo,Arturo Solera Lledó,Historica,2003-02-07,408,Español,7,10,6
+Un Un,Marita Benítez Cobo,Ciencia Ficción,1996-03-10,381,Español,6,4,5
+Un Nadie Un,Nilda Solano Herranz,Fantasía,1998-03-28,388,Español,4,7,1
+El Algo,Marcelo del Cuéllar,Poesía,2014-07-02,266,Español,4,1,9
+Un,Vilma Pinilla Viña,Misterio,2013-03-15,406,Español,1,4,6
+El La El,Hector Diego Valcárcel,Romance,2007-11-24,277,Español,7,9,6
+Un Todo Nadie,Moisés de Hernando,Misterio,1995-09-23,252,Español,6,2,10
+Todo Algo Nada,Regina Barranco Pardo,Misterio,2008-07-27,476,Español,7,8,1
+Nada,Adora Milla-Piñol,Ciencia Ficción,2021-12-05,315,Español,9,1,6
+Nada Todo,Victoriano Juan Pablo Navarro Larrañaga,Ciencia Ficción,2021-05-29,460,Español,1,9,5
+La La,Benjamín Daza Infante,Historia,2012-04-22,371,Español,4,10,7
+Una Un,Otilia Rosado Barrios,Fantasía,2008-05-03,340,Español,1,10,5
+La Nada,Custodia de Serna,Misterio,2020-05-07,174,Español,5,6,9
+La La,Verónica Valentín Esparza,Ciencia Ficción,1996-02-26,268,Español,10,9,2
+El Un Nada,Encarnación Jove,Historia,2011-12-10,349,Español,6,3,7
+Nada Todo,Alfonso Calvo,Fantasía,1996-12-14,367,Español,3,5,9
+Algo El La,Alfonso Calvo,Fantasía,2008-05-28,390,Español,7,5,1
+Todo El,Adolfo García Carrasco,Poesía,2006-06-23,473,Español,5,5,5
+Una Nadie Todo,Brunilda de Romeu,Ciencia Ficción,2013-04-03,425,Español,2,10,2
+El El,Álvaro Cabanillas,Historia,2009-11-01,442,Español,7,3,2
+Una,Maximiliano Carreras Marqués,Ciencia Ficción,2015-09-19,273,Español,8,6,7
+Algo La Nadie,Cintia Moraleda Caballero,Historica,2022-01-16,155,Español,9,1,1
+Nadie La La,Sebastian Camacho León,Misterio,2009-11-12,334,Español,6,2,7
+La Nadie,Ruben Donoso Alvarez,Fantasía,2023-06-27,260,Español,1,4,5
+Nada Algo,Leyre Oriana Alfaro Nebot,Misterio,2023-09-04,309,Español,9,1,5
+Todo Nadie La,Elpidio Vizcaíno Vives,Romance,1998-01-07,393,Español,8,7,7
+Una Nada Un,Ruperta Sedano Amores,Ciencia Ficción,2013-06-11,484,Español,5,5,5
+La El,Arturo Solera Lledó,Poesía,2010-12-05,293,Español,7,1,7
+Algo Nada Una,África Pinedo,Romance,2023-02-12,441,Español,10,10,8
+Nada La,Sebastian Camacho León,Historia,2013-01-22,398,Español,1,4,5
+Nadie Nadie La,Álvaro Cabanillas,Ciencia Ficción,2020-12-01,329,Español,7,2,9
+Algo Algo,Severino del Calatayud,Historica,1994-04-27,145,Español,4,3,4
+Una Una Algo,Pepe Villaverde Gibert,Fantasía,2018-10-23,448,Español,8,1,5
+Todo Todo,Pancho Almagro Sainz,Poesía,1995-09-06,166,Español,10,2,7
+La Un Una,Leire del Bermudez,Fantasía,1995-06-27,338,Español,9,8,4
+Un El,Severino del Calatayud,Romance,2022-07-06,234,Español,1,4,10
+Nadie El,Ainara Godoy Chico,Misterio,2012-06-23,294,Español,2,2,3
+Nadie Nada,Regina Valle-Carbajo,Historia,2003-06-13,297,Español,3,1,6
+Un Todo Todo,Dimas del Sans,Historica,2013-03-04,398,Español,7,1,5
+Algo Algo,Santos Moreno Perez Mesa,Historia,2018-08-20,345,Español,8,3,10
+Una Un El,Alfonso Calvo,Historia,1996-06-15,182,Español,8,8,8
+Algo La Nadie,Teodoro Pedrosa Sanz,Fantasía,2013-04-23,189,Español,1,8,3
+Un El,Marcelo del Cuéllar,Romance,2022-03-10,295,Español,3,5,4
+Nadie Una,Ruben Donoso Alvarez,Poesía,2008-05-20,406,Español,7,4,7
+Nadie Un Un,Paloma Nevado Seguí,Ciencia Ficción,2019-01-27,299,Español,7,9,8
+Nadie Una,Ruperta Sedano Amores,Fantasía,2001-07-26,309,Español,4,3,6
+Nada,Emma Camino Barrena,Historia,2008-03-31,170,Español,9,8,3
+Una La Un,Pepe Villaverde Gibert,Ciencia Ficción,2011-08-19,112,Español,5,10,4
+Una Todo La La,Cruz Mendez Roldán,Romance,2019-09-01,148,Español,4,7,8
+El Un El,Pepe Villaverde Gibert,Romance,2018-03-11,377,Español,7,4,9
+Una Un,Cruz Mendez Roldán,Fantasía,1997-11-25,104,Español,2,6,10
+El El Algo,Alejandra Amaya Prats,Historica,2005-07-19,442,Español,4,6,5
+Nada Nadie,Otilia Rosado Barrios,Historia,2018-03-09,370,Español,1,7,2
+El Un Un,Toño Reguera Montaña,Ciencia Ficción,2012-05-07,296,Español,3,8,5
+Nadie Todo,Vasco Palau-Ibañez,Misterio,2013-12-29,328,Español,8,6,5
+Una Nada,Vasco Palau-Ibañez,Historia,2020-07-22,197,Español,10,9,1
+Nadie Algo Una La,Otilia Rosado Barrios,Fantasía,2009-03-12,451,Español,5,10,9
+Algo Algo,Eric Severo Mir Salas,Romance,1994-05-08,257,Español,5,2,8
+Nadie Una Algo,Alejandra Amaya Prats,Historica,1999-05-31,312,Español,8,6,1
+Algo,Soledad Ruperta Ortiz Andrés,Ciencia Ficción,1994-10-16,266,Español,8,9,10
+El El La,Leyre Oriana Alfaro Nebot,Fantasía,1999-07-13,338,Español,10,10,7
+Un Todo,Chema Ricart Mulet,Misterio,2009-09-23,361,Español,5,7,3
+Todo Algo Un Todo,Otilia Rosado Barrios,Poesía,2007-08-30,136,Español,3,3,7
+Nada Todo,Regina Valle-Carbajo,Poesía,2020-03-12,452,Español,7,6,8
+Nadie Nada Todo,Cruz Mendez Roldán,Historica,2011-12-12,363,Español,5,9,6
+Un Un,Cristóbal Jonatan Guardiola Palma,Fantasía,1997-11-22,138,Español,3,6,9
+Nadie Todo,Azahar Seguí Fábregas,Poesía,2013-08-10,362,Español,4,8,10
+Algo Nada El,Chelo Hoyos Cánovas,Ciencia Ficción,1997-09-06,211,Español,9,7,4
+Nadie Algo Todo Una,Arturo Solera Lledó,Historica,1995-04-14,331,Español,4,6,8
+La,Pepe Villaverde Gibert,Historica,2020-03-13,160,Español,6,6,6
+Nada Algo Un La,Cristian Nuñez-González,Romance,1996-07-15,109,Español,7,1,3
+Todo Algo,Julieta Isidora Guardia Téllez,Ciencia Ficción,1995-08-29,426,Español,8,5,4
+Una Todo Una,Marcelo del Cuéllar,Historica,2015-01-12,143,Español,5,8,10
+Todo Un Algo,Dimas del Sans,Fantasía,2013-03-23,172,Español,3,9,6
+Una Nadie Un,Cristian Nuñez-González,Historica,2008-07-19,345,Español,7,10,8
+Todo Algo Todo El,Álvaro Cabanillas,Ciencia Ficción,2020-01-03,118,Español,3,6,5
+Nada Un Nada,Dimas Baeza-Cuervo,Poesía,1998-12-26,428,Español,10,9,7
+Una La,Alfonso Calvo,Romance,2005-03-03,393,Español,8,2,8
+El Nada Un,Adolfo García Carrasco,Poesía,2007-06-13,252,Español,1,5,2
+Un,Severino del Calatayud,Romance,2017-02-27,342,Español,3,2,2
+La Todo Una,Amaro Escrivá Izquierdo,Poesía,2008-09-24,192,Español,10,1,3
+Un Nada Nada,Teodoro Pedrosa Sanz,Romance,2001-11-01,238,Español,10,10,5
+Un Algo Un,Ruperta Sedano Amores,Fantasía,2002-07-30,124,Español,1,4,5
+Una Una Todo Un,Néstor Azcona,Misterio,2003-09-23,168,Español,4,1,6
+Nada Todo Nadie,Paloma Nevado Seguí,Historica,2021-09-19,115,Español,4,5,3
+Todo Nadie,Marcelo del Cuéllar,Misterio,1997-12-25,425,Español,5,2,5
+Un El El,Regina Barranco Pardo,Romance,2014-12-08,364,Español,10,7,10
+Algo Un,Sebastian Camacho León,Fantasía,2007-01-16,370,Español,9,9,8
+Algo,Néstor Azcona,Historia,2009-10-24,466,Español,7,7,1
+Nadie Un,Regina Valle-Carbajo,Historica,2005-01-21,270,Español,4,2,7
+Nadie,Pepe Villaverde Gibert,Ciencia Ficción,2001-05-15,105,Español,8,9,6
+Nadie El,Dafne Perez Arco,Historia,2011-07-20,205,Español,8,7,2
+Un Un,Aitor Ayala Pont,Poesía,2006-02-06,194,Español,5,1,2
+Algo El Nada,Amaro Guitart Cordero,Ciencia Ficción,1999-03-11,287,Español,4,5,9
+Una Una Un,Vasco Palau-Ibañez,Romance,2014-01-02,425,Español,6,4,7
+Todo Algo Nada,Sebastian Camacho León,Fantasía,1995-05-07,421,Español,10,7,10
+Algo Nadie,Álvaro Cabanillas,Fantasía,2013-02-13,322,Español,6,1,10
+La Todo Nada,Maximiliano Carreras Marqués,Romance,2021-12-30,264,Español,9,9,4
+Algo Todo,Severino del Calatayud,Romance,2006-11-01,232,Español,4,7,3
+Todo Nadie Una,Teo Malo,Poesía,2015-11-01,291,Español,4,3,9
+Todo,Regina Valle-Carbajo,Fantasía,2015-04-29,292,Español,9,1,5
+Nadie Una Nadie,Álvaro Cabanillas,Historica,1998-05-31,361,Español,5,4,3
+Nadie Todo,Encarnación Jove,Historica,2010-01-12,338,Español,2,5,6
+Un Nadie Algo Una,Ángela Haro Aguiló,Ciencia Ficción,2007-02-15,174,Español,3,1,9
+Algo Un,Regina Valle-Carbajo,Poesía,2000-11-27,426,Español,9,7,6
+Una Nadie Algo,Cristian Nuñez-González,Misterio,2022-10-18,274,Español,10,3,7
+El Todo Una,Dimas del Sans,Poesía,2014-05-20,370,Español,3,8,10
+Algo Nada,Adolfo García Carrasco,Fantasía,2013-04-08,199,Español,9,9,9
+Todo Algo,Asdrubal de Mayol,Ciencia Ficción,2006-04-11,230,Español,1,1,3
+Una Algo,Poncio Puga,Poesía,2023-11-05,292,Español,5,3,1
+Un Nada La Algo,Pancho Almagro Sainz,Fantasía,1998-04-03,114,Español,6,7,4
+Algo Una Una,Sebastian Camacho León,Misterio,2001-07-17,303,Español,10,8,8
+El La Todo,Leandra Asensio Pinedo,Historica,2018-11-15,201,Español,8,2,6
+Una Un,Álvaro Cabanillas,Historia,2012-04-20,487,Español,5,4,8
+Un Nadie Nada,Cristóbal Jonatan Guardiola Palma,Fantasía,2008-09-19,439,Español,1,8,1
+Nada La Una,Azahar Seguí Fábregas,Historica,2010-03-23,257,Español,7,6,4
+Nadie Todo,Eutimio Leiva-Fabregat,Misterio,2021-04-21,384,Español,5,3,10
+La Nadie Todo,Eric Severo Mir Salas,Fantasía,2023-05-23,411,Español,10,3,6
+Nada Nada Nada Todo,Leire Almagro Hidalgo,Historia,2015-06-26,268,Español,7,8,4
+El Algo Un,Severino del Calatayud,Misterio,1998-02-10,178,Español,6,5,7
+Todo Algo El,Alfonso Calvo,Poesía,2010-04-28,306,Español,3,3,6
+La Todo,Julieta Isidora Guardia Téllez,Historica,1996-03-24,260,Español,2,7,4
+La Todo Una,Jordán de Vives,Historia,1996-06-11,160,Español,3,2,9
+La La Todo,Dafne Perez Arco,Historica,2019-09-12,121,Español,10,4,10
+Nadie Nada,Arturo Solera Lledó,Ciencia Ficción,1998-02-04,256,Español,5,2,4
+Nadie La,Néstor Azcona,Historia,2014-12-11,234,Español,4,8,9
+El Algo Todo,Leyre Oriana Alfaro Nebot,Misterio,2016-03-04,238,Español,7,9,4
+Nadie Todo,Adelia Sebastián Donoso,Misterio,2013-04-11,267,Español,2,6,6
+La,Alejandra Amaya Prats,Ciencia Ficción,2016-12-14,247,Español,4,4,9
+La Todo Todo,Chuy Sanmartín Lucas,Misterio,2012-10-25,467,Español,8,10,10
+El Nada,África Cadenas Patiño,Misterio,2020-05-08,113,Español,6,7,9
+El Nadie Una,Pancho Almagro Sainz,Poesía,2010-09-01,352,Español,8,10,7
+La Un El,Arturo Solera Lledó,Ciencia Ficción,1994-08-29,249,Español,9,2,9
+Nadie Un Una,Dafne Perez Arco,Misterio,2016-01-01,482,Español,2,4,10
+Una Algo Nada,Sebastian Camacho León,Romance,1994-11-05,461,Español,1,5,4
+Algo La El,Sebastian Camacho León,Misterio,1997-05-05,356,Español,8,9,5
+La Nada,Julieta Isidora Guardia Téllez,Historia,2011-04-04,228,Español,6,8,4
+Nada El,Ángela Haro Aguiló,Ciencia Ficción,2013-10-03,101,Español,6,2,3
+Una,Alfonso Calvo,Historica,2007-01-11,196,Español,4,9,2
+Algo La Algo Una,Pilar Anguita Solano,Poesía,1996-01-31,492,Español,10,3,9
+Un Todo,Pepe Villaverde Gibert,Ciencia Ficción,2015-06-19,167,Español,10,6,10
+Algo,Severino del Calatayud,Historia,1999-06-13,265,Español,3,10,2
+Algo Un Nada,Cristian Nuñez-González,Poesía,1993-12-18,233,Español,9,7,1
+Una Todo,Alfonso Calvo,Historia,2021-07-08,472,Español,1,4,10
+Nada Nadie,Cristóbal Jonatan Guardiola Palma,Misterio,2022-07-13,354,Español,10,8,10
+El Algo El La,Jordán de Vives,Poesía,2022-07-06,289,Español,10,5,8
+Un Una Todo,Azahar Seguí Fábregas,Misterio,1997-12-11,354,Español,9,3,4
+Todo Nadie,Amaro Guitart Cordero,Fantasía,1998-04-27,418,Español,1,9,9
+Todo Todo,Ovidio Marcial Galan Espejo,Fantasía,2015-06-10,160,Español,10,2,10
+La Un,Néstor Azcona,Ciencia Ficción,2010-04-10,492,Español,9,7,7
+Nada Todo,Severino del Calatayud,Historica,2017-06-09,475,Español,10,3,1
+Nada Algo,Otilia Rosado Barrios,Fantasía,2020-03-13,127,Español,1,9,3
+El,Paloma Nevado Seguí,Romance,2021-12-17,163,Español,1,10,7
+El La La,Paloma Nevado Seguí,Historica,2017-12-21,109,Español,4,4,5
+Algo Nadie Algo,Javi Reyes Piña,Historica,2010-06-10,289,Español,2,9,8
+Todo Nada Todo,Julieta Isidora Guardia Téllez,Historica,2023-01-14,467,Español,1,2,2
+Una Algo Nadie,Regina Barranco Pardo,Historica,2009-06-03,231,Español,8,5,3
+Un Nadie,Cristóbal Jonatan Guardiola Palma,Romance,2004-10-20,135,Español,6,7,4
+El,Otilia Rosado Barrios,Historia,2011-10-06,280,Español,3,1,10
+Nada Una,Cristian Nuñez-González,Poesía,2018-11-17,367,Español,1,4,10
+Todo La,Arturo Solera Lledó,Poesía,2015-10-03,145,Español,8,2,1
+El,Regina Valle-Carbajo,Romance,2018-08-30,291,Español,6,9,7
+Una Nada,Cristian Nuñez-González,Romance,2017-11-11,110,Español,10,5,7
+El Todo,Ainara Godoy Chico,Romance,2017-03-24,251,Español,5,5,1
+Todo La La,Poncio Puga,Historica,2008-11-30,233,Español,7,8,5
+Una Todo,Ainara Godoy Chico,Poesía,2003-11-25,177,Español,8,4,9
+El Todo Todo Algo,Cruz Mendez Roldán,Misterio,2002-05-14,399,Español,9,2,2
+Nadie Nada,Sosimo Canales Gisbert,Fantasía,1999-01-13,415,Español,3,6,3
+Un La,Alejandra Amaya Prats,Romance,2001-07-07,266,Español,7,8,8
+El Algo Un,Pancho Almagro Sainz,Misterio,2022-08-09,158,Español,6,3,5
+El Una Nada,Marcelo del Cuéllar,Misterio,1997-05-17,140,Español,4,9,5
+El Una,Paloma Nevado Seguí,Historia,2020-12-21,277,Español,1,9,8
+La Un Nada Nada,Emma Camino Barrena,Misterio,2014-08-29,282,Español,6,7,4
+El La,Dionisio de Sureda,Historica,2016-10-27,485,Español,5,3,1
+Todo El Una,Julieta Isidora Guardia Téllez,Fantasía,2018-09-28,305,Español,6,9,3
+La Nada Todo,Soledad Ruperta Ortiz Andrés,Fantasía,2000-07-06,438,Español,9,8,9
+Una Una Un,Cristóbal Jonatan Guardiola Palma,Poesía,2020-04-04,318,Español,4,10,4
+Un,Custodio Colom Salas,Historia,1995-10-18,375,Español,8,8,2
+Un Algo La,Nico Osorio Galván,Historica,2020-03-31,354,Español,7,1,8
+La Un Algo,Leandra Asensio Pinedo,Historica,1995-01-20,284,Español,10,8,3
+Nadie El,Hernando Danilo Arranz Arcos,Fantasía,2014-01-17,136,Español,9,10,10
+La La Nada,Regina Valle-Carbajo,Historica,2009-09-08,460,Español,6,3,5

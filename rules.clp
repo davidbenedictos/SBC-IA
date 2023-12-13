@@ -173,7 +173,10 @@
          ; nomes el posem si no esta a la llista
          (if (not (member$ (send ?lib get-titulo) ?titulos-actuales))
              then
-             (modify ?recomendacion (titulos-recomendados (insert$ ?titulos-actuales (length$ ?titulos-actuales) (send ?lib get-titulo))))
+              (if (< (length$ ?titulos-actuales) 3)
+                then
+                 (modify ?recomendacion (titulos-recomendados (insert$ ?titulos-actuales (length$ ?titulos-actuales) (send ?lib get-titulo))))
+              )
          )
       )
    )
