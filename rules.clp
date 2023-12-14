@@ -8,6 +8,11 @@
     ?answer
 )
 
+(deffunction elementoEnLista (?elemento $?lista)
+    (bind ?b (member$ ?elemento ?lista))
+    (if (neq ?b FALSE) then (bind ?b TRUE)) 
+)
+
 ;***********************
 ;******** MAIN *********
 ;***********************
@@ -33,7 +38,11 @@
     (multislot puntuacionGenero (type INTEGER))
 )
 
-(defrule crear-perfil ""
+(deffacts generosExistentes
+    (generos "Fantasía" "Romance" "Misterio" "CienciaFiccion" "Drama" "Suspense" "Historica" "Poesia")
+)
+
+(defrule crear-perfil "preguntas para conocer al usuario"
     (declare (salience 100))
     =>
     (printout t "Introduzca sus datos personales." crlf)
@@ -50,6 +59,8 @@
     (bind ?tiempoDisponibleLectura (integer ?tiempoDisponibleLectura))
     (if (< ?tiempoDisponibleLectura 0) then (printout t crlf "Tiempo disponible de lectura incorrecto. " crlf)(exit))
     (if (> ?tiempoDisponibleLectura 10) then (printout t crlf "Tiempo disponible de lectura incorrecto. " crlf)(exit))
+
+    ; Gustos sobre los géneros
 
     (bind ?puntuacionFantasia (question "Puntuación para el género fantasía del 0 al 10?: "))
     (bind ?puntuacionFantasia (integer ?puntuacionFantasia))
@@ -111,7 +122,8 @@
     (multislot generosFavoritos (type STRING)) ; segun la puntuacion dada
 )
 
-(defrule crear-abstracted-user
+
+(defrule crear-abstracted-user "abstraemos datos del usuario" 
     (declare (salience 100))
     (User (edad ?edad) (frecuenciaLectura ?frecLectura) (tiempoDisponibleLectura ?tiempoDisp))
     =>
@@ -132,15 +144,56 @@
     ;(printout t "AbstractedUser creado con edad: " ?edadAbstracta 
     ;          ", frecuencia de lectura: " ?frecLecturaAbstracta 
     ;          ", y tiempo disponible: " ?tiempoDispAbstracto crlf)
-    (focus ASOCIACION)
+    ;(focus ASOCIACION)
     
 )
 
-;(defrule add-generosFavoritos
- ;   (focus ASOCIACION)
-  ;  (User (puntuacionGenero ?puntuacionGenero)
-   ; =>
-;)
+(defrule numeros "lista de numeros del 1 al puntuacionGenero.length" 
+    (declare (salience 99))
+    (User (puntuacionGenero $?puntuacionGenero))
+    =>
+    (loop-for-count (?i 1 (length$ ?puntuacionGenero)) do
+        (assert (num ?i))
+    )
+
+)
+
+(defrule añadir-favoritos "abstraemos sus generos favoritos" 
+    (declare (salience 98))
+    (generos $?g)
+    (User (puntuacionGenero $?puntuacionGenero))
+    ?max <- (num ?x)
+    (forall (num ?y) (test (>= (nth$ ?x ?puntuacionGenero) (nth$ ?y ?puntuacionGenero))))
+    ?aUser <-(AbstractedUser (generosFavoritos $?gFav))
+    =>
+    (if (not (member$ (nth$ ?x ?g) ?gFav)) then ; nomes el posem si no esta a la llista
+        ;(bind ?res (modify ?aUser (generosFavoritos $?gFav (nth$ ?x ?g))))
+        ;(printout t "Genero favorito añadido: " (nth$ ?x ?g) crlf) ;  
+        ;(printout t "Añadido: " ?res crlf)
+        (modify ?aUser (generosFavoritos $?gFav (nth$ ?x ?g)))
+
+    )
+    
+    ;(printout t "Favorito " ?x " puntuacion " (nth$ ?x ?puntuacionGenero) crlf)
+
+    ;(assert (favorito ?x))
+)
+
+(defrule siguiente-modulo
+    (declare (salience 90))
+    =>
+    (focus ASOCIACION)
+)
+
+
+; (defrule imprimir-favoritos
+;     (declare (salience 97))
+;     (AbstractedUser (generosFavoritos $?gFav))
+;     =>
+;     (loop-for-count (?i 1 (length$ ?gFav)) do
+;         (printout t "Genero favorito: " (nth$ ?i ?gFav) crlf)
+;     )
+; )
 
 ;************************
 ;* MÓDULO DE ASOCIACIÓN *  
@@ -148,123 +201,145 @@
 
 (defmodule ASOCIACION (import ABSTRACCION ?ALL) (export ?ALL))
 
-(deftemplate AbstractedBook
-    (slot genero (type STRING))
-    (slot complejidad (type INTEGER))
-    (slot paginas (type INTEGER)) 
+(defrule entramos
+    (declare (salience 40))
+    =>    
+    (printout t "Entramos asociacion" crlf)
 )
 
-(defrule asociar-edad
-    (declare (salience 33))  ;; Alta prioridad
-    (AbstractedUser (edad ?edad))
+(deftemplate AbstractedBook
+    (multislot generos (type STRING))
+    (slot complejidad (type INTEGER) (default -1))
+    (slot paginas (type INTEGER) (default -1)) 
+)
+
+(defrule ajustar-por-generos
+    (declare (salience 39))
+    (AbstractedUser (generosFavoritos $?gFav))
+    ;?aBook <- (AbstractedBook (generos $?g))
     =>
-    (if (eq ?edad "niño") then (assert (AbstractedBook (genero "Ciencia Ficción")))
-    else (if (eq ?edad "adolescente") then (assert (AbstractedBook (genero "Fantasía")))
-    else (if (eq ?edad "joven") then (assert (AbstractedBook (genero "Romance")))
-    else (if (eq ?edad "adulto") then (assert (AbstractedBook (genero "Misterio")))
-    else (if (eq ?edad "mayor") then (assert (AbstractedBook (genero "Drama"))))))))
-    ;(printout t "Edad asociada " crlf)
+    ;(assert ?aBook (generos $?g $?gFav))
+    (assert (AbstractedBook (generos $?gFav)))
+    (printout t "generos del libro definidos" crlf)
+    ;(focus REFINAMIENTO)
 )
 
 (defrule ajustar-por-frecuencia
     (declare (salience 32))
     (AbstractedUser (frecuenciaLectura ?frecuencia))
-    ?ab <- (AbstractedBook)
+    ?ab <- (AbstractedBook (complejidad ?c&:(eq ?c -1))) ;todavía no se ha inicializado
     =>
     (if (eq ?frecuencia "mucha") then (modify ?ab (complejidad 10))
     else (if (eq ?frecuencia "normal") then (modify ?ab (complejidad 7)))    
-    else (if (eq ?frecuencia "poca") then (modify ?ab (complejidad 5))))    
-    ;(printout t "frecuencia asociada " ?tiempo crlf)    
+    else (if (eq ?frecuencia "poca") then (modify ?ab (complejidad 5))))
+    (printout t "frecuencia asociada " crlf)    
 )
 
 (defrule ajustar-por-tiempo
     (declare (salience 31))
     (AbstractedUser (tiempoDisponibleLectura ?tiempo))
-    ?ab <- (AbstractedBook)
+    ?ab <- (AbstractedBook (paginas ?p&:(eq ?p -1))) ;todavía no se ha inicializado
     =>
     (if (eq ?tiempo "mucho") then (modify ?ab (paginas 2000))
     else (if (eq ?tiempo "normal") then (modify ?ab (paginas 2000)))    
     else (if (eq ?tiempo "poco") then (modify ?ab (paginas 2000))))
+    (printout t "tiempo asociada " crlf)
+)
 
-    ;(printout t "tiempo asociada " ?tiempo crlf)
+(defrule imprimir-generos
+    (declare (salience 20))
+    (AbstractedBook (generos $?g))
+    =>
+    (loop-for-count (?i 1 (length$ ?g)) do
+        (printout t "Genero del libro: " (nth$ ?i ?g) crlf)
+    )
     (focus REFINAMIENTO)
 )
 
-;**************************
-;* MÓDULO DE REFINAMIENTO *  
-;**************************
 
-(defmodule REFINAMIENTO (import ASOCIACION ?ALL) (export ?ALL))
 
-(deftemplate Recomendaciones
-    (multislot titulos-recomendados (type STRING))
-)
+; **************************
+; * MÓDULO DE REFINAMIENTO *  
+; **************************
 
-; PARA COMENTAR Ctrl + k + c
-; PARA DESCOMENTAR Ctrl + k + u
+; (defmodule REFINAMIENTO (import ASOCIACION ?ALL) (export ?ALL))
 
-(defrule primera-recomendacion
-    (declare (salience 51))
-   =>
-    (printout t "Entro refinamiento" crlf)
-)
+; (deftemplate Recomendaciones
+;     (multislot titulos-recomendados (type STRING))
+; )
 
-(defrule primera-recomendacion
-   (declare (salience 51))
-   (not (Recomendaciones (titulos-recomendados $?recomendados)))
-   (AbstractedBook (genero ?generoRecomendado) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
-   ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
-   =>
-   ;mirem si genero recomendado esta a la llista de perteneceAGenero
-   (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero)) then
-        ;(printout t "primera_recomendacion " (send ?lib get-titulo) crlf)
-        (assert (Recomendaciones (titulos-recomendados (create$ (send ?lib get-titulo)))))
-   )
-)
+; ; PARA COMENTAR Ctrl + k + c
+; ; PARA DESCOMENTAR Ctrl + k + u
 
-(defrule añadir-recomendaciones
-   (declare (salience 50))
-   ?rec <- (Recomendaciones (titulos-recomendados $?recomendados))
-   (AbstractedBook (genero ?generoRecomendado) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
-   ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
-   =>
-   ;mirem si genero recomendado esta a la llista de perteneceAGenero
-   (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero)) then
-        (if (not (member$ (send ?lib get-titulo) ?recomendados)) then ; nomes el posem si no esta a la llista
-            (if (< (length$ ?recomendados) 3) then
-                (modify ?rec (titulos-recomendados $?recomendados (send ?lib get-titulo)))
-                ;(printout t "EN REFINAMIENTO: recomendacion añadida " (send ?lib get-titulo) crlf)
-            ) ;else 
-            ;(printout t "EN REFINAMIENTO: LIBRO NO AÑADIDO: " (send ?lib get-titulo) crlf)
-        )
-   )
-)
+; (defrule entramos
+;     (declare (salience 60))
+;     =>    
+;     (printout t "Entramos refinamiento" crlf)
+; )
 
-(defrule no-mas-recomendaciones
-   (declare (salience 5))
-   =>
-   (focus RESPUESTA)
-)
+; (defrule primera-recomendacion
+;     (declare (salience 51))
+;    =>
+;     (printout t "Entro refinamiento" crlf)
+; )
 
-;*************************
-;** MÓDULO DE RESPUESTA **  
-;*************************
+; (defrule primera-recomendacion
+;    (declare (salience 51))
+;    (not (Recomendaciones (titulos-recomendados $?recomendados)))
+;    (AbstractedBook (genero ?generoRecomendado) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
+;    ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
+;    =>
+;    ;mirem si genero recomendado esta a la llista de perteneceAGenero
+;    (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero)) then
+;         ;(printout t "primera_recomendacion " (send ?lib get-titulo) crlf)
+;         (assert (Recomendaciones (titulos-recomendados (create$ (send ?lib get-titulo)))))
+;    )
+; )
 
-(defmodule RESPUESTA (import REFINAMIENTO ?ALL) (export ?ALL))
+; (defrule añadir-recomendaciones
+;    (declare (salience 50))
+;    ?rec <- (Recomendaciones (titulos-recomendados $?recomendados))
+;    (AbstractedBook (genero ?generoRecomendado) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
+;    ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
+;    =>
+;    ;mirem si genero recomendado esta a la llista de perteneceAGenero
+;    (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero)) then
+;         (if (not (member$ (send ?lib get-titulo) ?recomendados)) then ; nomes el posem si no esta a la llista
+;             (if (< (length$ ?recomendados) 3) then
+;                 (modify ?rec (titulos-recomendados $?recomendados (send ?lib get-titulo)))
+;                 ;(printout t "EN REFINAMIENTO: recomendacion añadida " (send ?lib get-titulo) crlf)
+;             ) ;else 
+;             ;(printout t "EN REFINAMIENTO: LIBRO NO AÑADIDO: " (send ?lib get-titulo) crlf)
+;         )
+;    )
+; )
 
-(defrule imprimir-respuesta
-   (Recomendaciones (titulos-recomendados $?titulos&:(> (length$ ?titulos) 0)))
-   =>
-   (printout t "Te podría gustar: " crlf)
-   (foreach ?titulo ?titulos
-      (printout t " - " ?titulo crlf))
-)
+; (defrule no-mas-recomendaciones
+;    (declare (salience 5))
+;    =>
+;    (focus RESPUESTA)
+; )
 
-(defrule no-hay-recomendaciones
-    (not (Recomendaciones (titulos-recomendados $?titulos&:(> (length$ ?titulos) 0))))
-    =>
-    (printout t "No hay recomendaciones disponibles." crlf)
-)
+
+; ;*************************
+; ;** MÓDULO DE RESPUESTA **  
+; ;*************************
+
+; (defmodule RESPUESTA (import REFINAMIENTO ?ALL) (export ?ALL))
+
+; (defrule imprimir-respuesta
+;    (Recomendaciones (titulos-recomendados $?titulos&:(> (length$ ?titulos) 0)))
+;    =>
+;    (printout t "Te podría gustar: " crlf)
+;    (foreach ?titulo ?titulos
+;       (printout t " - " ?titulo crlf))
+; )
+
+; (defrule no-hay-recomendaciones
+;     (not (Recomendaciones (titulos-recomendados $?titulos&:(> (length$ ?titulos) 0))))
+;     =>
+;     (printout t "No hay recomendaciones disponibles." crlf)
+; )
 
 
 ; (bind ?encontrado FALSE)
