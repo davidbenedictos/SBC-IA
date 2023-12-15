@@ -158,7 +158,7 @@
 
 )
 
-(defrule añadir-favoritos "abstraemos sus generos favoritos" 
+(defrule añadir-favoritos "abstraemos sus generos favoritos"               ;NO SEMPRE FUNCIONA BE, ENTENDRE PQ
     (declare (salience 98))
     (generos $?g)
     (User (puntuacionGenero $?puntuacionGenero))
@@ -257,96 +257,84 @@
 )
 
 
-
 ; **************************
 ; * MÓDULO DE REFINAMIENTO *  
 ; **************************
 
-; (defmodule REFINAMIENTO (import ASOCIACION ?ALL) (export ?ALL))
+(defmodule REFINAMIENTO (import ASOCIACION ?ALL) (export ?ALL))
 
-; (deftemplate Recomendaciones
-;     (multislot titulos-recomendados (type STRING))
-; )
+(deftemplate Recomendaciones
+    (multislot titulos-recomendados (type STRING))
+)
 
-; ; PARA COMENTAR Ctrl + k + c
-; ; PARA DESCOMENTAR Ctrl + k + u
+; PARA COMENTAR Ctrl + k + c
+; PARA DESCOMENTAR Ctrl + k + u
 
-; (defrule entramos
-;     (declare (salience 60))
-;     =>    
-;     (printout t "Entramos refinamiento" crlf)
-; )
+(defrule entramos
+    (declare (salience 60))
+    =>    
+    (printout t "Entramos refinamiento" crlf)
+)
 
-; (defrule primera-recomendacion
-;     (declare (salience 51))
-;    =>
-;     (printout t "Entro refinamiento" crlf)
-; )
+(defrule primera-recomendacion
+    (declare (salience 51))
+   =>
+    (printout t "Entro refinamiento" crlf)
+)
 
-; (defrule primera-recomendacion
-;    (declare (salience 51))
-;    (not (Recomendaciones (titulos-recomendados $?recomendados)))
-;    (AbstractedBook (genero ?generoRecomendado) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
-;    ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
-;    =>
-;    ;mirem si genero recomendado esta a la llista de perteneceAGenero
-;    (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero)) then
-;         ;(printout t "primera_recomendacion " (send ?lib get-titulo) crlf)
-;         (assert (Recomendaciones (titulos-recomendados (create$ (send ?lib get-titulo)))))
-;    )
-; )
+(defrule primera-recomendacion
+   (declare (salience 51))
+   (not (Recomendaciones (titulos-recomendados $?recomendados)))
+   (AbstractedBook (generos ?generoRecomendados) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
+   ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
+   =>
+   ;mirem si genero recomendado esta a la llista de perteneceAGenero
+   (if (member$ (send ?lib get-perteneceAGenero) ?generosRecomendados) then ; pot anar a la part esquerra
+        ;(printout t "primera_recomendacion " (send ?lib get-titulo) crlf)
+        (assert (Recomendaciones (titulos-recomendados (create$ (send ?lib get-titulo)))))
+   )
+)
 
-; (defrule añadir-recomendaciones
-;    (declare (salience 50))
-;    ?rec <- (Recomendaciones (titulos-recomendados $?recomendados))
-;    (AbstractedBook (genero ?generoRecomendado) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
-;    ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
-;    =>
-;    ;mirem si genero recomendado esta a la llista de perteneceAGenero
-;    (if (member$ ?generoRecomendado (send ?lib get-perteneceAGenero)) then
-;         (if (not (member$ (send ?lib get-titulo) ?recomendados)) then ; nomes el posem si no esta a la llista
-;             (if (< (length$ ?recomendados) 3) then
-;                 (modify ?rec (titulos-recomendados $?recomendados (send ?lib get-titulo)))
-;                 ;(printout t "EN REFINAMIENTO: recomendacion añadida " (send ?lib get-titulo) crlf)
-;             ) ;else 
-;             ;(printout t "EN REFINAMIENTO: LIBRO NO AÑADIDO: " (send ?lib get-titulo) crlf)
-;         )
-;    )
-; )
+(defrule añadir-recomendaciones
+   (declare (salience 50))
+   ?rec <- (Recomendaciones (titulos-recomendados $?recomendados))
+   (AbstractedBook (generos ?generoRecomendados) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
+   ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
+   =>
+   ;mirem si genero recomendado esta a la llista de perteneceAGenero
+   (if (member$ (send ?lib get-perteneceAGenero) ?generosRecomendados) then ;ho podem ficar a la part esquerra de la regla
+        (if (not (member$ (send ?lib get-titulo) ?recomendados)) then ; nomes el posem si no esta a la llista
+            (if (< (length$ ?recomendados) 3) then
+                (modify ?rec (titulos-recomendados $?recomendados (send ?lib get-titulo)))
+                ;(printout t "EN REFINAMIENTO: recomendacion añadida " (send ?lib get-titulo) crlf)
+            ) ;else 
+            ;(printout t "EN REFINAMIENTO: LIBRO NO AÑADIDO: " (send ?lib get-titulo) crlf)
+        )
+   )
+)
 
-; (defrule no-mas-recomendaciones
-;    (declare (salience 5))
-;    =>
-;    (focus RESPUESTA)
-; )
+(defrule no-mas-recomendaciones
+   (declare (salience 5))
+   =>
+   (focus RESPUESTA)
+)
 
+;*************************
+;** MÓDULO DE RESPUESTA **  
+;*************************
 
-; ;*************************
-; ;** MÓDULO DE RESPUESTA **  
-; ;*************************
+(defmodule RESPUESTA (import REFINAMIENTO ?ALL) (export ?ALL))
 
-; (defmodule RESPUESTA (import REFINAMIENTO ?ALL) (export ?ALL))
+(defrule imprimir-respuesta
+   (Recomendaciones (titulos-recomendados $?titulos&:(> (length$ ?titulos) 0)))
+   =>
+   (printout t "Te podría gustar: " crlf)
+   (foreach ?titulo ?titulos
+      (printout t " - " ?titulo crlf))
+)
 
-; (defrule imprimir-respuesta
-;    (Recomendaciones (titulos-recomendados $?titulos&:(> (length$ ?titulos) 0)))
-;    =>
-;    (printout t "Te podría gustar: " crlf)
-;    (foreach ?titulo ?titulos
-;       (printout t " - " ?titulo crlf))
-; )
-
-; (defrule no-hay-recomendaciones
-;     (not (Recomendaciones (titulos-recomendados $?titulos&:(> (length$ ?titulos) 0))))
-;     =>
-;     (printout t "No hay recomendaciones disponibles." crlf)
-; )
-
-
-; (bind ?encontrado FALSE)
-; (bind ?i 1)
-; (while (and (<= ?i (length$ ?lista1)) (not ?encontrado))
-;     (bind ?elemento (nth$ ?i ?lista1))
-;     (bind ?encontrado (elementoEnLista ?elemento ?lista2))
-;     (bind ?i (+ ?i 1))
-; )
- 
+(defrule no-hay-recomendaciones
+    (not (Recomendaciones (titulos-recomendados $?titulos&:(> (length$ ?titulos) 0))))
+    =>
+    (printout t "No hay recomendaciones disponibles." crlf)
+)
