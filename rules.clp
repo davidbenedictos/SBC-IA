@@ -79,7 +79,7 @@
     (if (> ?puntuacionMisterio 10) then (printout t crlf "Puntuación para el género Misterio incorrecta. " crlf)(exit))
 
     (bind ?puntuacionCienciaFiccion (question "Puntuación para el género ciencia ficción del 0 al 10?: "))
-    (bind ?puntuacionCienciaFiccion(integer ?puntuacionRomance))
+    (bind ?puntuacionCienciaFiccion(integer ?puntuacionCienciaFiccion))
     (if (< ?puntuacionCienciaFiccion 0) then (printout t crlf "Puntuación para el género CienciaFiccion incorrecta. " crlf)(exit))
     (if (> ?puntuacionCienciaFiccion 10) then (printout t crlf "Puntuación para el género CienciaFiccion incorrecta. " crlf)(exit))
 
@@ -168,7 +168,7 @@
     =>
     (if (not (member$ (nth$ ?x ?g) ?gFav)) then ; nomes el posem si no esta a la llista
         ;(bind ?res (modify ?aUser (generosFavoritos $?gFav (nth$ ?x ?g))))
-        ;(printout t "Genero favorito añadido: " (nth$ ?x ?g) crlf) ;  
+        (printout t "Genero favorito añadido: " (nth$ ?x ?g) crlf) ;  
         ;(printout t "Añadido: " ?res crlf)
         (modify ?aUser (generosFavoritos $?gFav (nth$ ?x ?g)))
 
@@ -285,7 +285,7 @@
 (defrule primera-recomendacion
    (declare (salience 51))
    (not (Recomendaciones (titulos-recomendados $?recomendados)))
-   (AbstractedBook (generos ?generoRecomendados) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
+   (AbstractedBook (generos $?generosRecomendados) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
    ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
    =>
    ;mirem si genero recomendado esta a la llista de perteneceAGenero
@@ -298,7 +298,7 @@
 (defrule añadir-recomendaciones
    (declare (salience 50))
    ?rec <- (Recomendaciones (titulos-recomendados $?recomendados))
-   (AbstractedBook (generos ?generoRecomendados) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
+   (AbstractedBook (generos $?generosRecomendados) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
    ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
    =>
    ;mirem si genero recomendado esta a la llista de perteneceAGenero

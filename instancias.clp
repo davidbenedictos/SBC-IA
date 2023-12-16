@@ -2,7 +2,7 @@
     ([instancia0] of Libro
          (titulo "Titulo")
          (escritoPor ["Autor"])
-         (perteneceAGenero ["Genero"])
+         (perteneceAGenero "Genero")
          (fecha "Fecha")
          (paginas 0)
          (idioma "")
@@ -13,7 +13,7 @@
     ([instancia1] of Libro
          (titulo "El secreto del bosque")
          (escritoPor ["Marta Sánchez"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2022-05-15")
          (paginas 320)
          (idioma "Español")
@@ -24,7 +24,7 @@
     ([instancia2] of Libro
          (titulo "Caminos entrelazados")
          (escritoPor ["Juan López"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2023-02-10")
          (paginas 250)
          (idioma "Español")
@@ -35,7 +35,7 @@
     ([instancia3] of Libro
          (titulo "Intriga en la ciudad perdida")
          (escritoPor ["Ana Gómez"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2021-11-28")
          (paginas 400)
          (idioma "Español")
@@ -46,7 +46,7 @@
     ([instancia4] of Libro
          (titulo "Mundos paralelos")
          (escritoPor ["Carlos Rodríguez"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2023-08-03")
          (paginas 280)
          (idioma "Español")
@@ -57,7 +57,7 @@
     ([instancia5] of Libro
          (titulo "Entre sombras y luces")
          (escritoPor ["María Pérez"])
-         (perteneceAGenero ["Drama"])
+         (perteneceAGenero "Drama")
          (fecha "2022-07-20")
          (paginas 350)
          (idioma "Español")
@@ -68,7 +68,7 @@
     ([instancia6] of Libro
          (titulo "El último suspiro")
          (escritoPor ["Luisa Martínez"])
-         (perteneceAGenero ["Suspense"])
+         (perteneceAGenero "Suspense")
          (fecha "2023-04-12")
          (paginas 300)
          (idioma "Español")
@@ -79,7 +79,7 @@
     ([instancia7] of Libro
          (titulo "Amor en la Toscana")
          (escritoPor ["Roberto Torres"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2022-01-08")
          (paginas 200)
          (idioma "Español")
@@ -90,7 +90,7 @@
     ([instancia8] of Libro
          (titulo "El legado perdido")
          (escritoPor ["Laura Díaz"])
-         (perteneceAGenero ["Aventura"])
+         (perteneceAGenero "Aventura")
          (fecha "2023-06-25")
          (paginas 420)
          (idioma "Español")
@@ -101,7 +101,7 @@
     ([instancia9] of Libro
          (titulo "El enigma de la esfinge")
          (escritoPor ["Andrés Fernández"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2022-09-30")
          (paginas 280)
          (idioma "Español")
@@ -112,7 +112,7 @@
     ([instancia10] of Libro
          (titulo "La melodía del destino")
          (escritoPor ["Patricia Ruiz"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2023-12-05")
          (paginas 380)
          (idioma "Español")
@@ -123,7 +123,7 @@
     ([instancia11] of Libro
          (titulo "Viaje a lo desconocido")
          (escritoPor ["Alberto González"])
-         (perteneceAGenero ["Aventura"])
+         (perteneceAGenero "Aventura")
          (fecha "2022-03-18")
          (paginas 310)
          (idioma "Español")
@@ -134,7 +134,7 @@
     ([instancia12] of Libro
          (titulo "El susurro de las estrellas")
          (escritoPor ["Sofía Martín"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2023-01-22")
          (paginas 260)
          (idioma "Español")
@@ -145,7 +145,7 @@
     ([instancia13] of Libro
          (titulo "Atrapados en el tiempo")
          (escritoPor ["Javier Castro"])
-         (perteneceAGenero ["Suspense"])
+         (perteneceAGenero "Suspense")
          (fecha "2022-10-10")
          (paginas 330)
          (idioma "Español")
@@ -156,7 +156,7 @@
     ([instancia14] of Libro
          (titulo "Romeo y Julieta modernos")
          (escritoPor ["Lucía Navarro"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2022-04-05")
          (paginas 280)
          (idioma "Español")
@@ -167,7 +167,7 @@
     ([instancia15] of Libro
          (titulo "La búsqueda del tesoro perdido")
          (escritoPor ["Pablo García"])
-         (perteneceAGenero ["Aventura"])
+         (perteneceAGenero "Aventura")
          (fecha "2023-07-15")
          (paginas 400)
          (idioma "Español")
@@ -178,7 +178,7 @@
     ([instancia16] of Libro
          (titulo "Sueños rotos")
          (escritoPor ["Carmen López"])
-         (perteneceAGenero ["Drama"])
+         (perteneceAGenero "Drama")
          (fecha "2022-11-30")
          (paginas 280)
          (idioma "Español")
@@ -189,7 +189,7 @@
     ([instancia17] of Libro
          (titulo "En el corazón del bosque")
          (escritoPor ["Jorge Ruiz"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2023-03-12")
          (paginas 340)
          (idioma "Español")
@@ -200,7 +200,7 @@
     ([instancia18] of Libro
          (titulo "Sombras en la oscuridad")
          (escritoPor ["Isabel Díaz"])
-         (perteneceAGenero ["Suspense"])
+         (perteneceAGenero "Suspense")
          (fecha "2022-05-28")
          (paginas 290)
          (idioma "Español")
@@ -211,7 +211,7 @@
     ([instancia19] of Libro
          (titulo "El guardián de los secretos")
          (escritoPor ["Manuel Torres"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2022-12-20")
          (paginas 360)
          (idioma "Español")
@@ -222,7 +222,7 @@
     ([instancia20] of Libro
          (titulo "La conquista del espacio")
          (escritoPor ["Lorena Sánchez"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2023-09-05")
          (paginas 420)
          (idioma "Español")
@@ -233,7 +233,7 @@
     ([instancia21] of Libro
          (titulo "Amanecer en París")
          (escritoPor ["Diego Martínez"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2022-02-14")
          (paginas 240)
          (idioma "Español")
@@ -244,7 +244,7 @@
     ([instancia22] of Libro
          (titulo "Desafío en el abismo")
          (escritoPor ["Marta Rodríguez"])
-         (perteneceAGenero ["Aventura"])
+         (perteneceAGenero "Aventura")
          (fecha "2023-04-30")
          (paginas 380)
          (idioma "Español")
@@ -255,7 +255,7 @@
     ([instancia23] of Libro
          (titulo "Secretos enterrados")
          (escritoPor ["Ana García"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2022-08-18")
          (paginas 310)
          (idioma "Español")
@@ -266,7 +266,7 @@
     ([instancia24] of Libro
          (titulo "La herencia perdida")
          (escritoPor ["Luis Torres"])
-         (perteneceAGenero ["Drama"])
+         (perteneceAGenero "Drama")
          (fecha "2023-01-05")
          (paginas 270)
          (idioma "Español")
@@ -277,7 +277,7 @@
     ([instancia25] of Libro
          (titulo "Caminando entre sombras")
          (escritoPor ["Elena Díaz"])
-         (perteneceAGenero ["Suspense"])
+         (perteneceAGenero "Suspense")
          (fecha "2022-06-22")
          (paginas 320)
          (idioma "Español")
@@ -288,7 +288,7 @@
     ([instancia26] of Libro
          (titulo "El misterio del faro")
          (escritoPor ["Carlos Pérez"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2023-02-28")
          (paginas 290)
          (idioma "Español")
@@ -299,7 +299,7 @@
     ([instancia27] of Libro
          (titulo "Aventuras en la selva")
          (escritoPor ["María González"])
-         (perteneceAGenero ["Aventura"])
+         (perteneceAGenero "Aventura")
          (fecha "2022-12-15")
          (paginas 400)
          (idioma "Español")
@@ -310,7 +310,7 @@
     ([instancia28] of Libro
          (titulo "Bajo el cielo estrellado")
          (escritoPor ["Andrea Martínez"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2023-10-08")
          (paginas 360)
          (idioma "Español")
@@ -321,7 +321,7 @@
     ([instancia29] of Libro
          (titulo "El último vuelo")
          (escritoPor ["Roberto Sánchez"])
-         (perteneceAGenero ["Suspense"])
+         (perteneceAGenero "Suspense")
          (fecha "2022-09-15")
          (paginas 300)
          (idioma "Español")
@@ -332,7 +332,7 @@
     ([instancia30] of Libro
          (titulo "El destino de dos almas")
          (escritoPor ["Ana Torres"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2022-04-20")
          (paginas 250)
          (idioma "Español")
@@ -343,7 +343,7 @@
     ([instancia31] of Libro
          (titulo "Entre la luz y la oscuridad")
          (escritoPor ["Miguel Ruiz"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2023-06-10")
          (paginas 310)
          (idioma "Español")
@@ -354,7 +354,7 @@
     ([instancia32] of Libro
          (titulo "Tras la huella del pasado")
          (escritoPor ["Lucía Díaz"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2022-11-10")
          (paginas 340)
          (idioma "Español")
@@ -365,7 +365,7 @@
     ([instancia33] of Libro
          (titulo "El secreto de la montaña")
          (escritoPor ["Javier Martín"])
-         (perteneceAGenero ["Aventura"])
+         (perteneceAGenero "Aventura")
          (fecha "2023-03-25")
          (paginas 380)
          (idioma "Español")
@@ -376,7 +376,7 @@
     ([instancia34] of Libro
          (titulo "Amores prohibidos")
          (escritoPor ["Sara López"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2022-07-05")
          (paginas 280)
          (idioma "Español")
@@ -387,7 +387,7 @@
     ([instancia35] of Libro
          (titulo "Misterios en la mansión")
          (escritoPor ["Sergio García"])
-         (perteneceAGenero ["Suspense"])
+         (perteneceAGenero "Suspense")
          (fecha "2023-01-15")
          (paginas 320)
          (idioma "Español")
@@ -398,7 +398,7 @@
     ([instancia36] of Libro
          (titulo "La senda del guerrero")
          (escritoPor ["Alicia Pérez"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2022-05-30")
          (paginas 300)
          (idioma "Español")
@@ -409,7 +409,7 @@
     ([instancia37] of Libro
          (titulo "El rincón olvidado")
          (escritoPor ["Carmen Martínez"])
-         (perteneceAGenero ["Drama"])
+         (perteneceAGenero "Drama")
          (fecha "2023-04-18")
          (paginas 260)
          (idioma "Español")
@@ -420,7 +420,7 @@
     ([instancia38] of Libro
          (titulo "Cazadores de tesoros")
          (escritoPor ["Pablo Sánchez"])
-         (perteneceAGenero ["Aventura"])
+         (perteneceAGenero "Aventura")
          (fecha "2022-08-30")
          (paginas 400)
          (idioma "Español")
@@ -431,7 +431,7 @@
     ([instancia39] of Libro
          (titulo "Entre dos mundos")
          (escritoPor ["Lorena Díaz"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2023-11-20")
          (paginas 350)
          (idioma "Español")
@@ -442,7 +442,7 @@
     ([instancia40] of Libro
          (titulo "La joya perdida")
          (escritoPor ["Francisco Torres"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2022-02-28")
          (paginas 280)
          (idioma "Español")
@@ -453,7 +453,7 @@
     ([instancia41] of Libro
          (titulo "Bajo el sol de Sevilla")
          (escritoPor ["Marta García"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2023-08-22")
          (paginas 300)
          (idioma "Español")
@@ -464,7 +464,7 @@
     ([instancia42] of Libro
          (titulo "Caminos cruzados")
          (escritoPor ["José Díaz"])
-         (perteneceAGenero ["Suspense"])
+         (perteneceAGenero "Suspense")
          (fecha "2022-12-02")
          (paginas 330)
          (idioma "Español")
@@ -475,7 +475,7 @@
     ([instancia43] of Libro
          (titulo "El enigma de la mariposa")
          (escritoPor ["Beatriz Martín"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2022-06-08")
          (paginas 280)
          (idioma "Español")
@@ -486,7 +486,7 @@
     ([instancia44] of Libro
          (titulo "Algo La")
          (escritoPor ["Ovidio Marcial Galan Espejo"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2011-01-18")
          (paginas 229)
          (idioma "Español")
@@ -497,7 +497,7 @@
     ([instancia45] of Libro
          (titulo "Un Una La")
          (escritoPor ["Rafa Mulet"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2015-12-02")
          (paginas 305)
          (idioma "Español")
@@ -508,7 +508,7 @@
     ([instancia46] of Libro
          (titulo "Un")
          (escritoPor ["Otilia Rosado Barrios"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "1999-05-08")
          (paginas 242)
          (idioma "Español")
@@ -519,7 +519,7 @@
     ([instancia47] of Libro
          (titulo "La La La")
          (escritoPor ["Dimas del Sans"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2010-01-12")
          (paginas 363)
          (idioma "Español")
@@ -530,7 +530,7 @@
     ([instancia48] of Libro
          (titulo "Nada Un")
          (escritoPor ["Ángela Haro Aguiló"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2001-05-26")
          (paginas 312)
          (idioma "Español")
@@ -541,7 +541,7 @@
     ([instancia49] of Libro
          (titulo "Una Nadie Una")
          (escritoPor ["Néstor Azcona"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2013-01-15")
          (paginas 419)
          (idioma "Español")
@@ -552,7 +552,7 @@
     ([instancia50] of Libro
          (titulo "Nada La")
          (escritoPor ["Regina Barranco Pardo"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2008-07-23")
          (paginas 161)
          (idioma "Español")
@@ -563,7 +563,7 @@
     ([instancia51] of Libro
          (titulo "Nadie Una")
          (escritoPor ["Ruben Donoso Alvarez"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2012-05-21")
          (paginas 443)
          (idioma "Español")
@@ -574,7 +574,7 @@
     ([instancia52] of Libro
          (titulo "Nadie La")
          (escritoPor ["Chema Ricart Mulet"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "1998-01-20")
          (paginas 101)
          (idioma "Español")
@@ -585,7 +585,7 @@
     ([instancia53] of Libro
          (titulo "La Nadie")
          (escritoPor ["Adolfo García Carrasco"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "1998-12-30")
          (paginas 280)
          (idioma "Español")
@@ -596,7 +596,7 @@
     ([instancia54] of Libro
          (titulo "Nada La Algo")
          (escritoPor ["Reinaldo Fuertes-Barrio"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2019-06-29")
          (paginas 283)
          (idioma "Español")
@@ -607,7 +607,7 @@
     ([instancia55] of Libro
          (titulo "Todo")
          (escritoPor ["Teodoro Pedrosa Sanz"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2016-08-08")
          (paginas 419)
          (idioma "Español")
@@ -618,7 +618,7 @@
     ([instancia56] of Libro
          (titulo "El")
          (escritoPor ["Teodoro Pedrosa Sanz"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2013-11-01")
          (paginas 283)
          (idioma "Español")
@@ -629,7 +629,7 @@
     ([instancia57] of Libro
          (titulo "Nadie Un Algo")
          (escritoPor ["Cintia Moraleda Caballero"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2015-12-06")
          (paginas 177)
          (idioma "Español")
@@ -640,7 +640,7 @@
     ([instancia58] of Libro
          (titulo "La Una")
          (escritoPor ["Ovidio Marcial Galan Espejo"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2009-06-28")
          (paginas 418)
          (idioma "Español")
@@ -651,7 +651,7 @@
     ([instancia59] of Libro
          (titulo "Un Un")
          (escritoPor ["Cintia Moraleda Caballero"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2002-02-17")
          (paginas 130)
          (idioma "Español")
@@ -662,7 +662,7 @@
     ([instancia60] of Libro
          (titulo "La La Todo")
          (escritoPor ["Wilfredo Roda Sandoval"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "1999-05-04")
          (paginas 334)
          (idioma "Español")
@@ -673,7 +673,7 @@
     ([instancia61] of Libro
          (titulo "Una La")
          (escritoPor ["Cristóbal Jonatan Guardiola Palma"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2021-06-28")
          (paginas 308)
          (idioma "Español")
@@ -684,7 +684,7 @@
     ([instancia62] of Libro
          (titulo "Nada Algo")
          (escritoPor ["Arturo Solera Lledó"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2003-02-07")
          (paginas 408)
          (idioma "Español")
@@ -695,7 +695,7 @@
     ([instancia63] of Libro
          (titulo "Un Un")
          (escritoPor ["Marita Benítez Cobo"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "1996-03-10")
          (paginas 381)
          (idioma "Español")
@@ -706,7 +706,7 @@
     ([instancia64] of Libro
          (titulo "Un Nadie Un")
          (escritoPor ["Nilda Solano Herranz"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "1998-03-28")
          (paginas 388)
          (idioma "Español")
@@ -717,7 +717,7 @@
     ([instancia65] of Libro
          (titulo "El Algo")
          (escritoPor ["Marcelo del Cuéllar"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2014-07-02")
          (paginas 266)
          (idioma "Español")
@@ -728,7 +728,7 @@
     ([instancia66] of Libro
          (titulo "Un")
          (escritoPor ["Vilma Pinilla Viña"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2013-03-15")
          (paginas 406)
          (idioma "Español")
@@ -739,7 +739,7 @@
     ([instancia67] of Libro
          (titulo "El La El")
          (escritoPor ["Hector Diego Valcárcel"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2007-11-24")
          (paginas 277)
          (idioma "Español")
@@ -750,7 +750,7 @@
     ([instancia68] of Libro
          (titulo "Un Todo Nadie")
          (escritoPor ["Moisés de Hernando"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "1995-09-23")
          (paginas 252)
          (idioma "Español")
@@ -761,7 +761,7 @@
     ([instancia69] of Libro
          (titulo "Todo Algo Nada")
          (escritoPor ["Regina Barranco Pardo"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2008-07-27")
          (paginas 476)
          (idioma "Español")
@@ -772,7 +772,7 @@
     ([instancia70] of Libro
          (titulo "Nada")
          (escritoPor ["Adora Milla-Piñol"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2021-12-05")
          (paginas 315)
          (idioma "Español")
@@ -783,7 +783,7 @@
     ([instancia71] of Libro
          (titulo "Nada Todo")
          (escritoPor ["Victoriano Juan Pablo Navarro Larrañaga"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2021-05-29")
          (paginas 460)
          (idioma "Español")
@@ -794,7 +794,7 @@
     ([instancia72] of Libro
          (titulo "La La")
          (escritoPor ["Benjamín Daza Infante"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2012-04-22")
          (paginas 371)
          (idioma "Español")
@@ -805,7 +805,7 @@
     ([instancia73] of Libro
          (titulo "Una Un")
          (escritoPor ["Otilia Rosado Barrios"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2008-05-03")
          (paginas 340)
          (idioma "Español")
@@ -816,7 +816,7 @@
     ([instancia74] of Libro
          (titulo "La Nada")
          (escritoPor ["Custodia de Serna"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2020-05-07")
          (paginas 174)
          (idioma "Español")
@@ -827,7 +827,7 @@
     ([instancia75] of Libro
          (titulo "La La")
          (escritoPor ["Verónica Valentín Esparza"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "1996-02-26")
          (paginas 268)
          (idioma "Español")
@@ -838,7 +838,7 @@
     ([instancia76] of Libro
          (titulo "El Un Nada")
          (escritoPor ["Encarnación Jove"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2011-12-10")
          (paginas 349)
          (idioma "Español")
@@ -849,7 +849,7 @@
     ([instancia77] of Libro
          (titulo "Nada Todo")
          (escritoPor ["Alfonso Calvo"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "1996-12-14")
          (paginas 367)
          (idioma "Español")
@@ -860,7 +860,7 @@
     ([instancia78] of Libro
          (titulo "Algo El La")
          (escritoPor ["Alfonso Calvo"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2008-05-28")
          (paginas 390)
          (idioma "Español")
@@ -871,7 +871,7 @@
     ([instancia79] of Libro
          (titulo "Todo El")
          (escritoPor ["Adolfo García Carrasco"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2006-06-23")
          (paginas 473)
          (idioma "Español")
@@ -882,7 +882,7 @@
     ([instancia80] of Libro
          (titulo "Una Nadie Todo")
          (escritoPor ["Brunilda de Romeu"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2013-04-03")
          (paginas 425)
          (idioma "Español")
@@ -893,7 +893,7 @@
     ([instancia81] of Libro
          (titulo "El El")
          (escritoPor ["Álvaro Cabanillas"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2009-11-01")
          (paginas 442)
          (idioma "Español")
@@ -904,7 +904,7 @@
     ([instancia82] of Libro
          (titulo "Una")
          (escritoPor ["Maximiliano Carreras Marqués"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2015-09-19")
          (paginas 273)
          (idioma "Español")
@@ -915,7 +915,7 @@
     ([instancia83] of Libro
          (titulo "Algo La Nadie")
          (escritoPor ["Cintia Moraleda Caballero"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2022-01-16")
          (paginas 155)
          (idioma "Español")
@@ -926,7 +926,7 @@
     ([instancia84] of Libro
          (titulo "Nadie La La")
          (escritoPor ["Sebastian Camacho León"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2009-11-12")
          (paginas 334)
          (idioma "Español")
@@ -937,7 +937,7 @@
     ([instancia85] of Libro
          (titulo "La Nadie")
          (escritoPor ["Ruben Donoso Alvarez"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2023-06-27")
          (paginas 260)
          (idioma "Español")
@@ -948,7 +948,7 @@
     ([instancia86] of Libro
          (titulo "Nada Algo")
          (escritoPor ["Leyre Oriana Alfaro Nebot"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2023-09-04")
          (paginas 309)
          (idioma "Español")
@@ -959,7 +959,7 @@
     ([instancia87] of Libro
          (titulo "Todo Nadie La")
          (escritoPor ["Elpidio Vizcaíno Vives"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "1998-01-07")
          (paginas 393)
          (idioma "Español")
@@ -970,7 +970,7 @@
     ([instancia88] of Libro
          (titulo "Una Nada Un")
          (escritoPor ["Ruperta Sedano Amores"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2013-06-11")
          (paginas 484)
          (idioma "Español")
@@ -981,7 +981,7 @@
     ([instancia89] of Libro
          (titulo "La El")
          (escritoPor ["Arturo Solera Lledó"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2010-12-05")
          (paginas 293)
          (idioma "Español")
@@ -992,7 +992,7 @@
     ([instancia90] of Libro
          (titulo "Algo Nada Una")
          (escritoPor ["África Pinedo"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2023-02-12")
          (paginas 441)
          (idioma "Español")
@@ -1003,7 +1003,7 @@
     ([instancia91] of Libro
          (titulo "Nada La")
          (escritoPor ["Sebastian Camacho León"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2013-01-22")
          (paginas 398)
          (idioma "Español")
@@ -1014,7 +1014,7 @@
     ([instancia92] of Libro
          (titulo "Nadie Nadie La")
          (escritoPor ["Álvaro Cabanillas"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2020-12-01")
          (paginas 329)
          (idioma "Español")
@@ -1025,7 +1025,7 @@
     ([instancia93] of Libro
          (titulo "Algo Algo")
          (escritoPor ["Severino del Calatayud"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "1994-04-27")
          (paginas 145)
          (idioma "Español")
@@ -1036,7 +1036,7 @@
     ([instancia94] of Libro
          (titulo "Una Una Algo")
          (escritoPor ["Pepe Villaverde Gibert"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2018-10-23")
          (paginas 448)
          (idioma "Español")
@@ -1047,7 +1047,7 @@
     ([instancia95] of Libro
          (titulo "Todo Todo")
          (escritoPor ["Pancho Almagro Sainz"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "1995-09-06")
          (paginas 166)
          (idioma "Español")
@@ -1058,7 +1058,7 @@
     ([instancia96] of Libro
          (titulo "La Un Una")
          (escritoPor ["Leire del Bermudez"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "1995-06-27")
          (paginas 338)
          (idioma "Español")
@@ -1069,7 +1069,7 @@
     ([instancia97] of Libro
          (titulo "Un El")
          (escritoPor ["Severino del Calatayud"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2022-07-06")
          (paginas 234)
          (idioma "Español")
@@ -1080,7 +1080,7 @@
     ([instancia98] of Libro
          (titulo "Nadie El")
          (escritoPor ["Ainara Godoy Chico"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2012-06-23")
          (paginas 294)
          (idioma "Español")
@@ -1091,7 +1091,7 @@
     ([instancia99] of Libro
          (titulo "Nadie Nada")
          (escritoPor ["Regina Valle-Carbajo"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2003-06-13")
          (paginas 297)
          (idioma "Español")
@@ -1102,7 +1102,7 @@
     ([instancia100] of Libro
          (titulo "Un Todo Todo")
          (escritoPor ["Dimas del Sans"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2013-03-04")
          (paginas 398)
          (idioma "Español")
@@ -1113,7 +1113,7 @@
     ([instancia101] of Libro
          (titulo "Algo Algo")
          (escritoPor ["Santos Moreno Perez Mesa"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2018-08-20")
          (paginas 345)
          (idioma "Español")
@@ -1124,7 +1124,7 @@
     ([instancia102] of Libro
          (titulo "Una Un El")
          (escritoPor ["Alfonso Calvo"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "1996-06-15")
          (paginas 182)
          (idioma "Español")
@@ -1135,7 +1135,7 @@
     ([instancia103] of Libro
          (titulo "Algo La Nadie")
          (escritoPor ["Teodoro Pedrosa Sanz"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2013-04-23")
          (paginas 189)
          (idioma "Español")
@@ -1146,7 +1146,7 @@
     ([instancia104] of Libro
          (titulo "Un El")
          (escritoPor ["Marcelo del Cuéllar"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2022-03-10")
          (paginas 295)
          (idioma "Español")
@@ -1157,7 +1157,7 @@
     ([instancia105] of Libro
          (titulo "Nadie Una")
          (escritoPor ["Ruben Donoso Alvarez"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2008-05-20")
          (paginas 406)
          (idioma "Español")
@@ -1168,7 +1168,7 @@
     ([instancia106] of Libro
          (titulo "Nadie Un Un")
          (escritoPor ["Paloma Nevado Seguí"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2019-01-27")
          (paginas 299)
          (idioma "Español")
@@ -1179,7 +1179,7 @@
     ([instancia107] of Libro
          (titulo "Nadie Una")
          (escritoPor ["Ruperta Sedano Amores"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2001-07-26")
          (paginas 309)
          (idioma "Español")
@@ -1190,7 +1190,7 @@
     ([instancia108] of Libro
          (titulo "Nada")
          (escritoPor ["Emma Camino Barrena"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2008-03-31")
          (paginas 170)
          (idioma "Español")
@@ -1201,7 +1201,7 @@
     ([instancia109] of Libro
          (titulo "Una La Un")
          (escritoPor ["Pepe Villaverde Gibert"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2011-08-19")
          (paginas 112)
          (idioma "Español")
@@ -1212,7 +1212,7 @@
     ([instancia110] of Libro
          (titulo "Una Todo La La")
          (escritoPor ["Cruz Mendez Roldán"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2019-09-01")
          (paginas 148)
          (idioma "Español")
@@ -1223,7 +1223,7 @@
     ([instancia111] of Libro
          (titulo "El Un El")
          (escritoPor ["Pepe Villaverde Gibert"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2018-03-11")
          (paginas 377)
          (idioma "Español")
@@ -1234,7 +1234,7 @@
     ([instancia112] of Libro
          (titulo "Una Un")
          (escritoPor ["Cruz Mendez Roldán"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "1997-11-25")
          (paginas 104)
          (idioma "Español")
@@ -1245,7 +1245,7 @@
     ([instancia113] of Libro
          (titulo "El El Algo")
          (escritoPor ["Alejandra Amaya Prats"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2005-07-19")
          (paginas 442)
          (idioma "Español")
@@ -1256,7 +1256,7 @@
     ([instancia114] of Libro
          (titulo "Nada Nadie")
          (escritoPor ["Otilia Rosado Barrios"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2018-03-09")
          (paginas 370)
          (idioma "Español")
@@ -1267,7 +1267,7 @@
     ([instancia115] of Libro
          (titulo "El Un Un")
          (escritoPor ["Toño Reguera Montaña"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2012-05-07")
          (paginas 296)
          (idioma "Español")
@@ -1278,7 +1278,7 @@
     ([instancia116] of Libro
          (titulo "Nadie Todo")
          (escritoPor ["Vasco Palau-Ibañez"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2013-12-29")
          (paginas 328)
          (idioma "Español")
@@ -1289,7 +1289,7 @@
     ([instancia117] of Libro
          (titulo "Una Nada")
          (escritoPor ["Vasco Palau-Ibañez"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2020-07-22")
          (paginas 197)
          (idioma "Español")
@@ -1300,7 +1300,7 @@
     ([instancia118] of Libro
          (titulo "Nadie Algo Una La")
          (escritoPor ["Otilia Rosado Barrios"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2009-03-12")
          (paginas 451)
          (idioma "Español")
@@ -1311,7 +1311,7 @@
     ([instancia119] of Libro
          (titulo "Algo Algo")
          (escritoPor ["Eric Severo Mir Salas"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "1994-05-08")
          (paginas 257)
          (idioma "Español")
@@ -1322,7 +1322,7 @@
     ([instancia120] of Libro
          (titulo "Nadie Una Algo")
          (escritoPor ["Alejandra Amaya Prats"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "1999-05-31")
          (paginas 312)
          (idioma "Español")
@@ -1333,7 +1333,7 @@
     ([instancia121] of Libro
          (titulo "Algo")
          (escritoPor ["Soledad Ruperta Ortiz Andrés"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "1994-10-16")
          (paginas 266)
          (idioma "Español")
@@ -1344,7 +1344,7 @@
     ([instancia122] of Libro
          (titulo "El El La")
          (escritoPor ["Leyre Oriana Alfaro Nebot"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "1999-07-13")
          (paginas 338)
          (idioma "Español")
@@ -1355,7 +1355,7 @@
     ([instancia123] of Libro
          (titulo "Un Todo")
          (escritoPor ["Chema Ricart Mulet"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2009-09-23")
          (paginas 361)
          (idioma "Español")
@@ -1366,7 +1366,7 @@
     ([instancia124] of Libro
          (titulo "Todo Algo Un Todo")
          (escritoPor ["Otilia Rosado Barrios"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2007-08-30")
          (paginas 136)
          (idioma "Español")
@@ -1377,7 +1377,7 @@
     ([instancia125] of Libro
          (titulo "Nada Todo")
          (escritoPor ["Regina Valle-Carbajo"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2020-03-12")
          (paginas 452)
          (idioma "Español")
@@ -1388,7 +1388,7 @@
     ([instancia126] of Libro
          (titulo "Nadie Nada Todo")
          (escritoPor ["Cruz Mendez Roldán"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2011-12-12")
          (paginas 363)
          (idioma "Español")
@@ -1399,7 +1399,7 @@
     ([instancia127] of Libro
          (titulo "Un Un")
          (escritoPor ["Cristóbal Jonatan Guardiola Palma"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "1997-11-22")
          (paginas 138)
          (idioma "Español")
@@ -1410,7 +1410,7 @@
     ([instancia128] of Libro
          (titulo "Nadie Todo")
          (escritoPor ["Azahar Seguí Fábregas"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2013-08-10")
          (paginas 362)
          (idioma "Español")
@@ -1421,7 +1421,7 @@
     ([instancia129] of Libro
          (titulo "Algo Nada El")
          (escritoPor ["Chelo Hoyos Cánovas"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "1997-09-06")
          (paginas 211)
          (idioma "Español")
@@ -1432,7 +1432,7 @@
     ([instancia130] of Libro
          (titulo "Nadie Algo Todo Una")
          (escritoPor ["Arturo Solera Lledó"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "1995-04-14")
          (paginas 331)
          (idioma "Español")
@@ -1443,7 +1443,7 @@
     ([instancia131] of Libro
          (titulo "La")
          (escritoPor ["Pepe Villaverde Gibert"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2020-03-13")
          (paginas 160)
          (idioma "Español")
@@ -1454,7 +1454,7 @@
     ([instancia132] of Libro
          (titulo "Nada Algo Un La")
          (escritoPor ["Cristian Nuñez-González"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "1996-07-15")
          (paginas 109)
          (idioma "Español")
@@ -1465,7 +1465,7 @@
     ([instancia133] of Libro
          (titulo "Todo Algo")
          (escritoPor ["Julieta Isidora Guardia Téllez"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "1995-08-29")
          (paginas 426)
          (idioma "Español")
@@ -1476,7 +1476,7 @@
     ([instancia134] of Libro
          (titulo "Una Todo Una")
          (escritoPor ["Marcelo del Cuéllar"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2015-01-12")
          (paginas 143)
          (idioma "Español")
@@ -1487,7 +1487,7 @@
     ([instancia135] of Libro
          (titulo "Todo Un Algo")
          (escritoPor ["Dimas del Sans"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2013-03-23")
          (paginas 172)
          (idioma "Español")
@@ -1498,7 +1498,7 @@
     ([instancia136] of Libro
          (titulo "Una Nadie Un")
          (escritoPor ["Cristian Nuñez-González"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2008-07-19")
          (paginas 345)
          (idioma "Español")
@@ -1509,7 +1509,7 @@
     ([instancia137] of Libro
          (titulo "Todo Algo Todo El")
          (escritoPor ["Álvaro Cabanillas"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2020-01-03")
          (paginas 118)
          (idioma "Español")
@@ -1520,7 +1520,7 @@
     ([instancia138] of Libro
          (titulo "Nada Un Nada")
          (escritoPor ["Dimas Baeza-Cuervo"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "1998-12-26")
          (paginas 428)
          (idioma "Español")
@@ -1531,7 +1531,7 @@
     ([instancia139] of Libro
          (titulo "Una La")
          (escritoPor ["Alfonso Calvo"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2005-03-03")
          (paginas 393)
          (idioma "Español")
@@ -1542,7 +1542,7 @@
     ([instancia140] of Libro
          (titulo "El Nada Un")
          (escritoPor ["Adolfo García Carrasco"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2007-06-13")
          (paginas 252)
          (idioma "Español")
@@ -1553,7 +1553,7 @@
     ([instancia141] of Libro
          (titulo "Un")
          (escritoPor ["Severino del Calatayud"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2017-02-27")
          (paginas 342)
          (idioma "Español")
@@ -1564,7 +1564,7 @@
     ([instancia142] of Libro
          (titulo "La Todo Una")
          (escritoPor ["Amaro Escrivá Izquierdo"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2008-09-24")
          (paginas 192)
          (idioma "Español")
@@ -1575,7 +1575,7 @@
     ([instancia143] of Libro
          (titulo "Un Nada Nada")
          (escritoPor ["Teodoro Pedrosa Sanz"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2001-11-01")
          (paginas 238)
          (idioma "Español")
@@ -1586,7 +1586,7 @@
     ([instancia144] of Libro
          (titulo "Un Algo Un")
          (escritoPor ["Ruperta Sedano Amores"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2002-07-30")
          (paginas 124)
          (idioma "Español")
@@ -1597,7 +1597,7 @@
     ([instancia145] of Libro
          (titulo "Una Una Todo Un")
          (escritoPor ["Néstor Azcona"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2003-09-23")
          (paginas 168)
          (idioma "Español")
@@ -1608,7 +1608,7 @@
     ([instancia146] of Libro
          (titulo "Nada Todo Nadie")
          (escritoPor ["Paloma Nevado Seguí"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2021-09-19")
          (paginas 115)
          (idioma "Español")
@@ -1619,7 +1619,7 @@
     ([instancia147] of Libro
          (titulo "Todo Nadie")
          (escritoPor ["Marcelo del Cuéllar"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "1997-12-25")
          (paginas 425)
          (idioma "Español")
@@ -1630,7 +1630,7 @@
     ([instancia148] of Libro
          (titulo "Un El El")
          (escritoPor ["Regina Barranco Pardo"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2014-12-08")
          (paginas 364)
          (idioma "Español")
@@ -1641,7 +1641,7 @@
     ([instancia149] of Libro
          (titulo "Algo Un")
          (escritoPor ["Sebastian Camacho León"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2007-01-16")
          (paginas 370)
          (idioma "Español")
@@ -1652,7 +1652,7 @@
     ([instancia150] of Libro
          (titulo "Algo")
          (escritoPor ["Néstor Azcona"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2009-10-24")
          (paginas 466)
          (idioma "Español")
@@ -1663,7 +1663,7 @@
     ([instancia151] of Libro
          (titulo "Nadie Un")
          (escritoPor ["Regina Valle-Carbajo"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2005-01-21")
          (paginas 270)
          (idioma "Español")
@@ -1674,7 +1674,7 @@
     ([instancia152] of Libro
          (titulo "Nadie")
          (escritoPor ["Pepe Villaverde Gibert"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2001-05-15")
          (paginas 105)
          (idioma "Español")
@@ -1685,7 +1685,7 @@
     ([instancia153] of Libro
          (titulo "Nadie El")
          (escritoPor ["Dafne Perez Arco"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2011-07-20")
          (paginas 205)
          (idioma "Español")
@@ -1696,7 +1696,7 @@
     ([instancia154] of Libro
          (titulo "Un Un")
          (escritoPor ["Aitor Ayala Pont"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2006-02-06")
          (paginas 194)
          (idioma "Español")
@@ -1707,7 +1707,7 @@
     ([instancia155] of Libro
          (titulo "Algo El Nada")
          (escritoPor ["Amaro Guitart Cordero"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "1999-03-11")
          (paginas 287)
          (idioma "Español")
@@ -1718,7 +1718,7 @@
     ([instancia156] of Libro
          (titulo "Una Una Un")
          (escritoPor ["Vasco Palau-Ibañez"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2014-01-02")
          (paginas 425)
          (idioma "Español")
@@ -1729,7 +1729,7 @@
     ([instancia157] of Libro
          (titulo "Todo Algo Nada")
          (escritoPor ["Sebastian Camacho León"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "1995-05-07")
          (paginas 421)
          (idioma "Español")
@@ -1740,7 +1740,7 @@
     ([instancia158] of Libro
          (titulo "Algo Nadie")
          (escritoPor ["Álvaro Cabanillas"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2013-02-13")
          (paginas 322)
          (idioma "Español")
@@ -1751,7 +1751,7 @@
     ([instancia159] of Libro
          (titulo "La Todo Nada")
          (escritoPor ["Maximiliano Carreras Marqués"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2021-12-30")
          (paginas 264)
          (idioma "Español")
@@ -1762,7 +1762,7 @@
     ([instancia160] of Libro
          (titulo "Algo Todo")
          (escritoPor ["Severino del Calatayud"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2006-11-01")
          (paginas 232)
          (idioma "Español")
@@ -1773,7 +1773,7 @@
     ([instancia161] of Libro
          (titulo "Todo Nadie Una")
          (escritoPor ["Teo Malo"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2015-11-01")
          (paginas 291)
          (idioma "Español")
@@ -1784,7 +1784,7 @@
     ([instancia162] of Libro
          (titulo "Todo")
          (escritoPor ["Regina Valle-Carbajo"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2015-04-29")
          (paginas 292)
          (idioma "Español")
@@ -1795,7 +1795,7 @@
     ([instancia163] of Libro
          (titulo "Nadie Una Nadie")
          (escritoPor ["Álvaro Cabanillas"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "1998-05-31")
          (paginas 361)
          (idioma "Español")
@@ -1806,7 +1806,7 @@
     ([instancia164] of Libro
          (titulo "Nadie Todo")
          (escritoPor ["Encarnación Jove"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2010-01-12")
          (paginas 338)
          (idioma "Español")
@@ -1817,7 +1817,7 @@
     ([instancia165] of Libro
          (titulo "Un Nadie Algo Una")
          (escritoPor ["Ángela Haro Aguiló"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2007-02-15")
          (paginas 174)
          (idioma "Español")
@@ -1828,7 +1828,7 @@
     ([instancia166] of Libro
          (titulo "Algo Un")
          (escritoPor ["Regina Valle-Carbajo"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2000-11-27")
          (paginas 426)
          (idioma "Español")
@@ -1839,7 +1839,7 @@
     ([instancia167] of Libro
          (titulo "Una Nadie Algo")
          (escritoPor ["Cristian Nuñez-González"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2022-10-18")
          (paginas 274)
          (idioma "Español")
@@ -1850,7 +1850,7 @@
     ([instancia168] of Libro
          (titulo "El Todo Una")
          (escritoPor ["Dimas del Sans"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2014-05-20")
          (paginas 370)
          (idioma "Español")
@@ -1861,7 +1861,7 @@
     ([instancia169] of Libro
          (titulo "Algo Nada")
          (escritoPor ["Adolfo García Carrasco"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2013-04-08")
          (paginas 199)
          (idioma "Español")
@@ -1872,7 +1872,7 @@
     ([instancia170] of Libro
          (titulo "Todo Algo")
          (escritoPor ["Asdrubal de Mayol"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2006-04-11")
          (paginas 230)
          (idioma "Español")
@@ -1883,7 +1883,7 @@
     ([instancia171] of Libro
          (titulo "Una Algo")
          (escritoPor ["Poncio Puga"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2023-11-05")
          (paginas 292)
          (idioma "Español")
@@ -1894,7 +1894,7 @@
     ([instancia172] of Libro
          (titulo "Un Nada La Algo")
          (escritoPor ["Pancho Almagro Sainz"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "1998-04-03")
          (paginas 114)
          (idioma "Español")
@@ -1905,7 +1905,7 @@
     ([instancia173] of Libro
          (titulo "Algo Una Una")
          (escritoPor ["Sebastian Camacho León"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2001-07-17")
          (paginas 303)
          (idioma "Español")
@@ -1916,7 +1916,7 @@
     ([instancia174] of Libro
          (titulo "El La Todo")
          (escritoPor ["Leandra Asensio Pinedo"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2018-11-15")
          (paginas 201)
          (idioma "Español")
@@ -1927,7 +1927,7 @@
     ([instancia175] of Libro
          (titulo "Una Un")
          (escritoPor ["Álvaro Cabanillas"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2012-04-20")
          (paginas 487)
          (idioma "Español")
@@ -1938,7 +1938,7 @@
     ([instancia176] of Libro
          (titulo "Un Nadie Nada")
          (escritoPor ["Cristóbal Jonatan Guardiola Palma"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2008-09-19")
          (paginas 439)
          (idioma "Español")
@@ -1949,7 +1949,7 @@
     ([instancia177] of Libro
          (titulo "Nada La Una")
          (escritoPor ["Azahar Seguí Fábregas"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2010-03-23")
          (paginas 257)
          (idioma "Español")
@@ -1960,7 +1960,7 @@
     ([instancia178] of Libro
          (titulo "Nadie Todo")
          (escritoPor ["Eutimio Leiva-Fabregat"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2021-04-21")
          (paginas 384)
          (idioma "Español")
@@ -1971,7 +1971,7 @@
     ([instancia179] of Libro
          (titulo "La Nadie Todo")
          (escritoPor ["Eric Severo Mir Salas"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2023-05-23")
          (paginas 411)
          (idioma "Español")
@@ -1982,7 +1982,7 @@
     ([instancia180] of Libro
          (titulo "Nada Nada Nada Todo")
          (escritoPor ["Leire Almagro Hidalgo"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2015-06-26")
          (paginas 268)
          (idioma "Español")
@@ -1993,7 +1993,7 @@
     ([instancia181] of Libro
          (titulo "El Algo Un")
          (escritoPor ["Severino del Calatayud"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "1998-02-10")
          (paginas 178)
          (idioma "Español")
@@ -2004,7 +2004,7 @@
     ([instancia182] of Libro
          (titulo "Todo Algo El")
          (escritoPor ["Alfonso Calvo"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2010-04-28")
          (paginas 306)
          (idioma "Español")
@@ -2015,7 +2015,7 @@
     ([instancia183] of Libro
          (titulo "La Todo")
          (escritoPor ["Julieta Isidora Guardia Téllez"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "1996-03-24")
          (paginas 260)
          (idioma "Español")
@@ -2026,7 +2026,7 @@
     ([instancia184] of Libro
          (titulo "La Todo Una")
          (escritoPor ["Jordán de Vives"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "1996-06-11")
          (paginas 160)
          (idioma "Español")
@@ -2037,7 +2037,7 @@
     ([instancia185] of Libro
          (titulo "La La Todo")
          (escritoPor ["Dafne Perez Arco"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2019-09-12")
          (paginas 121)
          (idioma "Español")
@@ -2048,7 +2048,7 @@
     ([instancia186] of Libro
          (titulo "Nadie Nada")
          (escritoPor ["Arturo Solera Lledó"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "1998-02-04")
          (paginas 256)
          (idioma "Español")
@@ -2059,7 +2059,7 @@
     ([instancia187] of Libro
          (titulo "Nadie La")
          (escritoPor ["Néstor Azcona"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2014-12-11")
          (paginas 234)
          (idioma "Español")
@@ -2070,7 +2070,7 @@
     ([instancia188] of Libro
          (titulo "El Algo Todo")
          (escritoPor ["Leyre Oriana Alfaro Nebot"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2016-03-04")
          (paginas 238)
          (idioma "Español")
@@ -2081,7 +2081,7 @@
     ([instancia189] of Libro
          (titulo "Nadie Todo")
          (escritoPor ["Adelia Sebastián Donoso"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2013-04-11")
          (paginas 267)
          (idioma "Español")
@@ -2092,7 +2092,7 @@
     ([instancia190] of Libro
          (titulo "La")
          (escritoPor ["Alejandra Amaya Prats"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2016-12-14")
          (paginas 247)
          (idioma "Español")
@@ -2103,7 +2103,7 @@
     ([instancia191] of Libro
          (titulo "La Todo Todo")
          (escritoPor ["Chuy Sanmartín Lucas"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2012-10-25")
          (paginas 467)
          (idioma "Español")
@@ -2114,7 +2114,7 @@
     ([instancia192] of Libro
          (titulo "El Nada")
          (escritoPor ["África Cadenas Patiño"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2020-05-08")
          (paginas 113)
          (idioma "Español")
@@ -2125,7 +2125,7 @@
     ([instancia193] of Libro
          (titulo "El Nadie Una")
          (escritoPor ["Pancho Almagro Sainz"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2010-09-01")
          (paginas 352)
          (idioma "Español")
@@ -2136,7 +2136,7 @@
     ([instancia194] of Libro
          (titulo "La Un El")
          (escritoPor ["Arturo Solera Lledó"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "1994-08-29")
          (paginas 249)
          (idioma "Español")
@@ -2147,7 +2147,7 @@
     ([instancia195] of Libro
          (titulo "Nadie Un Una")
          (escritoPor ["Dafne Perez Arco"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2016-01-01")
          (paginas 482)
          (idioma "Español")
@@ -2158,7 +2158,7 @@
     ([instancia196] of Libro
          (titulo "Una Algo Nada")
          (escritoPor ["Sebastian Camacho León"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "1994-11-05")
          (paginas 461)
          (idioma "Español")
@@ -2169,7 +2169,7 @@
     ([instancia197] of Libro
          (titulo "Algo La El")
          (escritoPor ["Sebastian Camacho León"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "1997-05-05")
          (paginas 356)
          (idioma "Español")
@@ -2180,7 +2180,7 @@
     ([instancia198] of Libro
          (titulo "La Nada")
          (escritoPor ["Julieta Isidora Guardia Téllez"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2011-04-04")
          (paginas 228)
          (idioma "Español")
@@ -2191,7 +2191,7 @@
     ([instancia199] of Libro
          (titulo "Nada El")
          (escritoPor ["Ángela Haro Aguiló"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2013-10-03")
          (paginas 101)
          (idioma "Español")
@@ -2202,7 +2202,7 @@
     ([instancia200] of Libro
          (titulo "Una")
          (escritoPor ["Alfonso Calvo"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2007-01-11")
          (paginas 196)
          (idioma "Español")
@@ -2213,7 +2213,7 @@
     ([instancia201] of Libro
          (titulo "Algo La Algo Una")
          (escritoPor ["Pilar Anguita Solano"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "1996-01-31")
          (paginas 492)
          (idioma "Español")
@@ -2224,7 +2224,7 @@
     ([instancia202] of Libro
          (titulo "Un Todo")
          (escritoPor ["Pepe Villaverde Gibert"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2015-06-19")
          (paginas 167)
          (idioma "Español")
@@ -2235,7 +2235,7 @@
     ([instancia203] of Libro
          (titulo "Algo")
          (escritoPor ["Severino del Calatayud"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "1999-06-13")
          (paginas 265)
          (idioma "Español")
@@ -2246,7 +2246,7 @@
     ([instancia204] of Libro
          (titulo "Algo Un Nada")
          (escritoPor ["Cristian Nuñez-González"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "1993-12-18")
          (paginas 233)
          (idioma "Español")
@@ -2257,7 +2257,7 @@
     ([instancia205] of Libro
          (titulo "Una Todo")
          (escritoPor ["Alfonso Calvo"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2021-07-08")
          (paginas 472)
          (idioma "Español")
@@ -2268,7 +2268,7 @@
     ([instancia206] of Libro
          (titulo "Nada Nadie")
          (escritoPor ["Cristóbal Jonatan Guardiola Palma"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2022-07-13")
          (paginas 354)
          (idioma "Español")
@@ -2279,7 +2279,7 @@
     ([instancia207] of Libro
          (titulo "El Algo El La")
          (escritoPor ["Jordán de Vives"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2022-07-06")
          (paginas 289)
          (idioma "Español")
@@ -2290,7 +2290,7 @@
     ([instancia208] of Libro
          (titulo "Un Una Todo")
          (escritoPor ["Azahar Seguí Fábregas"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "1997-12-11")
          (paginas 354)
          (idioma "Español")
@@ -2301,7 +2301,7 @@
     ([instancia209] of Libro
          (titulo "Todo Nadie")
          (escritoPor ["Amaro Guitart Cordero"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "1998-04-27")
          (paginas 418)
          (idioma "Español")
@@ -2312,7 +2312,7 @@
     ([instancia210] of Libro
          (titulo "Todo Todo")
          (escritoPor ["Ovidio Marcial Galan Espejo"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2015-06-10")
          (paginas 160)
          (idioma "Español")
@@ -2323,7 +2323,7 @@
     ([instancia211] of Libro
          (titulo "La Un")
          (escritoPor ["Néstor Azcona"])
-         (perteneceAGenero ["Ciencia Ficción"])
+         (perteneceAGenero "Ciencia Ficción")
          (fecha "2010-04-10")
          (paginas 492)
          (idioma "Español")
@@ -2334,7 +2334,7 @@
     ([instancia212] of Libro
          (titulo "Nada Todo")
          (escritoPor ["Severino del Calatayud"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2017-06-09")
          (paginas 475)
          (idioma "Español")
@@ -2345,7 +2345,7 @@
     ([instancia213] of Libro
          (titulo "Nada Algo")
          (escritoPor ["Otilia Rosado Barrios"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2020-03-13")
          (paginas 127)
          (idioma "Español")
@@ -2356,7 +2356,7 @@
     ([instancia214] of Libro
          (titulo "El")
          (escritoPor ["Paloma Nevado Seguí"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2021-12-17")
          (paginas 163)
          (idioma "Español")
@@ -2367,7 +2367,7 @@
     ([instancia215] of Libro
          (titulo "El La La")
          (escritoPor ["Paloma Nevado Seguí"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2017-12-21")
          (paginas 109)
          (idioma "Español")
@@ -2378,7 +2378,7 @@
     ([instancia216] of Libro
          (titulo "Algo Nadie Algo")
          (escritoPor ["Javi Reyes Piña"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2010-06-10")
          (paginas 289)
          (idioma "Español")
@@ -2389,7 +2389,7 @@
     ([instancia217] of Libro
          (titulo "Todo Nada Todo")
          (escritoPor ["Julieta Isidora Guardia Téllez"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2023-01-14")
          (paginas 467)
          (idioma "Español")
@@ -2400,7 +2400,7 @@
     ([instancia218] of Libro
          (titulo "Una Algo Nadie")
          (escritoPor ["Regina Barranco Pardo"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2009-06-03")
          (paginas 231)
          (idioma "Español")
@@ -2411,7 +2411,7 @@
     ([instancia219] of Libro
          (titulo "Un Nadie")
          (escritoPor ["Cristóbal Jonatan Guardiola Palma"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2004-10-20")
          (paginas 135)
          (idioma "Español")
@@ -2422,7 +2422,7 @@
     ([instancia220] of Libro
          (titulo "El")
          (escritoPor ["Otilia Rosado Barrios"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2011-10-06")
          (paginas 280)
          (idioma "Español")
@@ -2433,7 +2433,7 @@
     ([instancia221] of Libro
          (titulo "Nada Una")
          (escritoPor ["Cristian Nuñez-González"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2018-11-17")
          (paginas 367)
          (idioma "Español")
@@ -2444,7 +2444,7 @@
     ([instancia222] of Libro
          (titulo "Todo La")
          (escritoPor ["Arturo Solera Lledó"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2015-10-03")
          (paginas 145)
          (idioma "Español")
@@ -2455,7 +2455,7 @@
     ([instancia223] of Libro
          (titulo "El")
          (escritoPor ["Regina Valle-Carbajo"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2018-08-30")
          (paginas 291)
          (idioma "Español")
@@ -2466,7 +2466,7 @@
     ([instancia224] of Libro
          (titulo "Una Nada")
          (escritoPor ["Cristian Nuñez-González"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2017-11-11")
          (paginas 110)
          (idioma "Español")
@@ -2477,7 +2477,7 @@
     ([instancia225] of Libro
          (titulo "El Todo")
          (escritoPor ["Ainara Godoy Chico"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2017-03-24")
          (paginas 251)
          (idioma "Español")
@@ -2488,7 +2488,7 @@
     ([instancia226] of Libro
          (titulo "Todo La La")
          (escritoPor ["Poncio Puga"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2008-11-30")
          (paginas 233)
          (idioma "Español")
@@ -2499,7 +2499,7 @@
     ([instancia227] of Libro
          (titulo "Una Todo")
          (escritoPor ["Ainara Godoy Chico"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2003-11-25")
          (paginas 177)
          (idioma "Español")
@@ -2510,7 +2510,7 @@
     ([instancia228] of Libro
          (titulo "El Todo Todo Algo")
          (escritoPor ["Cruz Mendez Roldán"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2002-05-14")
          (paginas 399)
          (idioma "Español")
@@ -2521,7 +2521,7 @@
     ([instancia229] of Libro
          (titulo "Nadie Nada")
          (escritoPor ["Sosimo Canales Gisbert"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "1999-01-13")
          (paginas 415)
          (idioma "Español")
@@ -2532,7 +2532,7 @@
     ([instancia230] of Libro
          (titulo "Un La")
          (escritoPor ["Alejandra Amaya Prats"])
-         (perteneceAGenero ["Romance"])
+         (perteneceAGenero "Romance")
          (fecha "2001-07-07")
          (paginas 266)
          (idioma "Español")
@@ -2543,7 +2543,7 @@
     ([instancia231] of Libro
          (titulo "El Algo Un")
          (escritoPor ["Pancho Almagro Sainz"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2022-08-09")
          (paginas 158)
          (idioma "Español")
@@ -2554,7 +2554,7 @@
     ([instancia232] of Libro
          (titulo "El Una Nada")
          (escritoPor ["Marcelo del Cuéllar"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "1997-05-17")
          (paginas 140)
          (idioma "Español")
@@ -2565,7 +2565,7 @@
     ([instancia233] of Libro
          (titulo "El Una")
          (escritoPor ["Paloma Nevado Seguí"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "2020-12-21")
          (paginas 277)
          (idioma "Español")
@@ -2576,7 +2576,7 @@
     ([instancia234] of Libro
          (titulo "La Un Nada Nada")
          (escritoPor ["Emma Camino Barrena"])
-         (perteneceAGenero ["Misterio"])
+         (perteneceAGenero "Misterio")
          (fecha "2014-08-29")
          (paginas 282)
          (idioma "Español")
@@ -2587,7 +2587,7 @@
     ([instancia235] of Libro
          (titulo "El La")
          (escritoPor ["Dionisio de Sureda"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2016-10-27")
          (paginas 485)
          (idioma "Español")
@@ -2598,7 +2598,7 @@
     ([instancia236] of Libro
          (titulo "Todo El Una")
          (escritoPor ["Julieta Isidora Guardia Téllez"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2018-09-28")
          (paginas 305)
          (idioma "Español")
@@ -2609,7 +2609,7 @@
     ([instancia237] of Libro
          (titulo "La Nada Todo")
          (escritoPor ["Soledad Ruperta Ortiz Andrés"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2000-07-06")
          (paginas 438)
          (idioma "Español")
@@ -2620,7 +2620,7 @@
     ([instancia238] of Libro
          (titulo "Una Una Un")
          (escritoPor ["Cristóbal Jonatan Guardiola Palma"])
-         (perteneceAGenero ["Poesía"])
+         (perteneceAGenero "Poesía")
          (fecha "2020-04-04")
          (paginas 318)
          (idioma "Español")
@@ -2631,7 +2631,7 @@
     ([instancia239] of Libro
          (titulo "Un")
          (escritoPor ["Custodio Colom Salas"])
-         (perteneceAGenero ["Histórica"])
+         (perteneceAGenero "Histórica")
          (fecha "1995-10-18")
          (paginas 375)
          (idioma "Español")
@@ -2642,7 +2642,7 @@
     ([instancia240] of Libro
          (titulo "Un Algo La")
          (escritoPor ["Nico Osorio Galván"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2020-03-31")
          (paginas 354)
          (idioma "Español")
@@ -2653,7 +2653,7 @@
     ([instancia241] of Libro
          (titulo "La Un Algo")
          (escritoPor ["Leandra Asensio Pinedo"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "1995-01-20")
          (paginas 284)
          (idioma "Español")
@@ -2664,7 +2664,7 @@
     ([instancia242] of Libro
          (titulo "Nadie El")
          (escritoPor ["Hernando Danilo Arranz Arcos"])
-         (perteneceAGenero ["Fantasía"])
+         (perteneceAGenero "Fantasía")
          (fecha "2014-01-17")
          (paginas 136)
          (idioma "Español")
@@ -2675,7 +2675,7 @@
     ([instancia243] of Libro
          (titulo "La La Nada")
          (escritoPor ["Regina Valle-Carbajo"])
-         (perteneceAGenero ["Historica"])
+         (perteneceAGenero "Historica")
          (fecha "2009-09-08")
          (paginas 460)
          (idioma "Español")

@@ -72,7 +72,7 @@ void escribirInstancias(const vector<Libro>& libros) {
         outputFile << "    ([instancia" << i << "] of Libro" << endl;
         outputFile << "         (titulo \"" << libro.titulo << "\")" << endl;
         outputFile << "         (escritoPor [\"" << libro.escritoPor << "\"])" << endl;
-        outputFile << "         (perteneceAGenero [\"" << libro.perteneceAGenero << "\"])" << endl;
+        outputFile << "         (perteneceAGenero \"" << libro.perteneceAGenero << "\")" << endl;
         outputFile << "         (fecha \"" << libro.fecha << "\")" << endl;
         outputFile << "         (paginas " << libro.paginas << ")" << endl;
         outputFile << "         (idioma \"" << libro.idioma << "\")" << endl;
