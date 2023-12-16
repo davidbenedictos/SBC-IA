@@ -355,18 +355,18 @@
 ;    (send ?lib delete)
 ; )
 
-; (defrule primera-recomendacion
-;    (declare (salience 51))
-;    (not (Recomendaciones (titulos-recomendados $?recomendados)))
-;    (AbstractedBook (generos $?generosRecomendados) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
-;    ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
-;    =>
-;    ;mirem si genero recomendado esta a la llista de perteneceAGenero
-;    (if (member$ (send ?lib get-perteneceAGenero) ?generosRecomendados) then ; pot anar a la part esquerra
-;         ;(printout t "primera_recomendacion " (send ?lib get-titulo) crlf)
-;         (assert (Recomendaciones (titulos-recomendados (create$ (send ?lib get-titulo)))))
-;    )
-; )
+(defrule primera-recomendacion
+   (declare (salience 51))
+   (not (Recomendaciones (titulos-recomendados $?recomendados)))
+   (AbstractedBook (generos $?generosRecomendados) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
+   ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
+   =>
+   ;mirem si genero recomendado esta a la llista de perteneceAGenero
+   (if (member$ (send ?lib get-perteneceAGenero) ?generosRecomendados) then ; pot anar a la part esquerra
+        ;(printout t "primera_recomendacion " (send ?lib get-titulo) crlf)
+        (assert (Recomendaciones (titulos-recomendados (create$ (send ?lib get-titulo)))))
+   )
+)
 
 (defrule primera-no-recomendacion
    (declare (salience 40))
@@ -384,21 +384,21 @@
      )
 )
 
-; (defrule añadir-recomendaciones
-;    (declare (salience 50))
-;    ?rec <- (Recomendaciones (titulos-recomendados $?recomendados))
-;    (test (< (length$ ?recomendados) 3))
-;    (AbstractedBook (generos $?generosRecomendados) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
-;    ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
-;    (test (not (elementoEnLista (send ?lib get-titulo) ?recomendados)))
-;    =>
-;    ;mirem si genero recomendado esta a la llista de perteneceAGenero
-;    (if (member$ (send ?lib get-perteneceAGenero) ?generosRecomendados) then ;ho podem ficar a la part esquerra de la regla
-;         ;(if (not (member$ (send ?lib get-titulo) ?recomendados)) then ; nomes el posem si no esta a la llista
-;             (modify ?rec (titulos-recomendados $?recomendados (send ?lib get-titulo)))
-;         ;)
-;    )
-; )
+(defrule añadir-recomendaciones
+   (declare (salience 50))
+   ?rec <- (Recomendaciones (titulos-recomendados $?recomendados))
+   (test (< (length$ ?recomendados) 3))
+   (AbstractedBook (generos $?generosRecomendados) (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
+   ?lib <- (object (is-a Libro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
+   (test (not (elementoEnLista (send ?lib get-titulo) ?recomendados)))
+   =>
+   ;mirem si genero recomendado esta a la llista de perteneceAGenero
+   (if (member$ (send ?lib get-perteneceAGenero) ?generosRecomendados) then ;ho podem ficar a la part esquerra de la regla
+        ;(if (not (member$ (send ?lib get-titulo) ?recomendados)) then ; nomes el posem si no esta a la llista
+            (modify ?rec (titulos-recomendados $?recomendados (send ?lib get-titulo)))
+        ;)
+   )
+)
 
 (defrule no-mas-recomendaciones
    (declare (salience 5))
