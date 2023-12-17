@@ -3032,7 +3032,7 @@
          (paginas 140)
          (idioma "Español")
          (complejidad 2)
-         (popularidad 9)
+         (popularidad 8)
          (valoracion 9)
     )
     ([instancia276] of Libro
