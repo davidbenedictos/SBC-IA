@@ -1,8 +1,8 @@
 Titulo,Autor,Genero,Fecha,Paginas,Idioma,Complejidad,Popularidad,Valoracion
 Tiempo sobre miedo,Ascension Fortunata Donaire Mulet,Historica,2009-10-28,321,Español,10,3,10
-Sueño y noche,Nacio Vera Blanco,Ciencia Ficcion,2005-04-10,311,Español,6,7,4
+Sueño y noche,Nacio Vera Blanco,CienciaFiccion,2005-04-10,311,Español,6,7,4
 Luz bajo viaje,Eutropio Madrid Madrigal,Fantasia,2017-03-23,164,Español,8,9,7
-Viaje de sombra,Bautista Vila,Ciencia Ficcion,2017-02-20,455,Español,3,6,7
+Viaje de sombra,Bautista Vila,CienciaFiccion,2017-02-20,455,Español,3,6,7
 Esperanza de amor,Emiliana Corona Cifuentes Serna,Misterio,2011-11-09,450,Español,1,4,6
 Viaje y viaje,Aristides Lago Bueno,Romance,2013-04-10,255,Español,5,9,4
 Dia bajo dia,Azahar Zoraida Coll Bru,Historica,2016-08-26,343,Español,3,4,9
@@ -13,11 +13,11 @@ El Esperanza de tiempo,Luis angel Baron Lillo,Misterio,1995-02-01,201,Español,5
 Esperanza sobre tiempo,Ulises Colom Mascaro,Suspense,2007-02-24,286,Español,10,9,1
 La Realidad de mar,Luisina Sanmartin Escribano,Suspense,2003-10-19,238,Español,5,4,5
 Sombra y amor,Baldomero Blasco Giron,Romance,2020-09-08,309,Español,3,9,8
-Luz y luz,Leon Lobato Garriga,Ciencia Ficcion,2006-09-18,471,Español,4,3,2
+Luz y luz,Leon Lobato Garriga,CienciaFiccion,2006-09-18,471,Español,4,3,2
 Amor bajo dia,Adela Ojeda Villa,Suspense,2000-02-23,287,Español,1,5,4
 El Dia de cielo,Vera Mateos Jaume,Misterio,1995-10-30,229,Español,6,9,6
 Cielo de dia,Sandalio Duarte Benavent,Misterio,2011-10-17,295,Español,6,8,9
-El Dia de tiempo,Faustino Seve Prada Lopez,Ciencia Ficcion,2022-10-01,278,Español,7,3,10
+El Dia de tiempo,Faustino Seve Prada Lopez,CienciaFiccion,2022-10-01,278,Español,7,3,10
 La Dia de cielo,Merche Naranjo Marcos,Misterio,2015-06-23,209,Español,4,3,2
 La Dia de viaje,Virginia Reyes Aragon,Romance,2005-06-27,108,Español,9,9,3
 El Dia de mar,Gabriela Real Molina,Romance,2018-12-09,270,Español,8,9,6
@@ -55,11 +55,11 @@ Un Miedo en amor,Climaco de Carlos,Misterio,2002-07-17,425,Español,7,3,2
 Secreto de luz,Rosa Cozar Sanabria,Drama,1997-02-15,208,Español,5,4,1
 Esperanza sobre amor,Raul Maza Solana,Misterio,2016-09-29,359,Español,5,3,2
 La Luz de viaje,Osvaldo Castillo Yuste,Fantasia,1996-01-26,477,Español,1,8,1
-Luz de miedo,Olalla Cal,Ciencia Ficcion,1995-04-05,397,Español,3,5,1
+Luz de miedo,Olalla Cal,CienciaFiccion,1995-04-05,397,Español,3,5,1
 El Mar de dia,Jose Manuel Pina Vara,Aventura,2009-07-24,143,Español,2,2,6
 Miedo bajo tiempo,Hilario Nevado Acedo,Drama,2013-10-17,417,Español,1,6,7
 Miedo de tiempo,Lazaro Ortiz Fonseca,Romance,1997-08-27,344,Español,8,2,2
-Un Miedo en miedo,Jose Maria Valera Iniesta,Ciencia Ficcion,1995-08-01,486,Español,7,8,6
+Un Miedo en miedo,Jose Maria Valera Iniesta,CienciaFiccion,1995-08-01,486,Español,7,8,6
 Esperanza bajo secreto,Ema Peñas Quiros,Suspense,1995-02-13,120,Español,2,8,4
 Esperanza de sombra,Emigdio Amat Arco,Romance,2006-08-20,493,Español,4,5,5
 Miedo bajo luz,Florinda Zabaleta Planas,Misterio,2018-11-25,134,Español,3,2,1
@@ -95,7 +95,7 @@ La Cielo de cielo,Alejandra de Solano,Historica,2017-11-09,247,Español,7,7,2
 La Miedo de mar,Simon Castellanos Mayo,Fantasia,2000-09-17,404,Español,4,7,7
 Secreto bajo esperanza,Herminia Gargallo Galvez,Drama,2014-09-03,199,Español,4,2,5
 Luz sobre sombra,Jose angel Sebastian Mulet,Historica,1997-07-24,296,Español,10,5,7
-Un Viaje en noche,Vanesa Tejada-Jorda,Ciencia Ficcion,1995-05-26,281,Español,2,7,4
+Un Viaje en noche,Vanesa Tejada-Jorda,CienciaFiccion,1995-05-26,281,Español,2,7,4
 Sueño de noche,Josefa Aroa Cabo Tormo,Romance,2002-03-21,241,Español,5,2,6
 Noche de secreto,Evangelina Niño Valcarcel,Suspense,2018-07-16,431,Español,5,10,9
 La Dia de tiempo,Fabio Llorens-Castañeda,Historica,2015-07-24,483,Español,7,6,8
@@ -103,7 +103,7 @@ Viaje y cielo,Salomon Nieto Belmonte,Fantasia,2023-05-16,362,Español,9,7,10
 La Tiempo de luz,Carlito Aguilo Abril,Misterio,2010-08-15,122,Español,5,6,1
 El Cielo de miedo,Alondra Zaragoza,Suspense,2015-09-15,278,Español,9,6,3
 Sueño sobre sueño,Crescencia Carrasco,Historica,2004-06-23,376,Español,4,5,7
-Secreto sobre tiempo,Ana Gracia Tena,Ciencia Ficcion,2004-02-08,181,Español,10,2,7
+Secreto sobre tiempo,Ana Gracia Tena,CienciaFiccion,2004-02-08,181,Español,10,2,7
 Miedo y esperanza,Lorena Julian,Drama,2007-12-24,490,Español,8,5,7
 Esperanza sobre mar,Cirino Verdu Jaume,Drama,2002-12-03,124,Español,1,3,7
 La Luz de luz,Consuela Chico Molina,Romance,1995-05-13,447,Español,7,5,2
@@ -113,11 +113,11 @@ Amor sobre dia,Efrain Anton,Drama,2008-04-11,441,Español,8,4,6
 El Esperanza de esperanza,Corona Alfonso Bas,Historica,2013-08-12,291,Español,1,8,10
 La Amor de realidad,Emilio Julia-Llano,Romance,1997-05-02,149,Español,9,1,10
 El Dia de esperanza,Nando Garcia-Salvà,Historica,2011-03-12,272,Español,10,5,8
-Miedo bajo realidad,Ricardo de Rueda,Ciencia Ficcion,2009-06-09,186,Español,4,8,4
-La Miedo de esperanza,Marianela Uria,Ciencia Ficcion,2023-10-02,287,Español,8,2,8
+Miedo bajo realidad,Ricardo de Rueda,CienciaFiccion,2009-06-09,186,Español,4,8,4
+La Miedo de esperanza,Marianela Uria,CienciaFiccion,2023-10-02,287,Español,8,2,8
 Un Sueño en noche,Macaria Priego,Suspense,2017-03-10,371,Español,1,3,7
-Noche sobre dia,Venceslas Gracia Roman,Ciencia Ficcion,1995-01-26,229,Español,6,4,4
-Amor sobre secreto,Jose Ramon Hernandez Briones,Ciencia Ficcion,2011-10-11,416,Español,5,1,1
+Noche sobre dia,Venceslas Gracia Roman,CienciaFiccion,1995-01-26,229,Español,6,4,4
+Amor sobre secreto,Jose Ramon Hernandez Briones,CienciaFiccion,2011-10-11,416,Español,5,1,1
 Un Realidad en miedo,Fidela del Castilla,Historica,1994-05-31,232,Español,7,2,9
 Realidad de luz,Calixta Pizarro Calvo,Romance,2014-06-27,459,Español,2,10,4
 Tiempo de tiempo,Paulino Peiro-Lerma,Suspense,2018-02-10,352,Español,6,4,8
@@ -126,7 +126,7 @@ Secreto y cielo,Anita del Gomis,Suspense,1997-04-16,453,Español,5,9,10
 La Cielo de secreto,Josefa Batlle Alcolea,Romance,2012-03-11,203,Español,7,4,10
 Dia sobre cielo,Lope Jauregui Lillo,Aventura,2003-05-10,300,Español,8,6,6
 Un Amor en esperanza,Jacinta Francisca Aliaga Olivares,Drama,2021-08-13,314,Español,9,9,4
-El Esperanza de realidad,Aranzazu Ainoa Rico Arnal,Ciencia Ficcion,2019-01-28,487,Español,1,5,3
+El Esperanza de realidad,Aranzazu Ainoa Rico Arnal,CienciaFiccion,2019-01-28,487,Español,1,5,3
 Un Viaje en amor,Guillermo Mesa Cuenca,Drama,2023-06-02,198,Español,4,10,9
 Mar de realidad,Amalia Anita Camino Coronado,Historica,2009-10-20,323,Español,9,3,9
 Luz de sueño,Diana Mosquera Lozano,Drama,2016-12-14,291,Español,1,3,3
@@ -140,7 +140,7 @@ Un Mar en noche,Ale Fabian Bernat Ferrando,Romance,2003-09-17,187,Español,9,6,4
 La Esperanza de mar,Manu de Saez,Misterio,2007-12-28,414,Español,6,3,3
 El Amor de amor,Rodrigo Aleman Flores,Romance,2018-11-30,243,Español,1,6,3
 Miedo de esperanza,alvaro Pujadas Pagès,Fantasia,2015-03-22,286,Español,5,2,4
-Un Realidad en mar,Maximiano Pons Cueto,Ciencia Ficcion,1997-10-01,178,Español,6,9,3
+Un Realidad en mar,Maximiano Pons Cueto,CienciaFiccion,1997-10-01,178,Español,6,9,3
 Tiempo y mar,Valentina Cuellar Yuste,Fantasia,2020-03-27,467,Español,7,3,4
 El Miedo de realidad,Rufino Asensio Barriga,Misterio,2017-04-18,267,Español,2,3,10
 La Dia de tiempo,Viviana Carmen Cortes Laguna,Suspense,2012-08-08,209,Español,6,3,6
@@ -187,7 +187,7 @@ Luz y amor,Adolfo Solano Pujadas,Misterio,2002-12-17,385,Español,9,9,7
 Viaje y sombra,Purificacion Escudero Cerro,Drama,2014-04-28,473,Español,1,6,2
 Amor de noche,Merche Aliaga Blanes,Fantasia,2017-03-29,355,Español,9,7,10
 Tiempo y realidad,Paloma Malena Garay Quiroga,Fantasia,2023-10-13,155,Español,10,10,4
-Secreto de mar,Pilar Alondra Julia Pina,Ciencia Ficcion,2019-03-27,379,Español,3,3,9
+Secreto de mar,Pilar Alondra Julia Pina,CienciaFiccion,2019-03-27,379,Español,3,3,9
 Amor de esperanza,Olalla Marta Marco Sandoval,Suspense,2002-08-04,151,Español,3,7,9
 Dia bajo tiempo,Nadia Mendez Cozar,Suspense,1996-04-21,200,Español,10,10,6
 Tiempo de sueño,Andres Felipe del Armengol,Aventura,2000-07-11,183,Español,10,5,3
@@ -203,10 +203,10 @@ Luz de amor,David Padilla Martinez,Fantasia,2021-06-23,175,Español,4,5,6
 Cielo bajo sueño,Rogelio del Valles,Aventura,2009-02-11,247,Español,9,7,2
 Luz y cielo,Eva Gonzalo Mariño,Suspense,2000-10-07,202,Español,2,5,8
 Realidad bajo sombra,Isa Amador,Fantasia,2008-11-12,105,Español,4,9,9
-Realidad sobre sombra,Adelaida Fanny Giner Murillo,Ciencia Ficcion,1995-12-31,171,Español,4,7,6
+Realidad sobre sombra,Adelaida Fanny Giner Murillo,CienciaFiccion,1995-12-31,171,Español,4,7,6
 Viaje bajo esperanza,Manuelita Sainz-Pellicer,Suspense,2014-01-27,301,Español,2,9,2
 Sueño de luz,Zaida Zamora Roman,Fantasia,2008-07-16,186,Español,7,9,1
-Dia y tiempo,Lucia Huertas aguila,Ciencia Ficcion,1995-05-26,497,Español,4,6,4
+Dia y tiempo,Lucia Huertas aguila,CienciaFiccion,1995-05-26,497,Español,4,6,4
 Un Cielo en esperanza,Chucho Pereira-Coll,Historica,2018-12-17,137,Español,1,3,5
 El Tiempo de noche,Estrella Granados Ramon,Romance,1997-09-22,443,Español,4,8,8
 Esperanza bajo mar,Borja Arenas Cueto,Historica,1997-09-16,345,Español,9,1,8
@@ -217,15 +217,15 @@ Dia y realidad,Marisa de Benavent,Romance,2020-10-15,354,Español,8,10,8
 Sombra de esperanza,Lucia Gonzalo,Suspense,2020-01-13,322,Español,1,1,9
 Un Sombra en mar,Gaston Esteban Solsona,Misterio,2014-08-28,226,Español,7,2,8
 Realidad sobre amor,Malena Ramirez Mesa,Fantasia,2008-08-31,469,Español,8,2,7
-Cielo sobre secreto,Javi Salazar,Ciencia Ficcion,2010-12-28,357,Español,9,1,2
+Cielo sobre secreto,Javi Salazar,CienciaFiccion,2010-12-28,357,Español,9,1,2
 Realidad de realidad,Isidro Mariscal Valderrama,Misterio,1994-09-09,295,Español,2,6,9
-Noche y mar,Adelaida Zamora Prat,Ciencia Ficcion,2018-02-24,190,Español,9,6,5
+Noche y mar,Adelaida Zamora Prat,CienciaFiccion,2018-02-24,190,Español,9,6,5
 El Sueño de amor,Andres Boada Llano,Misterio,2017-08-31,370,Español,7,3,8
 La Dia de sombra,Alicia del Pla,Suspense,1994-09-01,343,Español,8,7,4
 El Cielo de noche,Monica Zamorano Paz,Misterio,2003-09-25,305,Español,2,9,4
 Viaje y sueño,Paca Leon Ortuño,Misterio,2010-06-05,446,Español,9,7,5
 Noche y noche,Lupe Che Ferrando Palma,Fantasia,2012-09-27,381,Español,6,9,9
-El Miedo de amor,Iban Sanz Belda,Ciencia Ficcion,1996-08-04,246,Español,5,10,7
+El Miedo de amor,Iban Sanz Belda,CienciaFiccion,1996-08-04,246,Español,5,10,7
 Un Esperanza en miedo,Gala del Escolano,Aventura,2022-05-03,330,Español,8,5,10
 La Tiempo de amor,Silvestre Marquez Piñeiro,Aventura,2019-04-15,247,Español,5,5,2
 Un Mar en realidad,Sigfrido Bertran-Ortiz,Aventura,2001-06-09,414,Español,4,6,2
@@ -243,27 +243,27 @@ El Realidad de noche,Placido de Muro,Historica,1999-08-14,472,Español,4,5,9
 Sueño y esperanza,Diana Arias Aviles,Misterio,2021-09-13,349,Español,3,6,2
 El Miedo de noche,Augusto Duque-Alonso,Drama,2014-12-15,212,Español,10,10,1
 Sueño sobre noche,Jenny del Baeza,Misterio,2018-08-09,265,Español,1,8,8
-Mar y luz,Lorenzo Haro,Ciencia Ficcion,2003-03-20,282,Español,5,7,7
+Mar y luz,Lorenzo Haro,CienciaFiccion,2003-03-20,282,Español,5,7,7
 Luz sobre amor,Olivia Camino Maestre,Misterio,2013-05-14,500,Español,2,9,8
 Sombra bajo luz,Palmira Luque Camacho,Suspense,2018-08-05,449,Español,4,8,4
 El Dia de realidad,Cayetano Chaparro,Romance,1994-06-29,298,Español,10,5,9
 Un Noche en secreto,Veronica Gonzalez Rojas,Historica,2016-04-07,424,Español,2,8,3
 Esperanza bajo mar,Emiliana Bertran Jaume,Drama,2009-01-22,305,Español,3,2,9
-La Dia de noche,Custodio Castilla-Andreu,Ciencia Ficcion,2009-02-22,370,Español,10,2,9
+La Dia de noche,Custodio Castilla-Andreu,CienciaFiccion,2009-02-22,370,Español,10,2,9
 Realidad y noche,Benigna Noguera Fajardo,Suspense,1998-09-08,162,Español,7,5,2
 Miedo bajo sombra,Abigail Ferrer Alcantara,Suspense,2012-06-17,468,Español,4,5,3
-La Sueño de realidad,Jose Miguel Martin Almansa,Ciencia Ficcion,1998-06-07,307,Español,8,5,5
+La Sueño de realidad,Jose Miguel Martin Almansa,CienciaFiccion,1998-06-07,307,Español,8,5,5
 Viaje de realidad,Vanesa Reina Lillo,Suspense,2009-09-23,226,Español,8,7,3
 Un Miedo en esperanza,Nelida Valle Ramis,Misterio,2011-10-06,309,Español,6,4,1
 Dia y amor,Regulo Rosello Bou,Misterio,2023-07-17,174,Español,9,7,2
 Sueño de esperanza,Loreto del Montoya,Fantasia,1998-02-04,467,Español,2,5,1
-Miedo sobre dia,Nelida Orozco Ureña,Ciencia Ficcion,2019-02-14,129,Español,9,1,2
+Miedo sobre dia,Nelida Orozco Ureña,CienciaFiccion,2019-02-14,129,Español,9,1,2
 Un Luz en cielo,Otilia Santiago Porras,Romance,1996-02-14,387,Español,2,9,7
 El Sombra de secreto,Lola Carpio Alfaro,Fantasia,2018-10-11,232,Español,1,10,2
 El Cielo de viaje,Iban Robles Exposito,Drama,2014-01-28,211,Español,8,7,1
 Un Mar en miedo,Consuela Enriquez Querol,Fantasia,2011-02-02,401,Español,5,10,5
 Luz de luz,Elisabet Velez Tena,Misterio,2004-02-17,445,Español,3,5,5
-Un Realidad en realidad,Onofre Colomer Sole,Ciencia Ficcion,2007-10-31,275,Español,2,6,4
+Un Realidad en realidad,Onofre Colomer Sole,CienciaFiccion,2007-10-31,275,Español,2,6,4
 Miedo de secreto,Macario Mari Olivera,Misterio,2023-11-29,129,Español,5,9,8
 Dia bajo esperanza,Fidela Abascal-Osorio,Drama,2000-05-21,464,Español,8,8,10
 Tiempo bajo viaje,Marcial Pujol Ferrer,Romance,2022-06-09,106,Español,9,7,7
@@ -291,9 +291,9 @@ La Sueño de tiempo,Adelia Solera Rojas,Misterio,2002-01-08,126,Español,10,6,4
 Miedo bajo sueño,Ildefonso Flor Jerez,Aventura,2019-08-25,306,Español,1,9,1
 Luz y luz,Americo Taboada Ferrandiz,Suspense,2017-06-24,113,Español,3,7,4
 La Miedo de viaje,Pepito Figueroa Reig,Aventura,1995-10-23,483,Español,6,8,3
-El Noche de mar,Elisa Valero-Cobo,Ciencia Ficcion,2007-07-12,323,Español,9,8,10
+El Noche de mar,Elisa Valero-Cobo,CienciaFiccion,2007-07-12,323,Español,9,8,10
 La Dia de esperanza,Vicente Manzanares Piquer,Misterio,2008-12-30,333,Español,6,9,10
-Miedo y sueño,Nelida Garay Calatayud,Ciencia Ficcion,2002-02-12,215,Español,4,9,6
+Miedo y sueño,Nelida Garay Calatayud,CienciaFiccion,2002-02-12,215,Español,4,9,6
 La Sueño de sueño,Pascuala Prat Ros,Suspense,1999-05-14,106,Español,10,3,2
 Miedo bajo mar,Pancho Colomer España,Aventura,2021-04-03,478,Español,7,6,2
 Noche bajo miedo,Manola Casares Vilalta,Misterio,1998-07-28,247,Español,7,1,4
