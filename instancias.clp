@@ -3032,8 +3032,8 @@
          (paginas 140)
          (idioma "Español")
          (complejidad 2)
-         (popularidad 8)
-         (valoracion 4)
+         (popularidad 9)
+         (valoracion 9)
     )
     ([instancia276] of Libro
          (titulo "Realidad y secreto")
