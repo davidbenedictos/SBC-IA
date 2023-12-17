@@ -18,6 +18,7 @@
     ?respuesta
 )
 
+
 (deffunction elementoEnLista (?elemento $?lista)
     (bind ?b (member$ ?elemento ?lista))
     (if (neq ?b FALSE) then (bind ?b TRUE)) 
@@ -49,6 +50,7 @@
     (slot importanciaValoracion (type INTEGER))
     (slot momentoFavorito (type INTEGER))
     (multislot puntuacionGenero (type INTEGER))
+    (slot justificacionRespuesta (type INTEGER))
 )
 
 (deffacts generosExistentes
@@ -86,10 +88,15 @@
     (printout t "Opción 1: Cuando tienes mucho rato disponible, como por ejemplo en el sofá de casa un domingo " crlf)
     (bind ?momentoFavorito (pregunta-numerica "Opción favorita: " 0 1))
 
+    (printout t crlf "¿Te gustaría ver el porqué de tu recomendación?: " crlf)
+    (printout t "Opción 0: NO" crlf)
+    (printout t "Opción 1: SI" crlf)
+    (bind ?justificacionRespuesta (pregunta-numerica "Opción favorita: " 0 1))
+   
     (assert (User (edad ?edad) (frecuenciaLectura ?frecuenciaLectura) (tiempoDisponibleLectura ?tiempoDisponibleLectura) 
     (importanciaPopularidad ?importanciaPopularidad) (importanciaValoracion ?importanciaValoracion) (momentoFavorito ?momentoFavorito)
         (puntuacionGenero ?puntuacionFantasia ?puntuacionRomance ?puntuacionMisterio ?puntuacionCienciaFiccion ?puntuacionDrama 
-            ?puntuacionSuspense ?puntuacionHistorica))); ?puntuacionPoesia)))
+            ?puntuacionSuspense ?puntuacionHistorica) (justificacionRespuesta ?justificacionRespuesta))); ?puntuacionPoesia)))
 
     (printout t crlf "*** Información personal guardada correctamente. ***" crlf crlf)
     (focus ABSTRACCION)
@@ -109,12 +116,13 @@
     (slot importanciaPopularidad (type STRING)) ; poca, normal, mucha
     (slot importanciaValoracion (type STRING)) ; poca, normal, mucha
     (multislot generosFavoritos (type STRING)) ; segun la puntuacion dada
+    (slot justificacionRespuesta (type INTEGER)); 1-> Si, 0->No
 )
 
 (defrule crear-abstracted-user "abstraemos datos del usuario" 
     (declare (salience 100))
     (User (edad ?edad) (frecuenciaLectura ?frecLectura) (tiempoDisponibleLectura ?tiempoDisp) (momentoFavorito ?momFav) 
-        (importanciaPopularidad ?impPop) (importanciaValoracion ?impVal))
+        (importanciaPopularidad ?impPop) (importanciaValoracion ?impVal) (justificacionRespuesta ?justRes))
     =>
     (bind ?edadAbstracta (if (< ?edad 12) then "niño"
                          else (if (< ?edad 20) then "adolescente"
@@ -140,10 +148,21 @@
                             (tiempoDisponibleLectura ?tiempoDispAbstracto)
                             (sesionesLectura ?sesionesLectura)
                             (importanciaPopularidad ?popularidadAbstracto)
-                            (importanciaValoracion ?valoracionAbstracto)))
+                            (importanciaValoracion ?valoracionAbstracto)
+                            (justificacionRespuesta ?justRes)))
+    (if (eq ?justRes 1) 
+        then
+        (printout t "Información abstraida del usuario: " crlf)                        
+        (printout t "Edad abstraida: " ?edadAbstracta crlf)   
+        (printout t "Frecuencia de lectura abstraida: " ?frecLecturaAbstracta crlf)   
+        (printout t "Tiempo de lectura disponible abstraido: " ?tiempoDispAbstracto crlf)
+        (printout t "Sesion de lectura abstraida: " ?sesionesLectura crlf)     
+        (printout t "Importancia por la popularidad abstraida: " ?popularidadAbstracto crlf) 
+        (printout t "Importancia por las valoraciones abstraida: " ?valoracionAbstracto crlf crlf)      
+    )                           
 )
 
-(defrule numeros "lista de numeros del 1 al puntuacionGenero.length" 
+(defrule numeros "lista de umeros del 1 al puntuacionGenero.length" 
     (declare (salience 99))
     (User (puntuacionGenero $?puntuacionGenero))
     =>
@@ -162,8 +181,8 @@
     =>
     (if (not (member$ (nth$ ?x ?g) ?gFav)) then
         (modify ?aUser (generosFavoritos $?gFav (nth$ ?x ?g)))
+        (printout t "Genero favorito abstraido: " (nth$ ?x ?g) crlf)  
     )
-    
 )
  
 (defrule siguiente-modulo
@@ -204,35 +223,42 @@
 
 (defrule ajustar-por-valoracion
     (declare (salience 33))
-    (AbstractedUser (importanciaValoracion ?impVal))
+    (AbstractedUser (importanciaValoracion ?impVal) (justificacionRespuesta ?justRes))
     ?ab <- (AbstractedBook (valorado ?v&:(eq ?v -1))) ;todavía no se ha inicializado
     =>
     (switch ?impVal
         (case "mucha" then 
+            (if (eq ?justRes 1) then (printout t crlf "Como importancia valoracion: " ?impVal ", valoración mínima para usuario: " 9 crlf))
             then (modify ?ab (valorado 9))   
         )
         (case "normal" then 
+            (if (eq ?justRes 1) then (printout t crlf "Como importancia valoracion: " ?impVal ", valoración mínima para usuario: " 5 crlf))
              then (modify ?ab (valorado 5))  
         )
         (case "poca" then 
+            (if (eq ?justRes 1) then (printout t crlf "Como importancia valoracion: " ?impVal ", valoración mínima para usuario: " 0 crlf))
             then (modify ?ab (valorado 0))   
         )
     )
+    
 )
 
 (defrule ajustar-por-popularidad
     (declare (salience 33))
-    (AbstractedUser (importanciaPopularidad ?impPop))
+    (AbstractedUser (importanciaPopularidad ?impPop) (justificacionRespuesta ?justRes))
     ?ab <- (AbstractedBook (popular ?p&:(eq ?p -1))) ;todavía no se ha inicializado
     =>
     (switch ?impPop
         (case "mucha" then 
+            (if (eq ?justRes 1) then (printout t "Como importancia popularidad: " ?impPop ", popularidad mínima para usuario: " 9 crlf))
             then (modify ?ab (popular 9))   
         )
         (case "normal" then 
+            (if (eq ?justRes 1) then (printout t "Como importancia popularidad: " ?impPop ", popularidad mínima para usuario: " 5 crlf))
              then (modify ?ab (popular 5))  
         )
         (case "poca" then 
+            (if (eq ?justRes 1) then (printout t "Como importancia popularidad: " ?impPop ", popularidad mínima para usuario: " 0 crlf))
             then (modify ?ab (popular 0))   
         )
     )
@@ -240,23 +266,38 @@
 
 (defrule ajustar-por-frecuencia
     (declare (salience 33))
-    (AbstractedUser (frecuenciaLectura ?frecuencia) (sesionesLectura ?sesiones))
+    (AbstractedUser (frecuenciaLectura ?frecuencia) (sesionesLectura ?sesiones) (justificacionRespuesta ?justRes))
     ?ab <- (AbstractedBook (complejidad ?c&:(eq ?c -1))) ;todavía no se ha inicializado
     =>
     (switch ?frecuencia
         (case "mucha" then 
-            (if (eq ?sesiones "largas") then (modify ?ab (complejidad 10))
-            else (modify ?ab (complejidad 8))
+            (if (eq ?sesiones "largas") 
+                then 
+                (if (eq ?justRes 1) then (printout t "Como frecuencia: " ?frecuencia " y sesiones: " ?sesiones ", complejidad máxima para usuario: 10" crlf))
+                (modify ?ab (complejidad 10))    
+            else 
+                (if (eq ?justRes 1) then (printout t "Como frecuencia: " ?frecuencia " y sesiones: " ?sesiones ", complejidad máxima para usuario: 8" crlf))
+                (modify ?ab (complejidad 8))
             ) 
         )
         (case "normal" then 
-            (if (eq ?sesiones "largas") then (modify ?ab (complejidad 8))
-            else (modify ?ab (complejidad 6))
+            (if (eq ?sesiones "largas") 
+                then 
+                (if (eq ?justRes 1) then (printout t "Como frecuencia: " ?frecuencia " y sesiones: " ?sesiones ", complejidad máxima para usuario: 8" crlf))
+                (modify ?ab (complejidad 8))
+            else 
+                (if (eq ?justRes 1) then (printout t "Como frecuencia: " ?frecuencia " y sesiones: " ?sesiones ", complejidad máxima para usuario: 6" crlf))
+                (modify ?ab (complejidad 6))
             ) 
         )
         (case "poca" then 
-            (if (eq ?sesiones "largas") then (modify ?ab (complejidad 6))
-            else (modify ?ab (complejidad 4))
+            (if (eq ?sesiones "largas") 
+                then 
+                (if (eq ?justRes 1) then (printout t "Como frecuencia: " ?frecuencia " y sesiones: " ?sesiones ", complejidad máxima para usuario: 6" crlf))
+                (modify ?ab (complejidad 6))
+            else 
+                (if (eq ?justRes 1) then (printout t "Como frecuencia: " ?frecuencia " y sesiones: " ?sesiones ", complejidad máxima para usuario: 4" crlf))
+                (modify ?ab (complejidad 4))
             ) 
         )
     )
@@ -264,23 +305,38 @@
 
 (defrule ajustar-por-tiempo
     (declare (salience 31))
-    (AbstractedUser (tiempoDisponibleLectura ?tiempo) (sesionesLectura ?sesiones))
+    (AbstractedUser (tiempoDisponibleLectura ?tiempo) (sesionesLectura ?sesiones) (justificacionRespuesta ?justRes))
     ?ab <- (AbstractedBook (paginas ?p&:(eq ?p -1))) ;todavía no se ha inicializado
     =>
     (switch ?tiempo
         (case "mucho" then 
-            (if (eq ?sesiones "largas") then (modify ?ab (paginas 2000))
-            else (modify ?ab (paginas 1000))
+            (if (eq ?sesiones "largas") 
+                then 
+                (if (eq ?justRes 1) then (printout t "Como tiempo: " ?tiempo " y sesiones: " ?sesiones ", páginas máximas para usuario: 2000" crlf))
+                (modify ?ab (paginas 2000))
+            else 
+                (if (eq ?justRes 1) then (printout t "Como tiempo: " ?tiempo " y sesiones: " ?sesiones ", páginas máximas para usuario: 1000" crlf))
+                (modify ?ab (paginas 1000))
             ) 
         )
         (case "normal" then 
-            (if (eq ?sesiones "largas") then (modify ?ab (paginas 650))
-            else (modify ?ab (paginas 350))
+            (if (eq ?sesiones "largas") 
+                then 
+                (if (eq ?justRes 1) then (printout t "Como tiempo: " ?tiempo " y sesiones: " ?sesiones ", páginas máximas para usuario: 650" crlf))
+                (modify ?ab (paginas 650))
+            else 
+                (if (eq ?justRes 1) then (printout t "Como tiempo: " ?tiempo " y sesiones: " ?sesiones ", páginas máximas para usuario: 350" crlf))
+                (modify ?ab (paginas 350))
             ) 
         )
         (case "poco" then 
-            (if (eq ?sesiones "largas") then (modify ?ab (paginas 300))
-            else (modify ?ab (paginas 200))
+            (if (eq ?sesiones "largas") 
+                then 
+                (if (eq ?justRes 1) then (printout t "Como tiempo: " ?tiempo " y sesiones: " ?sesiones ", páginas máximas para usuario: 300" crlf))
+                (modify ?ab (paginas 300))
+            else 
+                (if (eq ?justRes 1) then (printout t "Como tiempo: " ?tiempo " y sesiones: " ?sesiones ", páginas máximas para usuario: 200" crlf))
+                (modify ?ab (paginas 200))
             ) 
         )
     )
@@ -319,13 +375,13 @@
 (defrule primera-recomendacion
     (declare (salience 51))
     (not (Recomendaciones (titulos-recomendados $?recomendados)))
+    (AbstractedUser (justificacionRespuesta ?justRes))
     (AbstractedBook (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas)
      (popular ?popularidadImportancia) (valorado ?valoracionImportancia))
     ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas))
      (popularidad ?popularidad&:(>= ?popularidad ?popularidadImportancia)) (valoracion ?valoracion&:(>= ?valoracion ?valoracionImportancia)))
     =>
-     (printout t "popularidad-libro: " ?popularidad " importancia-popularidad: "?popularidadImportancia crlf)
-      (printout t "valoracion-libro: " ?valoracion " importancia-valoracion: "?valoracionImportancia crlf)
+    (if (eq ?justRes 1) then (printout t crlf "Titulo libro: " ?nombreLibro ", Popularidad libro: "?popularidad ", Valoracion: " ?valoracion crlf))
     (assert (Recomendaciones (titulos-recomendados (create$ ?nombreLibro))))
     (send ?lib delete)
 )
@@ -333,13 +389,13 @@
 (defrule añadir-recomendaciones
     (declare (salience 50))
     ?rec <- (Recomendaciones (titulos-recomendados $?recomendados&:(< (length$ ?recomendados) 3)))
+    (AbstractedUser (justificacionRespuesta ?justRes))
     (AbstractedBook (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas)
         (popular ?popularidadImportancia) (valorado ?valoracionImportancia))
     ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas))
         (popularidad ?popularidad&:(>= ?popularidad ?popularidadImportancia)) (valoracion ?valoracion&:(>= ?valoracion ?valoracionImportancia)))
     =>
-      (printout t "popularidad-libro: " ?popularidad " importancia-popularidad: "?popularidadImportancia crlf)
-      (printout t "valoracion-libro: " ?valoracion " importancia-valoracion: "?valoracionImportancia crlf)
+    (if (eq ?justRes 1) then (printout t "Titulo libro: " ?nombreLibro ", Popularidad libro: "?popularidad ", Valoracion: " ?valoracion crlf))
     (modify ?rec (titulos-recomendados $?recomendados ?nombreLibro))
     (send ?lib delete)
 )
@@ -347,22 +403,24 @@
 (defrule primera-no-recomendacion "si no hay libros que cumplan las condiciones, recomendaremos los 3 libros mas populares"
     (declare (salience 40))
     (not (Recomendaciones (titulos-recomendados $?recomendados)))
+    (AbstractedUser (justificacionRespuesta ?justRes))
     ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (popularidad ?popularidadLibro))
     (forall (object (is-a Libro) (popularidad ?popularidad2)) (test (<= ?popularidad2 ?popularidadLibro))) 
     =>
     (assert (Recomendaciones (titulos-recomendados (create$ ?nombreLibro))))
-    (printout t "Título añadido por no-recomendacion: " ?nombreLibro crlf)
+    (if (eq ?justRes 1) then (printout t crlf "Recomendación añadida por pertenecer a uno de sus géneros favoritos y ser popular, titulo libro: " ?nombreLibro ", Popularidad libro: "?popularidadLibro  crlf))
     (send ?lib delete)
 )
 
 (defrule añadir-no-recomendacion "Si no hay más libros que cumplan las condiciones, recomendaremos los mas populares"
     (declare (salience 39))
     ?rec <- (Recomendaciones (titulos-recomendados $?recomendados&:(< (length$ ?recomendados) 3)))
+    (AbstractedUser (justificacionRespuesta ?justRes))
     ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (popularidad ?popularidadLibro))
     (forall (object (is-a Libro) (popularidad ?popularidad2)) (test (<= ?popularidad2 ?popularidadLibro))) 
     =>
     (modify ?rec (titulos-recomendados $?recomendados ?nombreLibro))
-    (printout t "Título añadido por no-recomendacion: " ?nombreLibro crlf)
+    (if (eq ?justRes 1) then (printout t  "Recomendación añadida por pertenecer a uno de sus géneros favoritos y ser popular, titulo libro: " ?nombreLibro ", Popularidad libro: "?popularidadLibro crlf))
     (send ?lib delete)
 )
 
@@ -381,7 +439,7 @@
 (defrule imprimir-respuesta
     (Recomendaciones (titulos-recomendados $?titulos))
     =>
-    (printout t "Te podría gustar: " crlf)
+    (printout t crlf crlf "Te podría gustar: " crlf)
     (foreach ?titulo ?titulos
         (printout t " - " ?titulo crlf))
 )
