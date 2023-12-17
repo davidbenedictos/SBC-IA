@@ -40,7 +40,7 @@
          (paginas 164)
          (idioma "Español")
          (complejidad 8)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 7)
     )
     ([instancia4] of Libro
@@ -73,7 +73,7 @@
          (paginas 255)
          (idioma "Español")
          (complejidad 5)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 4)
     )
     ([instancia7] of Libro
@@ -95,7 +95,7 @@
          (paginas 454)
          (idioma "Español")
          (complejidad 2)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 8)
     )
     ([instancia9] of Libro
@@ -139,7 +139,7 @@
          (paginas 286)
          (idioma "Español")
          (complejidad 10)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 1)
     )
     ([instancia13] of Libro
@@ -194,7 +194,7 @@
          (paginas 229)
          (idioma "Español")
          (complejidad 6)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 6)
     )
     ([instancia18] of Libro
@@ -293,7 +293,7 @@
          (paginas 404)
          (idioma "Español")
          (complejidad 8)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 7)
     )
     ([instancia27] of Libro
@@ -304,7 +304,7 @@
          (paginas 144)
          (idioma "Español")
          (complejidad 4)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 6)
     )
     ([instancia28] of Libro
@@ -326,7 +326,7 @@
          (paginas 286)
          (idioma "Español")
          (complejidad 9)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 4)
     )
     ([instancia30] of Libro
@@ -354,7 +354,7 @@
     ([instancia32] of Libro
          (titulo "Sombra y mar")
          (escritoPor "Gabriel Castellanos Boix")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2003-02-13")
          (paginas 244)
          (idioma "Español")
@@ -381,7 +381,7 @@
          (paginas 350)
          (idioma "Español")
          (complejidad 5)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 10)
     )
     ([instancia35] of Libro
@@ -403,7 +403,7 @@
          (paginas 222)
          (idioma "Español")
          (complejidad 8)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 6)
     )
     ([instancia37] of Libro
@@ -469,7 +469,7 @@
          (paginas 396)
          (idioma "Español")
          (complejidad 9)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 2)
     )
     ([instancia43] of Libro
@@ -524,7 +524,7 @@
          (paginas 192)
          (idioma "Español")
          (complejidad 10)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 2)
     )
     ([instancia48] of Libro
@@ -552,7 +552,7 @@
     ([instancia50] of Libro
          (titulo "Viaje de miedo")
          (escritoPor "Sandalio Asenjo Garay")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "1996-08-04")
          (paginas 164)
          (idioma "Español")
@@ -574,7 +574,7 @@
     ([instancia52] of Libro
          (titulo "El Realidad de luz")
          (escritoPor "Consuelo Vall Davila")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "1999-01-22")
          (paginas 244)
          (idioma "Español")
@@ -640,7 +640,7 @@
     ([instancia58] of Libro
          (titulo "El Mar de dia")
          (escritoPor "Jose Manuel Pina Vara")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2009-07-24")
          (paginas 143)
          (idioma "Español")
@@ -717,7 +717,7 @@
     ([instancia65] of Libro
          (titulo "Noche de mar")
          (escritoPor "Mar Porras-Suarez")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "1998-12-21")
          (paginas 216)
          (idioma "Español")
@@ -728,12 +728,12 @@
     ([instancia66] of Libro
          (titulo "Amor bajo secreto")
          (escritoPor "Noelia Fuster")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2020-06-06")
          (paginas 183)
          (idioma "Español")
          (complejidad 4)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 10)
     )
     ([instancia67] of Libro
@@ -766,13 +766,13 @@
          (paginas 153)
          (idioma "Español")
          (complejidad 8)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 6)
     )
     ([instancia70] of Libro
          (titulo "Realidad de luz")
          (escritoPor "Clotilde del Vila")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2020-06-28")
          (paginas 434)
          (idioma "Español")
@@ -805,7 +805,7 @@
     ([instancia73] of Libro
          (titulo "La Realidad de secreto")
          (escritoPor "Fabiana Santiago Lasa")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2011-09-19")
          (paginas 253)
          (idioma "Español")
@@ -871,7 +871,7 @@
     ([instancia79] of Libro
          (titulo "Tiempo sobre dia")
          (escritoPor "Santos Ferrera Alemany")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2011-09-21")
          (paginas 137)
          (idioma "Español")
@@ -920,7 +920,7 @@
          (paginas 232)
          (idioma "Español")
          (complejidad 9)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 4)
     )
     ([instancia84] of Libro
@@ -937,7 +937,7 @@
     ([instancia85] of Libro
          (titulo "Miedo y mar")
          (escritoPor "Elias Amado Carrera Dueñas")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2022-04-23")
          (paginas 232)
          (idioma "Español")
@@ -953,7 +953,7 @@
          (paginas 114)
          (idioma "Español")
          (complejidad 6)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 6)
     )
     ([instancia87] of Libro
@@ -970,7 +970,7 @@
     ([instancia88] of Libro
          (titulo "Tiempo sobre tiempo")
          (escritoPor "Edu Antunez")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "1994-12-15")
          (paginas 450)
          (idioma "Español")
@@ -981,7 +981,7 @@
     ([instancia89] of Libro
          (titulo "Miedo sobre noche")
          (escritoPor "Loida Mari Gimeno")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2001-02-17")
          (paginas 252)
          (idioma "Español")
@@ -1096,7 +1096,7 @@
          (paginas 431)
          (idioma "Español")
          (complejidad 5)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 9)
     )
     ([instancia100] of Libro
@@ -1360,7 +1360,7 @@
          (paginas 385)
          (idioma "Español")
          (complejidad 5)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 8)
     )
     ([instancia124] of Libro
@@ -1371,7 +1371,7 @@
          (paginas 453)
          (idioma "Español")
          (complejidad 5)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 10)
     )
     ([instancia125] of Libro
@@ -1388,7 +1388,7 @@
     ([instancia126] of Libro
          (titulo "Dia sobre cielo")
          (escritoPor "Lope Jauregui Lillo")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2003-05-10")
          (paginas 300)
          (idioma "Español")
@@ -1404,7 +1404,7 @@
          (paginas 314)
          (idioma "Español")
          (complejidad 9)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 4)
     )
     ([instancia128] of Libro
@@ -1426,7 +1426,7 @@
          (paginas 198)
          (idioma "Español")
          (complejidad 4)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 9)
     )
     ([instancia130] of Libro
@@ -1454,12 +1454,12 @@
     ([instancia132] of Libro
          (titulo "El Noche de secreto")
          (escritoPor "Lucia Olivares Villalobos")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2001-01-31")
          (paginas 185)
          (idioma "Español")
          (complejidad 2)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 7)
     )
     ([instancia133] of Libro
@@ -1481,13 +1481,13 @@
          (paginas 257)
          (idioma "Español")
          (complejidad 1)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 5)
     )
     ([instancia135] of Libro
          (titulo "Amor y tiempo")
          (escritoPor "Amelia Carbajo")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2016-07-01")
          (paginas 113)
          (idioma "Español")
@@ -1503,7 +1503,7 @@
          (paginas 356)
          (idioma "Español")
          (complejidad 10)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 1)
     )
     ([instancia137] of Libro
@@ -1569,7 +1569,7 @@
          (paginas 178)
          (idioma "Español")
          (complejidad 6)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 3)
     )
     ([instancia143] of Libro
@@ -1674,7 +1674,7 @@
     ([instancia152] of Libro
          (titulo "Secreto bajo viaje")
          (escritoPor "Herminia de Armengol")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "1997-06-22")
          (paginas 417)
          (idioma "Español")
@@ -1707,7 +1707,7 @@
     ([instancia155] of Libro
          (titulo "Sombra bajo tiempo")
          (escritoPor "Domitila Blanco Pomares")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2006-04-09")
          (paginas 485)
          (idioma "Español")
@@ -1740,7 +1740,7 @@
     ([instancia158] of Libro
          (titulo "Miedo sobre amor")
          (escritoPor "Juan Luis Salvador Aramburu")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2021-02-08")
          (paginas 144)
          (idioma "Español")
@@ -1773,7 +1773,7 @@
     ([instancia161] of Libro
          (titulo "Dia sobre noche")
          (escritoPor "Eric Azcona Cobos")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2010-10-19")
          (paginas 460)
          (idioma "Español")
@@ -1800,7 +1800,7 @@
          (paginas 487)
          (idioma "Español")
          (complejidad 10)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 1)
     )
     ([instancia164] of Libro
@@ -1839,7 +1839,7 @@
     ([instancia167] of Libro
          (titulo "El Amor de sombra")
          (escritoPor "Felicia Fabregat Bernat")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2020-06-27")
          (paginas 490)
          (idioma "Español")
@@ -1866,7 +1866,7 @@
          (paginas 378)
          (idioma "Español")
          (complejidad 1)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 4)
     )
     ([instancia170] of Libro
@@ -1888,7 +1888,7 @@
          (paginas 225)
          (idioma "Español")
          (complejidad 1)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 3)
     )
     ([instancia172] of Libro
@@ -1943,7 +1943,7 @@
          (paginas 462)
          (idioma "Español")
          (complejidad 1)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 1)
     )
     ([instancia177] of Libro
@@ -1965,7 +1965,7 @@
          (paginas 215)
          (idioma "Español")
          (complejidad 4)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 5)
     )
     ([instancia179] of Libro
@@ -1976,7 +1976,7 @@
          (paginas 333)
          (idioma "Español")
          (complejidad 4)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 5)
     )
     ([instancia180] of Libro
@@ -2042,7 +2042,7 @@
          (paginas 385)
          (idioma "Español")
          (complejidad 9)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 7)
     )
     ([instancia186] of Libro
@@ -2075,7 +2075,7 @@
          (paginas 155)
          (idioma "Español")
          (complejidad 10)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 4)
     )
     ([instancia189] of Libro
@@ -2108,13 +2108,13 @@
          (paginas 200)
          (idioma "Español")
          (complejidad 10)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 6)
     )
     ([instancia192] of Libro
          (titulo "Tiempo de sueño")
          (escritoPor "Andres Felipe del Armengol")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2000-07-11")
          (paginas 183)
          (idioma "Español")
@@ -2141,7 +2141,7 @@
          (paginas 116)
          (idioma "Español")
          (complejidad 10)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 1)
     )
     ([instancia195] of Libro
@@ -2152,7 +2152,7 @@
          (paginas 201)
          (idioma "Español")
          (complejidad 9)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 7)
     )
     ([instancia196] of Libro
@@ -2185,7 +2185,7 @@
          (paginas 190)
          (idioma "Español")
          (complejidad 3)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 5)
     )
     ([instancia199] of Libro
@@ -2224,7 +2224,7 @@
     ([instancia202] of Libro
          (titulo "Cielo bajo sueño")
          (escritoPor "Rogelio del Valles")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2009-02-11")
          (paginas 247)
          (idioma "Español")
@@ -2251,7 +2251,7 @@
          (paginas 105)
          (idioma "Español")
          (complejidad 4)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 9)
     )
     ([instancia205] of Libro
@@ -2273,7 +2273,7 @@
          (paginas 301)
          (idioma "Español")
          (complejidad 2)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 2)
     )
     ([instancia207] of Libro
@@ -2284,7 +2284,7 @@
          (paginas 186)
          (idioma "Español")
          (complejidad 7)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 1)
     )
     ([instancia208] of Libro
@@ -2361,7 +2361,7 @@
          (paginas 147)
          (idioma "Español")
          (complejidad 9)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 8)
     )
     ([instancia215] of Libro
@@ -2471,7 +2471,7 @@
          (paginas 305)
          (idioma "Español")
          (complejidad 2)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 4)
     )
     ([instancia225] of Libro
@@ -2493,7 +2493,7 @@
          (paginas 381)
          (idioma "Español")
          (complejidad 6)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 9)
     )
     ([instancia227] of Libro
@@ -2504,13 +2504,13 @@
          (paginas 246)
          (idioma "Español")
          (complejidad 5)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 7)
     )
     ([instancia228] of Libro
          (titulo "Un Esperanza en miedo")
          (escritoPor "Gala del Escolano")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2022-05-03")
          (paginas 330)
          (idioma "Español")
@@ -2521,7 +2521,7 @@
     ([instancia229] of Libro
          (titulo "La Tiempo de amor")
          (escritoPor "Silvestre Marquez Piñeiro")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2019-04-15")
          (paginas 247)
          (idioma "Español")
@@ -2532,7 +2532,7 @@
     ([instancia230] of Libro
          (titulo "Un Mar en realidad")
          (escritoPor "Sigfrido Bertran-Ortiz")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2001-06-09")
          (paginas 414)
          (idioma "Español")
@@ -2625,7 +2625,7 @@
          (paginas 128)
          (idioma "Español")
          (complejidad 2)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 9)
     )
     ([instancia239] of Libro
@@ -2636,7 +2636,7 @@
          (paginas 368)
          (idioma "Español")
          (complejidad 8)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 7)
     )
     ([instancia240] of Libro
@@ -2647,7 +2647,7 @@
          (paginas 238)
          (idioma "Español")
          (complejidad 5)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 8)
     )
     ([instancia241] of Libro
@@ -2680,7 +2680,7 @@
          (paginas 212)
          (idioma "Español")
          (complejidad 10)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 1)
     )
     ([instancia244] of Libro
@@ -2713,7 +2713,7 @@
          (paginas 500)
          (idioma "Español")
          (complejidad 2)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 8)
     )
     ([instancia247] of Libro
@@ -2878,7 +2878,7 @@
          (paginas 232)
          (idioma "Español")
          (complejidad 1)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 2)
     )
     ([instancia262] of Libro
@@ -2900,7 +2900,7 @@
          (paginas 401)
          (idioma "Español")
          (complejidad 5)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 5)
     )
     ([instancia264] of Libro
@@ -2933,7 +2933,7 @@
          (paginas 129)
          (idioma "Español")
          (complejidad 5)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 8)
     )
     ([instancia267] of Libro
@@ -2988,7 +2988,7 @@
          (paginas 403)
          (idioma "Español")
          (complejidad 10)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 5)
     )
     ([instancia272] of Libro
@@ -3005,7 +3005,7 @@
     ([instancia273] of Libro
          (titulo "Un Noche en sombra")
          (escritoPor "Luis angel Arrieta Cuervo")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "1995-11-17")
          (paginas 368)
          (idioma "Español")
@@ -3054,13 +3054,13 @@
          (paginas 188)
          (idioma "Español")
          (complejidad 1)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 1)
     )
     ([instancia278] of Libro
          (titulo "Luz y sueño")
          (escritoPor "Otilia Llopis")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2019-11-27")
          (paginas 408)
          (idioma "Español")
@@ -3087,7 +3087,7 @@
          (paginas 274)
          (idioma "Español")
          (complejidad 1)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 3)
     )
     ([instancia281] of Libro
@@ -3192,12 +3192,12 @@
     ([instancia290] of Libro
          (titulo "Miedo bajo sueño")
          (escritoPor "Ildefonso Flor Jerez")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2019-08-25")
          (paginas 306)
          (idioma "Español")
          (complejidad 1)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 1)
     )
     ([instancia291] of Libro
@@ -3214,7 +3214,7 @@
     ([instancia292] of Libro
          (titulo "La Miedo de viaje")
          (escritoPor "Pepito Figueroa Reig")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "1995-10-23")
          (paginas 483)
          (idioma "Español")
@@ -3241,7 +3241,7 @@
          (paginas 333)
          (idioma "Español")
          (complejidad 6)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 10)
     )
     ([instancia295] of Libro
@@ -3252,7 +3252,7 @@
          (paginas 215)
          (idioma "Español")
          (complejidad 4)
-         (popularidad 8)
+         (popularidad 9)
          (valoracion 6)
     )
     ([instancia296] of Libro
@@ -3269,7 +3269,7 @@
     ([instancia297] of Libro
          (titulo "Miedo bajo mar")
          (escritoPor "Pancho Colomer España")
-         (perteneceAGenero "CienciaFiccion")
+         (perteneceAGenero "Aventura")
          (fecha "2021-04-03")
          (paginas 478)
          (idioma "Español")
@@ -3296,7 +3296,7 @@
          (paginas 463)
          (idioma "Español")
          (complejidad 1)
-         (popularidad 8)
+         (popularidad 10)
          (valoracion 7)
     )
     ([instancia300] of Libro
