@@ -191,10 +191,8 @@
     (multislot generos (type STRING))
     (slot complejidad (type INTEGER) (default -1))
     (slot paginas (type INTEGER) (default -1))
-    ;habia pensado que fueran booleanos en plan: tiene q esta bien valorado y tiene q ser popular
-    ;pero nose si seria mejor eso o un int igual q complejidad y paginas
-    (slot valorado (default -1)) 
-    (slot popular (default -1))
+    (slot valorado (type INTEGER) (default -1))
+    (slot popular (type INTEGER) (default -1))
 )
 
 (defrule ajustar-por-generos
@@ -209,9 +207,17 @@
     (AbstractedUser (importanciaValoracion ?impVal))
     ?ab <- (AbstractedBook (valorado ?v&:(eq ?v -1))) ;todavía no se ha inicializado
     =>
-    (if (or (eq ?impVal "normal") (eq ?impVal "mucha")) then (modify ?ab (valorado TRUE))
-    else (modify ?ab (valorado FALSE))
-    ) 
+    (switch ?impVal
+        (case "mucha" then 
+            then (modify ?ab (valorado 9))   
+        )
+        (case "normal" then 
+             then (modify ?ab (valorado 5))  
+        )
+        (case "poca" then 
+            then (modify ?ab (valorado 0))   
+        )
+    )
 )
 
 (defrule ajustar-por-popularidad
@@ -219,9 +225,17 @@
     (AbstractedUser (importanciaPopularidad ?impPop))
     ?ab <- (AbstractedBook (popular ?p&:(eq ?p -1))) ;todavía no se ha inicializado
     =>
-    (if (or (eq ?impPop "normal") (eq ?impPop "mucha")) then (modify ?ab (popular TRUE))
-    else (modify ?ab (valorado FALSE))
-    ) 
+    (switch ?impPop
+        (case "mucha" then 
+            then (modify ?ab (popular 9))   
+        )
+        (case "normal" then 
+             then (modify ?ab (popular 5))  
+        )
+        (case "poca" then 
+            then (modify ?ab (popular 0))   
+        )
+    )
 )
 
 (defrule ajustar-por-frecuencia
@@ -305,9 +319,13 @@
 (defrule primera-recomendacion
     (declare (salience 51))
     (not (Recomendaciones (titulos-recomendados $?recomendados)))
-    (AbstractedBook (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
-    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
+    (AbstractedBook (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas)
+     (popular ?popularidadImportancia) (valorado ?valoracionImportancia))
+    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas))
+     (popularidad ?popularidad&:(>= ?popularidad ?popularidadImportancia)) (valoracion ?valoracion&:(>= ?valoracion ?valoracionImportancia)))
     =>
+     (printout t "popularidad-libro: " ?popularidad " importancia-popularidad: "?popularidadImportancia crlf)
+      (printout t "valoracion-libro: " ?valoracion " importancia-valoracion: "?valoracionImportancia crlf)
     (assert (Recomendaciones (titulos-recomendados (create$ ?nombreLibro))))
     (send ?lib delete)
 )
@@ -315,9 +333,13 @@
 (defrule añadir-recomendaciones
     (declare (salience 50))
     ?rec <- (Recomendaciones (titulos-recomendados $?recomendados&:(< (length$ ?recomendados) 3)))
-    (AbstractedBook (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas))
-    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas)))
+    (AbstractedBook (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas)
+        (popular ?popularidadImportancia) (valorado ?valoracionImportancia))
+    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas))
+        (popularidad ?popularidad&:(>= ?popularidad ?popularidadImportancia)) (valoracion ?valoracion&:(>= ?valoracion ?valoracionImportancia)))
     =>
+      (printout t "popularidad-libro: " ?popularidad " importancia-popularidad: "?popularidadImportancia crlf)
+      (printout t "valoracion-libro: " ?valoracion " importancia-valoracion: "?valoracionImportancia crlf)
     (modify ?rec (titulos-recomendados $?recomendados ?nombreLibro))
     (send ?lib delete)
 )
