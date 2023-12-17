@@ -1,0 +1,291 @@
+@prefix : <http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix untitled-ontology-11: <http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#> .
+@base <http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11/> .
+
+<http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#escritoPor
+untitled-ontology-11:escritoPor rdf:type owl:ObjectProperty ;
+                                rdfs:domain untitled-ontology-11:Libro ;
+                                rdfs:range untitled-ontology-11:Autor .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#perteneceAGenero
+untitled-ontology-11:perteneceAGenero rdf:type owl:ObjectProperty ;
+                                      rdfs:domain untitled-ontology-11:Libro ;
+                                      rdfs:range untitled-ontology-11:Genero .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#recomiendaLibro
+untitled-ontology-11:recomiendaLibro rdf:type owl:ObjectProperty ;
+                                     rdfs:domain untitled-ontology-11:Recomendacion ;
+                                     rdfs:range untitled-ontology-11:Libro .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tieneLibrosPopulares
+untitled-ontology-11:tieneLibrosPopulares rdf:type owl:ObjectProperty ;
+                                          rdfs:domain untitled-ontology-11:Genero ;
+                                          rdfs:range untitled-ontology-11:Libro .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tienePreferenciasDeGenero
+untitled-ontology-11:tienePreferenciasDeGenero rdf:type owl:ObjectProperty ;
+                                               rdfs:domain untitled-ontology-11:Usuario ;
+                                               rdfs:range untitled-ontology-11:Genero .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#autor
+untitled-ontology-11:autor rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdf:type owl:FunctionalProperty ;
+                           rdfs:domain untitled-ontology-11:Libro ;
+                           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#complejidad
+untitled-ontology-11:complejidad rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                 rdf:type owl:FunctionalProperty ;
+                                 rdfs:domain untitled-ontology-11:Libro ;
+                                 rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#confianzaValoraciones
+untitled-ontology-11:confianzaValoraciones rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                           rdf:type owl:FunctionalProperty ;
+                                           rdfs:domain untitled-ontology-11:Usuario ;
+                                           rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#fecha
+untitled-ontology-11:fecha rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdf:type owl:FunctionalProperty ;
+                           rdfs:domain untitled-ontology-11:Libro ;
+                           rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#frecuenciaLectura
+untitled-ontology-11:frecuenciaLectura rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdf:type owl:FunctionalProperty ;
+                                       rdfs:domain untitled-ontology-11:Usuario ;
+                                       rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#genero
+untitled-ontology-11:genero rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdf:type owl:FunctionalProperty ;
+                            rdfs:domain untitled-ontology-11:Libro ;
+                            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#idioma
+untitled-ontology-11:idioma rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdf:type owl:FunctionalProperty ;
+                            rdfs:domain untitled-ontology-11:Libro ;
+                            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#influenciaModasLiterarias
+untitled-ontology-11:influenciaModasLiterarias rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                               rdf:type owl:FunctionalProperty ;
+                                               rdfs:domain untitled-ontology-11:Usuario ;
+                                               rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#listaLibrosRecomendados
+untitled-ontology-11:listaLibrosRecomendados rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                             rdfs:domain untitled-ontology-11:Recomendacion ;
+                                             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#lugaresLectura
+untitled-ontology-11:lugaresLectura rdf:type owl:DatatypeProperty ;
+                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                    rdfs:domain untitled-ontology-11:Usuario ;
+                                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#momentoFavoritoLectura
+untitled-ontology-11:momentoFavoritoLectura rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                            rdf:type owl:FunctionalProperty ;
+                                            rdfs:domain untitled-ontology-11:Usuario ;
+                                            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#nombre
+untitled-ontology-11:nombre rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdf:type owl:FunctionalProperty ;
+                            rdfs:domain untitled-ontology-11:Libro ,
+                                        untitled-ontology-11:Persona ;
+                            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#nombreGenero
+untitled-ontology-11:nombreGenero rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                  rdf:type owl:FunctionalProperty ;
+                                  rdfs:domain untitled-ontology-11:Genero ;
+                                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#paginas
+untitled-ontology-11:paginas rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf owl:topDataProperty ;
+                             rdf:type owl:FunctionalProperty ;
+                             rdfs:domain untitled-ontology-11:Libro ;
+                             rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#popularidad
+untitled-ontology-11:popularidad rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                 rdf:type owl:FunctionalProperty ;
+                                 rdfs:domain untitled-ontology-11:Libro ;
+                                 rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#preferenciaBestSellers
+untitled-ontology-11:preferenciaBestSellers rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                            rdf:type owl:FunctionalProperty ;
+                                            rdfs:domain untitled-ontology-11:Usuario ;
+                                            rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#preferenciaGeneros
+untitled-ontology-11:preferenciaGeneros rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdfs:domain untitled-ontology-11:Usuario ;
+                                        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#razonesRecomendacion
+untitled-ontology-11:razonesRecomendacion rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                          rdfs:domain untitled-ontology-11:Recomendacion ;
+                                          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#tiempoDisponibleLectura
+untitled-ontology-11:tiempoDisponibleLectura rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                             rdf:type owl:FunctionalProperty ;
+                                             rdfs:domain untitled-ontology-11:Usuario ;
+                                             rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#titulo
+untitled-ontology-11:titulo rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdf:type owl:FunctionalProperty ;
+                            rdfs:domain untitled-ontology-11:Libro ;
+                            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#valoracion
+untitled-ontology-11:valoracion rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf owl:topDataProperty ;
+                                rdf:type owl:FunctionalProperty ;
+                                rdfs:domain untitled-ontology-11:Libro ;
+                                rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Autor
+untitled-ontology-11:Autor rdf:type owl:Class ;
+                           rdfs:subClassOf untitled-ontology-11:Persona .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Genero
+untitled-ontology-11:Genero rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Libro
+untitled-ontology-11:Libro rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Persona
+untitled-ontology-11:Persona rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Recomendacion
+untitled-ontology-11:Recomendacion rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Usuario
+untitled-ontology-11:Usuario rdf:type owl:Class ;
+                             rdfs:subClassOf untitled-ontology-11:Persona .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#CienciaFiccion
+untitled-ontology-11:CienciaFiccion rdf:type owl:NamedIndividual ,
+                                             untitled-ontology-11:Genero ;
+                                    untitled-ontology-11:nombreGenero "CienciaFiccion" .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Drama
+untitled-ontology-11:Drama rdf:type owl:NamedIndividual ,
+                                    untitled-ontology-11:Genero ;
+                           untitled-ontology-11:nombreGenero "Drama" .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Fantasia
+untitled-ontology-11:Fantasia rdf:type owl:NamedIndividual ,
+                                       untitled-ontology-11:Genero ;
+                              untitled-ontology-11:nombreGenero "Fantasia" .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Historica
+untitled-ontology-11:Historica rdf:type owl:NamedIndividual ,
+                                        untitled-ontology-11:Genero ;
+                               untitled-ontology-11:nombreGenero "Historica" .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Misterio
+untitled-ontology-11:Misterio rdf:type owl:NamedIndividual ,
+                                       untitled-ontology-11:Genero ;
+                              untitled-ontology-11:nombreGenero "Misterio" .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Romance
+untitled-ontology-11:Romance rdf:type owl:NamedIndividual ,
+                                      untitled-ontology-11:Genero ;
+                             untitled-ontology-11:nombreGenero "Romance" .
+
+
+###  http://www.semanticweb.org/34696/ontologies/2023/10/untitled-ontology-11#Suspense
+untitled-ontology-11:Suspense rdf:type owl:NamedIndividual ,
+                                       untitled-ontology-11:Genero ;
+                              untitled-ontology-11:nombreGenero "Suspense" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
