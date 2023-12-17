@@ -404,11 +404,11 @@
     (declare (salience 40))
     (not (Recomendaciones (titulos-recomendados $?recomendados)))
     (AbstractedUser (justificacionRespuesta ?justRes))
-    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (escritoPor ?autor) (perteneceAGenero ?generoLibro) (popularidad ?popularidadLibro))
+    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (escritoPor ?autor) (perteneceAGenero ?generoLibro) (popularidad ?popularidadLibro) (valoracion ?valoracionLibro))
     (forall (object (is-a Libro) (popularidad ?popularidad2)) (test (<= ?popularidad2 ?popularidadLibro))) 
     =>
     (assert (Recomendaciones (titulos-recomendados (create$ ?nombreLibro))))
-    (if (eq ?justRes 1) then (printout t crlf "Recomendación añadida por pertenecer a uno de sus géneros favoritos y ser popular, titulo: " ?nombreLibro ", Genero: " ?generoLibro ", Autor: " ?autor ", Popularidad: "?popularidadLibro crlf))
+    (if (eq ?justRes 1) then (printout t crlf "Recomendación añadida por pertenecer a uno de sus géneros favoritos y ser popular, titulo: " ?nombreLibro ", Genero: " ?generoLibro ", Autor: " ?autor ", Popularidad: "?popularidadLibro ", Valoracion: " ?valoracionLibro crlf))
     (send ?lib delete)
 )
 
@@ -416,11 +416,11 @@
     (declare (salience 39))
     ?rec <- (Recomendaciones (titulos-recomendados $?recomendados&:(< (length$ ?recomendados) 3)))
     (AbstractedUser (justificacionRespuesta ?justRes))
-    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (escritoPor ?autor) (perteneceAGenero ?generoLibro)(popularidad ?popularidadLibro))
+    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (escritoPor ?autor) (perteneceAGenero ?generoLibro)(popularidad ?popularidadLibro) (valoracion ?valoracionLibro))
     (forall (object (is-a Libro) (popularidad ?popularidad2)) (test (<= ?popularidad2 ?popularidadLibro))) 
     =>
     (modify ?rec (titulos-recomendados $?recomendados ?nombreLibro))
-    (if (eq ?justRes 1) then (printout t  "Recomendación añadida por pertenecer a uno de sus géneros favoritos y ser popular, titulo: " ?nombreLibro ", Genero: " ?generoLibro ", Autor: " ?autor ", Popularidad: "?popularidadLibro crlf))
+    (if (eq ?justRes 1) then (printout t  "Recomendación añadida por pertenecer a uno de sus géneros favoritos y ser popular, titulo: " ?nombreLibro ", Genero: " ?generoLibro ", Autor: " ?autor ", Popularidad: "?popularidadLibro ", Valoracion: " ?valoracionLibro crlf))
     (send ?lib delete)
 )
 
