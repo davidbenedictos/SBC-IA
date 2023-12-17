@@ -54,7 +54,7 @@
 )
 
 (deffacts generosExistentes
-    (generos "Fantasia" "Romance" "Misterio" "CienciaFiccion" "Drama" "Suspense" "Historica" "Poesia")
+    (generos "Fantasia" "Romance" "Misterio" "CienciaFiccion" "Drama" "Suspense" "Historica")
 )
 
 (defrule crear-perfil "preguntas para conocer al usuario"
@@ -378,10 +378,10 @@
     (AbstractedUser (justificacionRespuesta ?justRes))
     (AbstractedBook (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas)
      (popular ?popularidadImportancia) (valorado ?valoracionImportancia))
-    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas))
+    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (escritoPor ?autor) (perteneceAGenero ?generoLibro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas))
      (popularidad ?popularidad&:(>= ?popularidad ?popularidadImportancia)) (valoracion ?valoracion&:(>= ?valoracion ?valoracionImportancia)))
     =>
-    (if (eq ?justRes 1) then (printout t crlf "Titulo libro: " ?nombreLibro ", Popularidad libro: "?popularidad ", Valoracion: " ?valoracion crlf))
+    (if (eq ?justRes 1) then (printout t crlf "Recomendación añadida por coincidir con características del usuario. Titulo: " ?nombreLibro ", Genero: " ?generoLibro ", Autor: " ?autor ", Popularidad: "?popularidad ", Valoracion: " ?valoracion ", Complejidad: " ?complejidad ", Num pags: " ?pags crlf))
     (assert (Recomendaciones (titulos-recomendados (create$ ?nombreLibro))))
     (send ?lib delete)
 )
@@ -392,10 +392,10 @@
     (AbstractedUser (justificacionRespuesta ?justRes))
     (AbstractedBook (complejidad ?complejidadRecomendada) (paginas ?pagsRecomendadas)
         (popular ?popularidadImportancia) (valorado ?valoracionImportancia))
-    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas))
+    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (escritoPor ?autor) (perteneceAGenero ?generoLibro) (complejidad ?complejidad&:(<= ?complejidad ?complejidadRecomendada)) (paginas ?pags&:(<= ?pags ?pagsRecomendadas))
         (popularidad ?popularidad&:(>= ?popularidad ?popularidadImportancia)) (valoracion ?valoracion&:(>= ?valoracion ?valoracionImportancia)))
     =>
-    (if (eq ?justRes 1) then (printout t "Titulo libro: " ?nombreLibro ", Popularidad libro: "?popularidad ", Valoracion: " ?valoracion crlf))
+    (if (eq ?justRes 1) then (printout t "Recomendación añadida por coincidir con características del usuario. Titulo: " ?nombreLibro ", Genero: " ?generoLibro ", Autor: " ?autor ", Popularidad: "?popularidad ", Valoracion: " ?valoracion ", Complejidad: " ?complejidad ", Num pags: " ?pags crlf))
     (modify ?rec (titulos-recomendados $?recomendados ?nombreLibro))
     (send ?lib delete)
 )
@@ -404,11 +404,11 @@
     (declare (salience 40))
     (not (Recomendaciones (titulos-recomendados $?recomendados)))
     (AbstractedUser (justificacionRespuesta ?justRes))
-    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (popularidad ?popularidadLibro))
+    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (escritoPor ?autor) (perteneceAGenero ?generoLibro) (popularidad ?popularidadLibro))
     (forall (object (is-a Libro) (popularidad ?popularidad2)) (test (<= ?popularidad2 ?popularidadLibro))) 
     =>
     (assert (Recomendaciones (titulos-recomendados (create$ ?nombreLibro))))
-    (if (eq ?justRes 1) then (printout t crlf "Recomendación añadida por pertenecer a uno de sus géneros favoritos y ser popular, titulo libro: " ?nombreLibro ", Popularidad libro: "?popularidadLibro  crlf))
+    (if (eq ?justRes 1) then (printout t crlf "Recomendación añadida por pertenecer a uno de sus géneros favoritos y ser popular, titulo: " ?nombreLibro ", Genero: " ?generoLibro ", Autor: " ?autor ", Popularidad: "?popularidadLibro crlf))
     (send ?lib delete)
 )
 
@@ -416,11 +416,11 @@
     (declare (salience 39))
     ?rec <- (Recomendaciones (titulos-recomendados $?recomendados&:(< (length$ ?recomendados) 3)))
     (AbstractedUser (justificacionRespuesta ?justRes))
-    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (popularidad ?popularidadLibro))
+    ?lib <- (object (is-a Libro) (titulo ?nombreLibro) (escritoPor ?autor) (perteneceAGenero ?generoLibro)(popularidad ?popularidadLibro))
     (forall (object (is-a Libro) (popularidad ?popularidad2)) (test (<= ?popularidad2 ?popularidadLibro))) 
     =>
     (modify ?rec (titulos-recomendados $?recomendados ?nombreLibro))
-    (if (eq ?justRes 1) then (printout t  "Recomendación añadida por pertenecer a uno de sus géneros favoritos y ser popular, titulo libro: " ?nombreLibro ", Popularidad libro: "?popularidadLibro crlf))
+    (if (eq ?justRes 1) then (printout t  "Recomendación añadida por pertenecer a uno de sus géneros favoritos y ser popular, titulo: " ?nombreLibro ", Genero: " ?generoLibro ", Autor: " ?autor ", Popularidad: "?popularidadLibro crlf))
     (send ?lib delete)
 )
 
