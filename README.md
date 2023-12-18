@@ -1,12 +1,15 @@
 # SBC-IA: Sistema Basado en Conocimiento con CLIPS
-Pau Martínez
-Oriol Ramos 
-David Benedicto
+Autores:
+- Pau Martínez
+- Oriol Ramos
+- David Benedicto
 
-# Para ejecutar
-Cargar RecomendacionLibros.clp
-Cargar instancias.clp
-Cargar rules.clp
-(reset)
-(run)
-Entrar datos pedidos
+## Instrucciones para ejecutar:
+1. Cargar OntologiaLibros.clp
+2. Cargar instancias.clp (si no está presente, compilar y ejecutar script.cc)
+3. Cargar rules.clp
+4. (reset)
+5. (run)
+6. Ingresar los datos solicitados
+
+Este archivo es un README.
