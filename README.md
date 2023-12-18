@@ -12,4 +12,4 @@ Autores:
 5. (run)
 6. Ingresar los datos solicitados
 
-Este archivo es un README.
+
