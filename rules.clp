@@ -191,15 +191,6 @@
     (focus ASOCIACION)
 )
 
-; (defrule imprimir-favoritos
-;     (declare (salience 97))
-;     (AbstractedUser (generosFavoritos $?gFav))
-;     =>
-;     (loop-for-count (?i 1 (length$ ?gFav)) do
-;         (printout t "Genero favorito: " (nth$ ?i ?gFav) crlf)
-;     )
-; )
-
 ;************************
 ;* MÓDULO DE ASOCIACIÓN *  
 ;************************
@@ -342,16 +333,6 @@
     )
     (focus REFINAMIENTO)
 )
-
-; (defrule imprimir-generos
-;     (declare (salience 20))
-;     (AbstractedBook (generos $?g))
-;     =>
-;     (loop-for-count (?i 1 (length$ ?g)) do
-;         (printout t "Genero del libro: " (nth$ ?i ?g) crlf)
-;     )
-;     (focus REFINAMIENTO)
-; )
 
 
 ; **************************
